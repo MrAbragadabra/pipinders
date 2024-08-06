@@ -14,6 +14,10 @@ export const Header: React.FC<Props> = ({ className }) => {
 	const toggleBurger = () => {
 		setIsClick(!isClick)
 	}
+
+	const clickOnLink = () => {
+		setIsClick(!isClick)
+	}
 	return (
 		<>
 			<header
@@ -56,16 +60,16 @@ export const Header: React.FC<Props> = ({ className }) => {
 				<div
 					className='lg:hidden absolute w-full bg-pink-400 bg-opacity-20 backdrop-blur-md flex-col z-10 p-7 items-center justify-center text-center text-white text-2xl'
 				>
-					<Link className='block hover:underline' href='/history'>
+					<Link onClick={clickOnLink} className='block hover:underline' href='/history'>
 						История
 					</Link>
-					<Link className='mt-4 block hover:underline' href='/rules'>
+					<Link onClick={clickOnLink} className='mt-4 block hover:underline' href='/rules'>
 						Правила
 					</Link>
-					<Link className='mt-4 block hover:underline' href='/commands'>
+					<Link onClick={clickOnLink} className='mt-4 block hover:underline' href='/commands'>
 						Команды
 					</Link>
-					<Link className='mt-4 block hover:underline' href='/skins'>
+					<Link onClick={clickOnLink} className='mt-4 block hover:underline' href='/skins'>
 						Скины
 					</Link>
 				</div>
