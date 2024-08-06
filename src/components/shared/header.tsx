@@ -58,7 +58,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 			</header>
 			{isClick && (
 				<div
-					className='lg:hidden absolute w-full bg-pink-400 bg-opacity-20 backdrop-blur-md flex-col z-10 p-7 items-center justify-center text-center text-white text-2xl'
+					className='lg:hidden absolute w-full pg-lime-400 bg-opacity-20 backdrop-blur-md flex-col z-10 p-7 items-center justify-center text-center text-white text-2xl'
 				>
 					<Link onClick={clickOnLink} className='block hover:underline' href='/history'>
 						История
