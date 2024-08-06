@@ -11,7 +11,7 @@ export default function Home() {
 				</h2>
 			</div>
 			<div>
-				<p className='text-white font-semibold mt-5 text-xl leading-8'>
+				<p className='text-justify text-white font-semibold mt-5 text-xl leading-8'>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
 					rerum blanditiis autem facilis corporis similique ut corrupti, id et,
 					fugiat consequatur assumenda nemo, molestiae repellendus error

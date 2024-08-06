@@ -22,9 +22,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ru'>
-			<body className={cn(nunito.className, 'bg-gradient-to-tr from-slate-900 to-pink-500 min-h-screen overflow-hidden')}>
+			<body className={cn(nunito.className, 'bg-gradient-to-tr from-slate-900 to-pink-500 min-h-screen overflow-x-hidden')}>
         <Header/>
-				<main className='px-20 mt-16'>{children}</main>
+				<main className='px-20 mt-16 mb-16 relative'>{children}</main>
 			</body>
 		</html>
 	)
