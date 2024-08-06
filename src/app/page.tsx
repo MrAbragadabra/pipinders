@@ -24,7 +24,7 @@ export default function Home() {
 				</p>
 				<div className='flex items-center justify-center mt-5'>
 					<form action='https://ya.ru' target='_blank'>
-						<Button type='submit' className='font-bold text-xl p-6 bg-lime-800'>
+						<Button type='submit' className='font-bold text-xl p-6 bg-lime-600'>
 							Оставить заявку
 						</Button>
 					</form>
