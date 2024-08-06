@@ -9,7 +9,7 @@ export default function NotFound() {
 				</h2>
 				<div className='flex items-center justify-center mt-5'>
 					<Image
-						src='https://http.cat/404.jpg'
+						src='/404.jpg'
 						width={300}
 						height={300}
 						alt='404 cat'
