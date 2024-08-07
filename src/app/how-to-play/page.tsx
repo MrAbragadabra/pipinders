@@ -5,13 +5,12 @@ export default function Skins() {
 		<section>
 			<div>
 				<h2 className='text-white uppercase text-4xl font-bold text-center'>
-					Скины
+					Как играть?
 				</h2>
 			</div>
 			<div>
 				<p className='text-white font-semibold mt-5 text-xl leading-8'>
-					Чтобы на сервер нормально отображились скины игроков нужно всего лишь
-					взять соду пищевую...
+					Чтобы играть вам надо взять советскую...
 				</p>
 			</div>
 		</section>

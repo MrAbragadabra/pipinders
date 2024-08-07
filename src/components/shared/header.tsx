@@ -50,8 +50,8 @@ export const Header: React.FC<Props> = ({ className }) => {
 						Команды
 						<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
 					</Link>
-					<Link className='group' href='/skins'>
-						Скины
+					<Link className='group' href='/how-to-play'>
+						Как играть?
 						<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
 					</Link>
 				</div>
@@ -97,9 +97,9 @@ export const Header: React.FC<Props> = ({ className }) => {
 						<Link
 							onClick={clickOnLink}
 							className='mt-4 block hover:underline'
-							href='/skins'
+							href='/how-to-play'
 						>
-							Скины
+							Как играть?
 						</Link>
 					</div>
 				</div>

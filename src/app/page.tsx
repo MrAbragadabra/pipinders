@@ -11,16 +11,8 @@ export default function Home() {
 				</h2>
 			</div>
 			<div>
-				<p className='text-justify text-white font-semibold mt-5 text-xl leading-8'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-					rerum blanditiis autem facilis corporis similique ut corrupti, id et,
-					fugiat consequatur assumenda nemo, molestiae repellendus error
-					laborum? Doloremque soluta ea ullam dolores, sed vero illo temporibus
-					quod consequatur provident recusandae officia harum molestiae ipsum
-					corrupti tenetur accusantium asperiores. Quia eaque ipsam officiis!
-					Pariatur suscipit accusamus, porro officia inventore sint deleniti.
-					Fuga, unde laboriosam ipsam dolore velit obcaecati voluptas commodi
-					quisquam!
+				<p className='text-justify text-white font-semibold mt-5 text-2xl leading-8'>
+				Наш сервер - уникальный проект, который совмещает в себе ванильное выживание, а также взаимодействие между игроками. После того как вы попадаете на наш сервер, вы окунаетесь в ламповое и дружелюбное комьюнити игроков, которые всегда смогут провести с вами приятный вечер за игрой.
 				</p>
 				<div className='flex items-center justify-center mt-5'>
 					<form action='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>
