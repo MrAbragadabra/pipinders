@@ -1,10 +1,4 @@
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-	title: 'История | Pipinders Server',
-	description: 'Небольшой рассказ про историю сервера',
-}
-
+'use client'
 
 export default function History() {
 	return (
@@ -16,7 +10,8 @@ export default function History() {
 			</div>
 			<div>
 				<p className='text-white font-semibold mt-5 text-xl leading-8'>
-					Тут очень большая история сервера, которую можно будет написать вот так вот и вот да
+					Тут очень большая история сервера, которую можно будет написать вот
+					так вот и вот да
 				</p>
 			</div>
 		</section>

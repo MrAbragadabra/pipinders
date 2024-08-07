@@ -1,10 +1,4 @@
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-	title: 'Команды | Pipinders Server',
-	description: 'Команды, которые можно использовать на сервере',
-}
-
+'use client'
 
 export default function Commands() {
 	return (

@@ -1,6 +1,6 @@
 {
-  "name": "pipinders-site",
-  "version": "0.1.0",
+  "name": "pipinders-server",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

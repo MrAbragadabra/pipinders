@@ -1,8 +1,8 @@
+import { Header } from '@/components/shared'
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import './globals.css'
-import { Header } from '@/components/shared'
 
 const nunito = Nunito({
 	subsets: ['cyrillic'],
@@ -22,8 +22,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ru'>
-			<body className={cn(nunito.className, 'bg-gradient-to-tr from-lime-500 to-lime-700 min-h-screen overflow-x-hidden')}>
-        <Header/>
+			<body
+				className={cn(
+					nunito.className,
+					'bg-gradient-to-tl from-lime-500 to-lime-700 min-h-screen overflow-x-hidden'
+				)}
+			>
+				<Header />
 				<main className='lg:px-20 px-5 mt-16 mb-16 relative'>{children}</main>
 			</body>
 		</html>

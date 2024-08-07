@@ -1,11 +1,4 @@
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-	title: 'Правила | Pipinders Server',
-	description: 'Минимальный набор правил Pipinders Server, чтобы всем было хорошо на сервере',
-}
-
-
+'use client'
 export default function Rules() {
 	return (
 		<section>

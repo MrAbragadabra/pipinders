@@ -1,6 +1,6 @@
 'use client'
 import { cn } from '@/lib/utils'
-import { Menu } from 'lucide-react'
+import { Box, Menu } from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
@@ -29,7 +29,10 @@ export const Header: React.FC<Props> = ({ className }) => {
 				{/* Название сайта */}
 				<div>
 					<h1 className='uppercase text-white font-bold text-2xl'>
-						<Link href='/'>Pipinders Server</Link>
+						<div className='flex items-center gap-2'>
+							<Link href='/'>Pipinders Server</Link>
+							<Box size={32} color='#ffffff' />
+						</div>
 					</h1>
 				</div>
 
@@ -57,19 +60,33 @@ export const Header: React.FC<Props> = ({ className }) => {
 				/>
 			</header>
 			{isClick && (
-				<div
-					className='lg:hidden absolute w-full bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col z-10 p-7 items-center justify-center text-center text-white text-2xl'
-				>
-					<Link onClick={clickOnLink} className='block hover:underline' href='/history'>
+				<div className='lg:hidden absolute w-full bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col z-10 p-7 items-center justify-center text-center text-white text-2xl'>
+					<Link
+						onClick={clickOnLink}
+						className='block hover:underline'
+						href='/history'
+					>
 						История
 					</Link>
-					<Link onClick={clickOnLink} className='mt-4 block hover:underline' href='/rules'>
+					<Link
+						onClick={clickOnLink}
+						className='mt-4 block hover:underline'
+						href='/rules'
+					>
 						Правила
 					</Link>
-					<Link onClick={clickOnLink} className='mt-4 block hover:underline' href='/commands'>
+					<Link
+						onClick={clickOnLink}
+						className='mt-4 block hover:underline'
+						href='/commands'
+					>
 						Команды
 					</Link>
-					<Link onClick={clickOnLink} className='mt-4 block hover:underline' href='/skins'>
+					<Link
+						onClick={clickOnLink}
+						className='mt-4 block hover:underline'
+						href='/skins'
+					>
 						Скины
 					</Link>
 				</div>

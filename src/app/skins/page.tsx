@@ -1,10 +1,4 @@
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-	title: 'Скины | Pipinders Server',
-	description: 'Инструкция по настройке лаунчера для скинов.',
-}
-
+'use client'
 
 export default function Skins() {
 	return (
@@ -16,7 +10,8 @@ export default function Skins() {
 			</div>
 			<div>
 				<p className='text-white font-semibold mt-5 text-xl leading-8'>
-					Чтобы на сервер нормально отображились скины игроков нужно всего лишь взять соду пищевую...
+					Чтобы на сервер нормально отображились скины игроков нужно всего лишь
+					взять соду пищевую...
 				</p>
 			</div>
 		</section>
