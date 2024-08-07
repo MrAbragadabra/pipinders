@@ -60,10 +60,17 @@ export const Header: React.FC<Props> = ({ className }) => {
 				/>
 			</header>
 			{isClick && (
-				<div className='lg:hidden absolute w-full bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col z-10 p-7 items-center justify-center text-center text-white text-2xl'>
+				<div className='lg:hidden absolute w-full bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col z-10 p-7 items-center justify-center text-center text-white text-2xl font-semibold'>
 					<Link
 						onClick={clickOnLink}
 						className='block hover:underline'
+						href='/'
+					>
+						Главная
+					</Link>
+					<Link
+						onClick={clickOnLink}
+						className='mt-4 block hover:underline'
 						href='/history'
 					>
 						История
