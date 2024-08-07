@@ -31,24 +31,28 @@ export const Header: React.FC<Props> = ({ className }) => {
 					<h1 className='uppercase text-white font-bold text-2xl'>
 						<div className='flex items-center gap-2'>
 							<Link href='/'>Pipinders Server</Link>
-							<Box size={32} color='#ffffff' />
+							<Box className='animate-bounce' size={32} color='#ffffff' />
 						</div>
 					</h1>
 				</div>
 
 				{/* Навигационное меню */}
 				<div className='hidden lg:flex gap-7 items-center text-white font-bold text-xl'>
-					<Link className='hover:underline' href='/history'>
+					<Link className='group' href='/history'>
 						История
+						<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
 					</Link>
-					<Link className='hover:underline' href='/rules'>
+					<Link className='group' href='/rules'>
 						Правила
+						<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
 					</Link>
-					<Link className='hover:underline' href='/commands'>
+					<Link className='group' href='/commands'>
 						Команды
+						<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
 					</Link>
-					<Link className='hover:underline' href='/skins'>
+					<Link className='group' href='/skins'>
 						Скины
+						<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
 					</Link>
 				</div>
 				<Menu

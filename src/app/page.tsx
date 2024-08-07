@@ -23,7 +23,7 @@ export default function Home() {
 					quisquam!
 				</p>
 				<div className='flex items-center justify-center mt-5'>
-					<form action='https://ya.ru' target='_blank'>
+					<form action='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>
 						<Button type='submit' className='font-bold text-xl p-6 bg-lime-700 hover:bg-lime-800'>
 							Оставить заявку
 						</Button>
