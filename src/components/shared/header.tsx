@@ -60,42 +60,44 @@ export const Header: React.FC<Props> = ({ className }) => {
 				/>
 			</header>
 			{isClick && (
-				<div className='lg:hidden absolute w-full bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col z-10 p-7 items-center justify-center text-center text-white text-2xl font-semibold'>
-					<Link
-						onClick={clickOnLink}
-						className='block hover:underline'
-						href='/'
-					>
-						Главная
-					</Link>
-					<Link
-						onClick={clickOnLink}
-						className='mt-4 block hover:underline'
-						href='/history'
-					>
-						История
-					</Link>
-					<Link
-						onClick={clickOnLink}
-						className='mt-4 block hover:underline'
-						href='/rules'
-					>
-						Правила
-					</Link>
-					<Link
-						onClick={clickOnLink}
-						className='mt-4 block hover:underline'
-						href='/commands'
-					>
-						Команды
-					</Link>
-					<Link
-						onClick={clickOnLink}
-						className='mt-4 block hover:underline'
-						href='/skins'
-					>
-						Скины
-					</Link>
+				<div className='absolute w-full z-10 px-2 mt-2'>
+					<div className='lg:hidden bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col p-7 items-center justify-center text-center text-white text-2xl font-semibold rounded-md'>
+						<Link
+							onClick={clickOnLink}
+							className='block hover:underline'
+							href='/'
+						>
+							Главная
+						</Link>
+						<Link
+							onClick={clickOnLink}
+							className='mt-4 block hover:underline'
+							href='/history'
+						>
+							История
+						</Link>
+						<Link
+							onClick={clickOnLink}
+							className='mt-4 block hover:underline'
+							href='/rules'
+						>
+							Правила
+						</Link>
+						<Link
+							onClick={clickOnLink}
+							className='mt-4 block hover:underline'
+							href='/commands'
+						>
+							Команды
+						</Link>
+						<Link
+							onClick={clickOnLink}
+							className='mt-4 block hover:underline'
+							href='/skins'
+						>
+							Скины
+						</Link>
+					</div>
 				</div>
 			)}
 		</>
