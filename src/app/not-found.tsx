@@ -12,6 +12,7 @@ export default function NotFound() {
 					<Image
 						src='/404.jpg'
 						width={300}
+                                                quality={100}
 						height={300}
 						alt='404 cat'
 					/>
