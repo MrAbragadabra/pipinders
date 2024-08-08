@@ -9,7 +9,7 @@ export default function History() {
 				</h2>
 			</div>
 			<div>
-				<p className='text-white font-semibold mt-5 text-xl leading-8'>
+				<p className='text-white font-semibold mt-5 text-2xl leading-8'>
 					Тут очень большая история сервера, которую можно будет написать вот
 					так вот и вот да
 				</p>

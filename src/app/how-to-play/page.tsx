@@ -9,7 +9,7 @@ export default function Skins() {
 				</h2>
 			</div>
 			<div>
-				<p className='text-white font-semibold mt-5 text-xl leading-8'>
+				<p className='text-white font-semibold mt-5 text-2xl leading-8'>
 					Чтобы играть вам надо взять советскую...
 				</p>
 			</div>
