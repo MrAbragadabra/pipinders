@@ -8,7 +8,7 @@ export default function Rules() {
 				</h2>
 			</div>
 			<div>
-				<p className='text-white font-semibold mt-5 text-2xl leading-8'>
+				<p className='text-justify text-white font-semibold mt-5 text-2xl leading-8'>
 					Здесь будет небольшой текст правил
 				</p>
 			</div>
