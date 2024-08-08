@@ -46,37 +46,25 @@ export const Header: React.FC<Props> = ({ className }) => {
 
 				{/* Навигационное меню */}
 				<div className='hidden lg:flex gap-7 items-center text-white font-bold text-xl'>
-					<div className='flex items-center gap-2'>
+					<Link className='flex items-center gap-2' href='/history'>
 						<Clock color='#ffffff' size={20} />
-						<Link className='group' href='/history'>
-							История
-							<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
-						</Link>
-					</div>
+						История
+					</Link>
 
-					<div className='flex items-center gap-2'>
+					<Link className='flex items-center gap-2' href='/rules'>
 						<Scale color='#ffffff' size={20} />
-						<Link className='group' href='/rules'>
-							Правила
-							<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
-						</Link>
-					</div>
+						Правила
+					</Link>
 
-					<div className='flex items-center gap-2'>
+					<Link className='flex items-center gap-2' href='/commands'>
 						<Terminal color='#ffffff' size={20} />
-						<Link className='group' href='/commands'>
-							Команды
-							<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
-						</Link>
-					</div>
+						Команды
+					</Link>
 
-					<div className='flex items-center gap-2'>
+					<Link className='flex items-center gap-2' href='/how-to-play'>
 						<CircleHelp color='#ffffff' size={20} />
-						<Link className='group' href='/how-to-play'>
-							Как играть?
-							<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
-						</Link>
-					</div>
+						Как играть?
+					</Link>
 				</div>
 				<Menu
 					className='inline-block lg:hidden cursor-pointer'
