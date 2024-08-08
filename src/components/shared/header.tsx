@@ -1,6 +1,14 @@
 'use client'
 import { cn } from '@/lib/utils'
-import { Box, Menu } from 'lucide-react'
+import {
+	Box,
+	CircleHelp,
+	Clock,
+	House,
+	Menu,
+	Scale,
+	Terminal,
+} from 'lucide-react'
 import Link from 'next/link'
 import React, { useState } from 'react'
 
@@ -38,22 +46,37 @@ export const Header: React.FC<Props> = ({ className }) => {
 
 				{/* Навигационное меню */}
 				<div className='hidden lg:flex gap-7 items-center text-white font-bold text-xl'>
-					<Link className='group' href='/history'>
-						История
-						<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
-					</Link>
-					<Link className='group' href='/rules'>
-						Правила
-						<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
-					</Link>
-					<Link className='group' href='/commands'>
-						Команды
-						<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
-					</Link>
-					<Link className='group' href='/how-to-play'>
-						Как играть?
-						<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
-					</Link>
+					<div className='flex items-center gap-2'>
+						<Clock color='#ffffff' size={20} />
+						<Link className='group' href='/history'>
+							История
+							<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
+						</Link>
+					</div>
+
+					<div className='flex items-center gap-2'>
+						<Scale color='#ffffff' size={20} />
+						<Link className='group' href='/rules'>
+							Правила
+							<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
+						</Link>
+					</div>
+
+					<div className='flex items-center gap-2'>
+						<Terminal color='#ffffff' size={20} />
+						<Link className='group' href='/commands'>
+							Команды
+							<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
+						</Link>
+					</div>
+
+					<div className='flex items-center gap-2'>
+						<CircleHelp color='#ffffff' size={20} />
+						<Link className='group' href='/how-to-play'>
+							Как играть?
+							<span className='block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-lime-300'></span>
+						</Link>
+					</div>
 				</div>
 				<Menu
 					className='inline-block lg:hidden cursor-pointer'
@@ -65,42 +88,61 @@ export const Header: React.FC<Props> = ({ className }) => {
 			</header>
 			{isClick && (
 				<div className='absolute w-full z-10 px-2 mt-2'>
-					<div className='lg:hidden bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col p-7 items-center justify-center text-center text-white text-2xl font-semibold rounded-md'>
-						<Link
-							onClick={clickOnLink}
-							className='block hover:underline'
-							href='/'
-						>
-							Главная
-						</Link>
-						<Link
-							onClick={clickOnLink}
-							className='mt-4 block hover:underline'
-							href='/history'
-						>
-							История
-						</Link>
-						<Link
-							onClick={clickOnLink}
-							className='mt-4 block hover:underline'
-							href='/rules'
-						>
-							Правила
-						</Link>
-						<Link
-							onClick={clickOnLink}
-							className='mt-4 block hover:underline'
-							href='/commands'
-						>
-							Команды
-						</Link>
-						<Link
-							onClick={clickOnLink}
-							className='mt-4 block hover:underline'
-							href='/how-to-play'
-						>
-							Как играть?
-						</Link>
+					<div className='lg:hidden bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col p-7 items-center justify-center text-center text-white text-3xl font-semibold rounded-md'>
+						<div className='flex items-center gap-2 w-full justify-center'>
+							<House color='#ffffff' size={24} />
+							<Link
+								onClick={clickOnLink}
+								className='block hover:underline'
+								href='/'
+							>
+								Главная
+							</Link>
+						</div>
+
+						<div className='flex items-center gap-2 w-full justify-center mt-4'>
+							<Clock color='#ffffff' size={24} />
+							<Link
+								onClick={clickOnLink}
+								className='block hover:underline'
+								href='/history'
+							>
+								История
+							</Link>
+						</div>
+
+						<div className='flex items-center gap-2 w-full justify-center mt-4'>
+							<Scale color='#ffffff' size={24} />
+							<Link
+								onClick={clickOnLink}
+								className='block hover:underline'
+								href='/rules'
+							>
+								Правила
+							</Link>
+						</div>
+
+						<div className='flex items-center gap-2 w-full justify-center mt-4'>
+							<Terminal color='#ffffff' size={24} />
+							<Link
+								onClick={clickOnLink}
+								className='block hover:underline'
+								href='/commands'
+							>
+								Команды
+							</Link>
+						</div>
+
+						<div className='flex items-center gap-2 w-full justify-center mt-4'>
+							<CircleHelp color='#ffffff' size={24} />
+							<Link
+								onClick={clickOnLink}
+								className='block hover:underline'
+								href='/how-to-play'
+							>
+								Как играть?
+							</Link>
+						</div>
 					</div>
 				</div>
 			)}
