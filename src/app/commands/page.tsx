@@ -43,7 +43,7 @@ export default function Commands() {
 						>
 							/bellyflop
 						</span>{' '}
-						- команда позволяет вашему игроку плюхнуться на живот
+						- ваш игрок плюхниться на живот и вы будете лежать (ого)
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
@@ -54,7 +54,7 @@ export default function Commands() {
 						>
 							/crawl
 						</span>{' '}
-						- команда позволяет вам поползать
+						- позволяет ползать и более пристально наблюдать за землёй
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
@@ -65,7 +65,7 @@ export default function Commands() {
 						>
 							/lay
 						</span>{' '}
-						- команда вас положит на спину
+						- вы ляжете, а это как бы одна из самых сложных поз в йоге
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
@@ -76,7 +76,7 @@ export default function Commands() {
 						>
 							/sit
 						</span>{' '}
-						- команда заставит вас сесть на что угодно (почти)
+						- вы сядите
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
@@ -87,8 +87,7 @@ export default function Commands() {
 						>
 							/spin
 						</span>{' '}
-						- команда вас сильно закрутит, что вам захочется послушать Around
-						The World
+						- вас сильно закрутит, что вам захочется послушать Around The World
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
@@ -99,7 +98,7 @@ export default function Commands() {
 						>
 							/me &lt;сообщение&gt;
 						</span>{' '}
-						- команда позволит вам сказать всем, как вы всех любите
+						- позволит вам сказать всем, как вы всех любите
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
@@ -110,7 +109,7 @@ export default function Commands() {
 						>
 							/msg &lt;ник игрока&gt; &lt;сообщение&gt;
 						</span>{' '}
-						- команда которая поможет вам прошептать игроку на сколько он
+						- поможет вам прошептать игроку на сколько он
 						хороший человек
 					</li>
 					<li className='mb-5 text-left leading-10'>
@@ -122,7 +121,7 @@ export default function Commands() {
 						>
 							/skin set &lt;ник игрока&gt;
 						</span>{' '}
-						- с помощью этой команды вы можете поменять скин на скин
+						- вы можете поменять скин на скин
 						существующего игрока, например{' '}
 						<span
 							className={cn(
@@ -142,7 +141,7 @@ export default function Commands() {
 						>
 							/skin update
 						</span>{' '}
-						- с помощью этой команды вы обновите свой скин, если он не
+						- вы обновите свой скин, если он не
 						установился сразу
 					</li>
 					<li className='mb-5 text-left leading-10'>
@@ -154,7 +153,7 @@ export default function Commands() {
 						>
 							/skin url &lt;ссылка на скин&gt;
 						</span>{' '}
-						- данная команда помогает вам сделать скин из своей развертки скин в
+						- поможет вам сделать скин из своей развертки скин в
 						png. Вам нужно предоставить прямую ссылку на png файл из интернета.
 						Для этого можно использовать imgur или github
 					</li>
@@ -167,7 +166,7 @@ export default function Commands() {
 						>
 							/skin clear
 						</span>{' '}
-						- команда сбрасывает ваш скин до исходного
+						- сбрасывает ваш скин до исходного состояния
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
