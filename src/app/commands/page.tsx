@@ -1,10 +1,28 @@
 import { cn } from '@/lib/utils'
+import { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
 
 const jetBrains_mono = JetBrains_Mono({
 	weight: ['400', '700'],
 	subsets: ['cyrillic'],
 })
+
+export const metadata: Metadata = {
+	title: 'Команды сервера • PIPINDERS',
+	openGraph: {
+		title: 'Команды сервера • PIPINDERS',
+		description:
+			'Наш сервер объединяет ванильное выживание и взаимодействие игроков, предлагая уютное и дружелюбное комьюнити, где вы сможете провести приятный вечер за игрой.',
+		url: 'https://pipinders.ru',
+		images: [
+			{
+				url: 'https://pipinders.vercel.app/og.png',
+				width: 1200,
+				height: 630,
+			},
+		],
+	},
+}
 
 export default function Commands() {
 	return (
