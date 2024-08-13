@@ -30,22 +30,22 @@ export const Header: React.FC<Props> = ({ className }) => {
 		<>
 			<header
 				className={cn(
-					'h-[70px] w-full lg:px-20 px-5 flex items-center justify-between bg-gray-400 bg-opacity-20 backdrop-blur-md select-none',
+					'h-[70px] w-full xl:px-20 px-5 flex items-center justify-between bg-gray-400 bg-opacity-20 backdrop-blur-md select-none',
 					className
 				)}
 			>
 				{/* Название сайта */}
 				<div>
-					<h1 className='uppercase text-white font-bold text-2xl'>
+					<h1 className='uppercase text-white font-bold text-3xl'>
 						<div className='flex items-center gap-2'>
 							<Link href='/'>Pipinders Server</Link>
-							<Box className='animate-bounce' size={32} color='#ffffff' />
+							<Box className='animate-bounce' size={34} color='#ffffff' />
 						</div>
 					</h1>
 				</div>
 
 				{/* Навигационное меню в десктопе*/}
-				<div className='hidden lg:flex gap-7 items-center text-white font-bold text-xl'>
+				<div className='hidden xl:flex gap-7 items-center text-white font-bold text-2xl'>
 					<Link className='flex items-center gap-2' href='/history'>
 						<Clock color='#ffffff' size={20} />
 						История
@@ -67,7 +67,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 					</Link>
 				</div>
 				<Menu
-					className='inline-block lg:hidden cursor-pointer'
+					className='inline-block xl:hidden cursor-pointer'
 					size={28}
 					color='#ffffff'
 					strokeWidth={2.25}
@@ -78,7 +78,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 			{/* Навигационное меню в мобильном */}
 			{isClick && (
 				<div className='absolute w-full z-10 px-2 mt-2'>
-					<div className='lg:hidden bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col p-7 items-center justify-center text-center text-white text-3xl font-semibold rounded-md'>
+					<div className='xl:hidden bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col p-7 items-center justify-center text-center text-white text-3xl font-semibold rounded-md'>
 						<div className='flex items-center gap-2 w-full justify-left'>
 							<House color='#ffffff' size={24} />
 							<Link

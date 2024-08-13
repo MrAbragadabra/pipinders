@@ -8,9 +8,21 @@ export default function Rules() {
 				</h2>
 			</div>
 			<div>
-				<p className='text-justify text-white font-semibold mt-5 text-2xl leading-8'>
-					Здесь будет небольшой текст правил
-				</p>
+				<ul className='lg:px-20 px-10 list-decimal text-white font-semibold mt-5 text-3xl'>
+					<li className='mb-5 text-left leading-10'>Не гриферить.</li>
+					<li className='mb-5 text-left leading-10'>
+						Не убивать кого-либо для какой-то выгоды.
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						Не нарушать законы Российской Федерации.
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						Лаг машины категорически запрещены.
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						Большие и нагружающие сервер фермы обсуждать с админом.
+					</li>
+				</ul>
 			</div>
 		</section>
 	)

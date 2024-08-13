@@ -10,7 +10,7 @@ export default function Home() {
 				</h2>
 			</div>
 			<div>
-				<p className='text-justify text-white font-semibold mt-5 text-2xl leading-8'>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Наш сервер - уникальный проект, который совмещает в себе ванильное
 					выживание, а также взаимодействие между игроками. После того как вы
 					попадаете на наш сервер, вы окунаетесь в ламповое и дружелюбное
@@ -24,7 +24,7 @@ export default function Home() {
 					>
 						<Button
 							type='submit'
-							className='font-bold text-xl p-6 bg-lime-700 hover:bg-lime-800'
+							className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800'
 						>
 							Оставить заявку
 						</Button>
