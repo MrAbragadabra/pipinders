@@ -1,4 +1,9 @@
-'use client'
+import Image from 'next/image'
+import History1 from '../../../public/history/history1.png'
+import History2 from '../../../public/history/history2.png'
+import History3 from '../../../public/history/history3.png'
+import History4 from '../../../public/history/history4.png'
+import History5 from '../../../public/history/history5.png'
 
 export default function History() {
 	return (
@@ -9,10 +14,85 @@ export default function History() {
 				</h2>
 			</div>
 			<div>
-				<p className='text-justify text-white font-semibold mt-5 text-2xl leading-8'>
-					Тут очень большая история сервера, которую можно будет написать вот
-					так вот и вот да
-				</p>
+				<Image
+					className='py-5'
+					alt='history1'
+					src={History1}
+					width={1920}
+					height={1080}
+					sizes='80vw'
+					style={{
+						width: '80%',
+						height: 'auto',
+						margin: '0 auto',
+					}}
+					draggable='false'
+					quality={100}
+				/>
+
+				<Image
+					className='pb-5'
+					alt='history2'
+					src={History2}
+					width={1920}
+					height={1080}
+					sizes='80vw'
+					style={{
+						width: '80%',
+						height: 'auto',
+						margin: '0 auto',
+					}}
+					draggable='false'
+					quality={100}
+				/>
+
+				<Image
+					className='pb-5'
+					alt='history3'
+					src={History3}
+					width={1920}
+					height={1080}
+					sizes='80vw'
+					style={{
+						width: '80%',
+						height: 'auto',
+						margin: '0 auto',
+					}}
+					draggable='false'
+					quality={100}
+				/>
+
+				<Image
+					className='pb-5'
+					alt='history4'
+					src={History4}
+					width={1920}
+					height={1080}
+					sizes='80vw'
+					style={{
+						width: '80%',
+						height: 'auto',
+						margin: '0 auto',
+					}}
+					draggable='false'
+					quality={100}
+				/>
+
+				<Image
+					className='pb-5'
+					alt='history5'
+					src={History5}
+					width={1920}
+					height={1080}
+					sizes='80vw'
+					style={{
+						width: '80%',
+						height: 'auto',
+						margin: '0 auto',
+					}}
+					draggable='false'
+					quality={100}
+				/>
 			</div>
 		</section>
 	)
