@@ -36,7 +36,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 			>
 				{/* Название сайта */}
 				<div>
-					<h1 className='uppercase text-white font-bold text-3xl'>
+					<h1 className='uppercase text-white font-bold sm:text-3xl text-2xl'>
 						<div className='flex items-center gap-2'>
 							<Link href='/'>Pipinders Server</Link>
 							<Box className='animate-bounce' size={34} color='#ffffff' />
