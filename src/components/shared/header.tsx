@@ -44,7 +44,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 					</h1>
 				</div>
 
-				{/* Навигационное меню */}
+				{/* Навигационное меню в десктопе*/}
 				<div className='hidden lg:flex gap-7 items-center text-white font-bold text-xl'>
 					<Link className='flex items-center gap-2' href='/history'>
 						<Clock color='#ffffff' size={20} />
@@ -74,6 +74,8 @@ export const Header: React.FC<Props> = ({ className }) => {
 					onClick={toggleBurger}
 				/>
 			</header>
+
+			{/* Навигационное меню в мобильном */}
 			{isClick && (
 				<div className='absolute w-full z-10 px-2 mt-2'>
 					<div className='lg:hidden bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col p-7 items-center justify-center text-center text-white text-3xl font-semibold rounded-md'>
