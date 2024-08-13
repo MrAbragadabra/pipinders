@@ -47,22 +47,22 @@ export const Header: React.FC<Props> = ({ className }) => {
 				{/* Навигационное меню в десктопе*/}
 				<div className='hidden xl:flex gap-7 items-center text-white font-bold text-2xl'>
 					<Link className='flex items-center gap-2' href='/history'>
-						<Clock color='#ffffff' size={20} />
+						<Clock color='#ffffff' size={24} />
 						История
 					</Link>
 
 					<Link className='flex items-center gap-2' href='/rules'>
-						<Scale color='#ffffff' size={20} />
+						<Scale color='#ffffff' size={24} />
 						Правила
 					</Link>
 
 					<Link className='flex items-center gap-2' href='/commands'>
-						<Terminal color='#ffffff' size={20} />
+						<Terminal color='#ffffff' size={24} />
 						Команды
 					</Link>
 
 					<Link className='flex items-center gap-2' href='/how-to-play'>
-						<CircleHelp color='#ffffff' size={20} />
+						<CircleHelp color='#ffffff' size={24} />
 						Как играть?
 					</Link>
 				</div>
