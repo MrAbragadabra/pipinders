@@ -179,6 +179,28 @@ export default function Commands() {
 						</span>{' '}
 						- возврат предыдущего скина
 					</li>
+					<li className='mb-5 text-left leading-10'>
+						<span
+							className={cn(
+								jetBrains_mono.className,
+								'bg-lime-800 p-1 rounded-sm tracking-widest'
+							)}
+						>
+							/reg &lt;пароль&gt; &lt;повтор пароля&gt;
+						</span>{' '}
+						- регистрация при первом входе на сервер
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						<span
+							className={cn(
+								jetBrains_mono.className,
+								'bg-lime-800 p-1 rounded-sm tracking-widest'
+							)}
+						>
+							/log &lt;пароль&gt;
+						</span>{' '}
+						- авторизация при входе на сервер
+					</li>
 				</ul>
 			</div>
 		</section>
