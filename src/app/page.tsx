@@ -1,5 +1,6 @@
 'use client'
 import { Button } from '@/components/ui'
+import { ArrowUpRight } from 'lucide-react'
 
 export default function Home() {
 	return (
@@ -26,7 +27,7 @@ export default function Home() {
 							type='submit'
 							className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800'
 						>
-							Оставить заявку
+							Оставить заявку<ArrowUpRight color="#ffffff" strokeWidth={2.5} size={28}/>
 						</Button>
 					</form>
 				</div>
