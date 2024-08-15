@@ -109,8 +109,7 @@ export default function Commands() {
 						>
 							/msg &lt;ник игрока&gt; &lt;сообщение&gt;
 						</span>{' '}
-						- поможет вам прошептать игроку на сколько он
-						хороший человек
+						- поможет вам прошептать игроку на сколько он хороший человек
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
@@ -121,8 +120,7 @@ export default function Commands() {
 						>
 							/skin set &lt;ник игрока&gt;
 						</span>{' '}
-						- вы можете поменять скин на скин
-						существующего игрока, например{' '}
+						- вы можете поменять скин на скин существующего игрока, например{' '}
 						<span
 							className={cn(
 								jetBrains_mono.className,
@@ -141,8 +139,7 @@ export default function Commands() {
 						>
 							/skin update
 						</span>{' '}
-						- вы обновите свой скин, если он не
-						установился сразу
+						- вы обновите свой скин, если он не установился сразу
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
@@ -153,9 +150,9 @@ export default function Commands() {
 						>
 							/skin url &lt;ссылка на скин&gt;
 						</span>{' '}
-						- поможет вам сделать скин из своей развертки скин в
-						png. Вам нужно предоставить прямую ссылку на png файл из интернета.
-						Для этого можно использовать imgur или github
+						- поможет вам сделать скин из своей развертки скин в png. Вам нужно
+						предоставить прямую ссылку на png файл из интернета. Для этого можно
+						использовать imgur или github
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
