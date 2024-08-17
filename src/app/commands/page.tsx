@@ -198,6 +198,28 @@ export default function Commands() {
 						</span>{' '}
 						- авторизация при входе на сервер (это требуется для безопасности вашего аккаунта, чтобы никто не смог под вашим ником что-нибудь натворить)
 					</li>
+					<li className='mb-5 text-left leading-10'>
+						<span
+							className={cn(
+								jetBrains_mono.className,
+								'bg-lime-800 p-1 rounded-sm tracking-widest'
+							)}
+						>
+							/afk
+						</span>{' '}
+						- сообщит всем игрокам в чате о том, что вы AFK (команду вызывать можно раз в 10 секунд)
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						<span
+							className={cn(
+								jetBrains_mono.className,
+								'bg-lime-800 p-1 rounded-sm tracking-widest'
+							)}
+						>
+							/comeback
+						</span>{' '}
+						- сообщит всем игрокам в чате о том, что вы больше не AFK (команду вызывать можно раз в 10 секунд)
+					</li>
 				</ul>
 			</div>
 		</section>
