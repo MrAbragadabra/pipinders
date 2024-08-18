@@ -54,7 +54,7 @@ export default function RootLayout({
 				)}
 			>
 				<Header />
-				<main className='xl:px-20 px-5 mt-16 mb-16 relative'>{children}</main>
+				<main className='xl:px-20 px-5 mt-[120px] mb-16 relative'>{children}</main>
 			</body>
 		</html>
 	)

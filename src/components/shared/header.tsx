@@ -30,7 +30,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 		<>
 			<header
 				className={cn(
-					'h-[70px] w-full xl:px-20 px-5 flex items-center justify-between bg-gray-400 bg-opacity-20 backdrop-blur-md select-none',
+					'h-[70px] w-full xl:px-20 px-5 flex items-center justify-between bg-gray-400 bg-opacity-20 backdrop-blur-md select-none fixed top-0 z-50',
 					className
 				)}
 			>
