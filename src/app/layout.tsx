@@ -50,11 +50,11 @@ export default function RootLayout({
 			<body
 				className={cn(
 					nunito.className,
-					'bg-gradient-to-tl from-lime-500 to-lime-700 min-h-screen overflow-x-hidden'
+					'min-h-screen bg-gradient-to-tl from-lime-500 to-lime-700 overflow-x-hidden'
 				)}
 			>
 				<Header />
-				<main className='xl:px-20 px-5 top-[100px] mb-16 relative'>{children}</main>
+				<main className='xl:px-20 px-5 mt-[100px]'>{children}</main>
 			</body>
 		</html>
 	)
