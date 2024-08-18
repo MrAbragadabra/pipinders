@@ -30,7 +30,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 		<>
 			<header
 				className={cn(
-					'h-[70px] w-full xl:px-20 px-5 flex items-center justify-between bg-gray-400 bg-opacity-20 backdrop-blur-md select-none fixed top-0 z-50',
+					'h-[70px] w-full xl:px-20 px-5 flex items-center justify-between bg-gray-400 bg-opacity-20 backdrop-blur-md select-none fixed top-0 z-10',
 					className
 				)}
 			>
@@ -77,7 +77,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 
 			{/* Навигационное меню в мобильном */}
 			{isClick && (
-				<div className='absolute w-full z-10 px-2 top-20'>
+				<div className='w-full z-10 px-2 fixed top-20'>
 					<div className='xl:hidden bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col p-7 items-center justify-center text-center text-white text-3xl font-semibold rounded-md'>
 						<div className='flex items-center gap-2 w-full justify-left'>
 							<House color='#ffffff' size={24} />
