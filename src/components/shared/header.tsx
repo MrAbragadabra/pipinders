@@ -2,6 +2,7 @@
 import { cn } from '@/lib/utils'
 import {
 	Box,
+	CircleDollarSign,
 	CircleHelp,
 	Clock,
 	House,
@@ -64,6 +65,11 @@ export const Header: React.FC<Props> = ({ className }) => {
 					<Link className='flex items-center gap-2' href='/how-to-play'>
 						<CircleHelp color='#ffffff' size={24} />
 						Как играть?
+					</Link>
+
+					<Link className='flex items-center gap-2' href='/donate'>
+						<CircleDollarSign color='#ffffff' size={24} />
+						Донат
 					</Link>
 				</div>
 				<Menu
@@ -131,6 +137,17 @@ export const Header: React.FC<Props> = ({ className }) => {
 								href='/how-to-play'
 							>
 								Как играть?
+							</Link>
+						</div>
+
+						<div className='flex items-center gap-2 w-full justify-left mt-4'>
+							<CircleDollarSign color='#ffffff' size={24} />
+							<Link
+								onClick={clickOnLink}
+								className='block hover:underline'
+								href='/donate'
+							>
+								Донат
 							</Link>
 						</div>
 					</div>
