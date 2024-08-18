@@ -1,4 +1,4 @@
-import { Header } from '@/components/shared'
+import { Header, ScrollButton } from '@/components/shared'
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
@@ -55,6 +55,7 @@ export default function RootLayout({
 			>
 				<Header />
 				<main className='xl:px-20 px-5 mt-[100px]'>{children}</main>
+				<ScrollButton/>
 			</body>
 		</html>
 	)
