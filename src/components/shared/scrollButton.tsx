@@ -11,7 +11,7 @@ export const ScrollButton: React.FC<Props> = ({className}) => {
 
   // Показать кнопку, когда пользователь прокручивает страницу вниз
   const toggleVisibility = () => {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
