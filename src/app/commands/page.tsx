@@ -54,7 +54,7 @@ export default function Commands() {
 						>
 							/bellyflop
 						</span>{' '}
-						- ваш игрок плюхниться на живот и вы будете лежать (ого)
+						- ваш игрок плюхнится на живот и вы будете лежать (ого)
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
