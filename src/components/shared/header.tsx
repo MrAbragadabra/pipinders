@@ -47,9 +47,9 @@ export const Header: React.FC<Props> = ({ className }) => {
 
 				{/* Навигационное меню в десктопе*/}
 				<div className='hidden xl:flex gap-7 items-center text-white font-bold text-2xl'>
-					<Link className='flex items-center gap-2' href='/history'>
-						<Clock color='#ffffff' size={24} />
-						История
+					<Link className='flex items-center gap-2' href='/how-to-play'>
+						<CircleHelp color='#ffffff' size={24} />
+						Как играть?
 					</Link>
 
 					<Link className='flex items-center gap-2' href='/rules'>
@@ -62,9 +62,9 @@ export const Header: React.FC<Props> = ({ className }) => {
 						Команды
 					</Link>
 
-					<Link className='flex items-center gap-2' href='/how-to-play'>
-						<CircleHelp color='#ffffff' size={24} />
-						Как играть?
+					<Link className='flex items-center gap-2' href='/history'>
+						<Clock color='#ffffff' size={24} />
+						История
 					</Link>
 
 					<Link className='flex items-center gap-2' href='/donate'>
@@ -97,13 +97,13 @@ export const Header: React.FC<Props> = ({ className }) => {
 						</div>
 
 						<div className='flex items-center gap-2 w-full justify-left mt-4'>
-							<Clock color='#ffffff' size={24} />
+							<CircleHelp color='#ffffff' size={24} />
 							<Link
 								onClick={clickOnLink}
 								className='block hover:underline'
-								href='/history'
+								href='/how-to-play'
 							>
-								История
+								Как играть?
 							</Link>
 						</div>
 
@@ -130,13 +130,13 @@ export const Header: React.FC<Props> = ({ className }) => {
 						</div>
 
 						<div className='flex items-center gap-2 w-full justify-left mt-4'>
-							<CircleHelp color='#ffffff' size={24} />
+							<Clock color='#ffffff' size={24} />
 							<Link
 								onClick={clickOnLink}
 								className='block hover:underline'
-								href='/how-to-play'
+								href='/history'
 							>
-								Как играть?
+								История
 							</Link>
 						</div>
 
