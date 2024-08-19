@@ -38,7 +38,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/bellyflop
@@ -49,7 +49,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/crawl
@@ -60,7 +60,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/lay
@@ -71,7 +71,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/sit
@@ -82,7 +82,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/spin
@@ -93,7 +93,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/me &lt;сообщение&gt;
@@ -104,7 +104,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/msg &lt;ник игрока&gt; &lt;сообщение&gt;
@@ -115,7 +115,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/skin set &lt;ник игрока&gt;
@@ -124,7 +124,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							notch
@@ -134,7 +134,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/skin update
@@ -145,7 +145,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/skin url &lt;ссылка на скин&gt;
@@ -158,7 +158,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/skin clear
@@ -169,7 +169,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/skin undo
@@ -180,7 +180,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/reg &lt;пароль&gt; &lt;повтор пароля&gt;
@@ -191,7 +191,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/log &lt;пароль&gt;
@@ -202,7 +202,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/afk
@@ -213,7 +213,7 @@ export default function Commands() {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest'
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
 							)}
 						>
 							/comeback
