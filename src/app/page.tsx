@@ -25,7 +25,7 @@ export default function Home() {
 					>
 						<Button
 							type='submit'
-							className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800'
+							className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800 gap-2'
 						>
 							Оставить заявку
 							<ArrowUpRight color='#ffffff' strokeWidth={2.5} size={28} />

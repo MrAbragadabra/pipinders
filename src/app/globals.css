@@ -93,3 +93,103 @@
 *::-webkit-scrollbar-thumb:active {
 	background-color: #62a34b;
 }
+
+
+
+/* Form me, who don't know Tailwind :) */
+
+/* Анимашки для ссылок в навигации */
+.std-link {
+	position: relative;
+}
+.std-link:hover::before {
+	width: 90%;
+}
+.std-link::before {
+	content: "";
+
+	background-color: white;
+	border-radius: 10px;
+
+	position: absolute;
+	left: 50%;
+	translate: -50% 0;
+	bottom: -7px;
+	width: 0;
+	height: 2px;
+
+	transition-duration: .3s;
+}
+@media (width <= 1280px) {
+	.std-link::before {
+		bottom: -4px;
+	}
+}
+
+
+/* Бургер кнопка */
+.std-burger-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 28px;
+	aspect-ratio: 1;
+}
+.std-burger {
+	position: relative;
+}
+.std-burger::before {
+	top: -8px;
+}
+.std-burger::after {
+	top: 8px;
+}
+.std-burger::before,
+.std-burger::after {
+	content: "";
+	position: absolute;
+	left: 0;
+}
+.std-burger,
+.std-burger::before,
+.std-burger::after {
+	background-color: white;
+	width: 24px;
+	height: 3px;
+	border-radius: 10px;
+	transition-duration: .4s;
+}
+.std-burger--active {
+	rotate: -225deg;
+}
+.std-burger--active::after {
+	opacity: 0;
+}
+.std-burger--active::before {
+	top: 0;
+	rotate: 90deg;
+}
+
+
+/* Анимашка для всплывашки */
+.std-toast {
+	animation: std-toast-opened 2s linear;
+	translate: -100% 0;
+	opacity: 0;
+}
+@keyframes std-toast-opened {
+	0% {
+		translate: 0 100%;
+		opacity: 0;
+	}
+	10%,
+	90% {
+		translate: 0 0;
+		opacity: 1;
+	}
+	100% {
+		translate: -100% 0;
+		opacity: 0;
+	}
+}
