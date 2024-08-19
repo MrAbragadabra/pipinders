@@ -1,30 +1,40 @@
+'use client'
 import { cn } from '@/lib/utils'
-import { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
+import { useState } from 'react'
 
 const jetBrains_mono = JetBrains_Mono({
 	weight: ['400', '700'],
 	subsets: ['cyrillic'],
 })
 
-export const metadata: Metadata = {
-	title: 'Команды сервера • PIPINDERS',
-	openGraph: {
-		title: 'Команды сервера • PIPINDERS',
-		description:
-			'Наш сервер объединяет ванильное выживание и взаимодействие игроков, предлагая уютное и дружелюбное комьюнити, где вы сможете провести приятный вечер за игрой.',
-		url: 'https://pipinders.ru',
-		images: [
-			{
-				url: 'https://pipinders.vercel.app/og.png',
-				width: 1200,
-				height: 630,
-			},
-		],
-	},
-}
+// export const metadata: Metadata = {
+// 	title: 'Команды сервера • PIPINDERS',
+// 	openGraph: {
+// 		title: 'Команды сервера • PIPINDERS',
+// 		description:
+// 			'Наш сервер объединяет ванильное выживание и взаимодействие игроков, предлагая уютное и дружелюбное комьюнити, где вы сможете провести приятный вечер за игрой.',
+// 		url: 'https://pipinders.ru',
+// 		images: [
+// 			{
+// 				url: 'https://pipinders.vercel.app/og.png',
+// 				width: 1200,
+// 				height: 630,
+// 			},
+// 		],
+// 	},
+// }
 
 export default function Commands() {
+	const [copied, setCopied] = useState<string | null>(null)
+
+	const handleCopy = (command: string) => {
+		navigator.clipboard.writeText(command).then(() => {
+			setCopied(command)
+			setTimeout(() => setCopied(null), 2000)
+		})
+	}
+
 	return (
 		<section>
 			<div>
@@ -36,6 +46,7 @@ export default function Commands() {
 				<ul className='lg:px-20 px-10 list-disc text-white font-semibold mt-5 text-3xl'>
 					<li className='mb-5 text-left leading-10'>
 						<span
+							onClick={() => handleCopy('/bellyflop')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -47,6 +58,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+							onClick={() => handleCopy('/crawl')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -58,6 +70,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/lay')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -80,6 +93,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/spin')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -91,6 +105,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/me привет!')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -102,6 +117,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/msg MrAbragadabra привет!')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -113,6 +129,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/skin set notch')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -132,6 +149,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/skin update')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -143,6 +161,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/skin url https://s.namemc.com/i/c928f3b2fc46087e.png')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -156,6 +175,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/skin clear')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -167,6 +187,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/skin undo')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -178,6 +199,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/reg MegaPassword123 MegaPassword123')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -189,6 +211,7 @@ export default function Commands() {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/log MegaPassword123')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -196,10 +219,13 @@ export default function Commands() {
 						>
 							/log &lt;пароль&gt;
 						</span>{' '}
-						- авторизация при входе на сервер (это требуется для безопасности вашего аккаунта, чтобы никто не смог под вашим ником что-нибудь натворить)
+						- авторизация при входе на сервер (это требуется для безопасности
+						вашего аккаунта, чтобы никто не смог под вашим ником что-нибудь
+						натворить)
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/afk')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -207,10 +233,12 @@ export default function Commands() {
 						>
 							/afk
 						</span>{' '}
-						- сообщит всем игрокам в чате о том, что вы AFK (команду вызывать можно раз в 10 секунд)
+						- сообщит всем игрокам в чате о том, что вы AFK (команду вызывать
+						можно раз в 10 секунд)
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
+						onClick={() => handleCopy('/comeback')}
 							className={cn(
 								jetBrains_mono.className,
 								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
@@ -218,10 +246,16 @@ export default function Commands() {
 						>
 							/comeback
 						</span>{' '}
-						- сообщит всем игрокам в чате о том, что вы больше не AFK (команду вызывать можно раз в 10 секунд)
+						- сообщит всем игрокам в чате о том, что вы больше не AFK (команду
+						вызывать можно раз в 10 секунд)
 					</li>
 				</ul>
 			</div>
+			{copied && (
+				<div className='fixed bottom-5 bg-lime-900 text-white py-2 px-4 rounded text-xl z-50 m-2'>
+					Команда скопирована в буфер обмена!
+				</div>
+			)}
 		</section>
 	)
 }
