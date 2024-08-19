@@ -75,9 +75,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 				</div>
 
 				<button className="xl:hidden std-burger-container" onClick={toggleBurger}>
-					<div
-						className={`inline-block std-burger ${isClick ? "std-burger--active" : ""}`}
-					></div>
+					<div className={`inline-block std-burger ${isClick ? "std-burger--active" : ""}`}></div>
 				</button>
 				{/* {!isClick ? (
 
@@ -100,53 +98,53 @@ export const Header: React.FC<Props> = ({ className }) => {
 			</header>
 
 			{/* Навигационное меню в мобильном */}
-			{isClick && (
-				<div className="w-full z-10 px-2 fixed top-20">
-					<div className="xl:hidden bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col p-7 items-center justify-center text-center text-white text-3xl font-semibold rounded-md">
-						<div className="flex items-center gap-2 w-full justify-left">
-							<House color="#ffffff" size={24} />
-							<Link onClick={clickOnLink} className="block std-link" href="/">
-								Главная
-							</Link>
-						</div>
+			<div
+				className={`w-full z-10 px-2 fixed top-20 std-menu ${isClick ? "std-menu--active" : ""}`}
+			>
+				<div className="xl:hidden bg-lime-400 bg-opacity-20 backdrop-blur-md flex-col p-7 items-center justify-center text-center text-white text-3xl font-semibold rounded-md">
+					<div className="flex items-center gap-2 w-full justify-left">
+						<House color="#ffffff" size={24} />
+						<Link onClick={clickOnLink} className="block std-link" href="/">
+							Главная
+						</Link>
+					</div>
 
-						<div className="flex items-center gap-2 w-full justify-left mt-4">
-							<CircleHelp color="#ffffff" size={24} />
-							<Link onClick={clickOnLink} className="block std-link" href="/how-to-play">
-								Как играть?
-							</Link>
-						</div>
+					<div className="flex items-center gap-2 w-full justify-left mt-4">
+						<CircleHelp color="#ffffff" size={24} />
+						<Link onClick={clickOnLink} className="block std-link" href="/how-to-play">
+							Как играть?
+						</Link>
+					</div>
 
-						<div className="flex items-center gap-2 w-full justify-left mt-4">
-							<Scale color="#ffffff" size={24} />
-							<Link onClick={clickOnLink} className="block std-link" href="/rules">
-								Правила
-							</Link>
-						</div>
+					<div className="flex items-center gap-2 w-full justify-left mt-4">
+						<Scale color="#ffffff" size={24} />
+						<Link onClick={clickOnLink} className="block std-link" href="/rules">
+							Правила
+						</Link>
+					</div>
 
-						<div className="flex items-center gap-2 w-full justify-left mt-4">
-							<Terminal color="#ffffff" size={24} />
-							<Link onClick={clickOnLink} className="block std-link" href="/commands">
-								Команды
-							</Link>
-						</div>
+					<div className="flex items-center gap-2 w-full justify-left mt-4">
+						<Terminal color="#ffffff" size={24} />
+						<Link onClick={clickOnLink} className="block std-link" href="/commands">
+							Команды
+						</Link>
+					</div>
 
-						<div className="flex items-center gap-2 w-full justify-left mt-4">
-							<Clock color="#ffffff" size={24} />
-							<Link onClick={clickOnLink} className="block std-link" href="/history">
-								История
-							</Link>
-						</div>
+					<div className="flex items-center gap-2 w-full justify-left mt-4">
+						<Clock color="#ffffff" size={24} />
+						<Link onClick={clickOnLink} className="block std-link" href="/history">
+							История
+						</Link>
+					</div>
 
-						<div className="flex items-center gap-2 w-full justify-left mt-4">
-							<CircleDollarSign color="#ffffff" size={24} />
-							<Link onClick={clickOnLink} className="block std-link" href="/donate">
-								Донат
-							</Link>
-						</div>
+					<div className="flex items-center gap-2 w-full justify-left mt-4">
+						<CircleDollarSign color="#ffffff" size={24} />
+						<Link onClick={clickOnLink} className="block std-link" href="/donate">
+							Донат
+						</Link>
 					</div>
 				</div>
-			)}
+			</div>
 		</>
 	);
 };
