@@ -5,7 +5,7 @@ const jetBrains_mono = JetBrains_Mono({
 	subsets: ['cyrillic'],
 })
 
-export default function Skins() {
+export default function HowToPlayPage() {
 	return (
 		<section>
 			<div>

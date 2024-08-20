@@ -1,4 +1,4 @@
-export default function Rules() {
+export default function RulesPage() {
 	return (
 		<section>
 			<div>
