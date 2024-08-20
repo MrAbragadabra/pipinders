@@ -38,7 +38,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 				<div>
 					<h1 className='uppercase text-white font-bold sm:text-3xl text-2xl'>
 						<Link href='/' className='flex items-center gap-2'>
-							Pipinders Server
+							Pipinders
 							<Box className='animate-bounce' size={34} color='#ffffff' />
 						</Link>
 					</h1>
