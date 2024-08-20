@@ -1,7 +1,5 @@
-import { ArrowUpRight } from 'lucide-react'
 import { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
-import Link from 'next/link'
 
 const jetBrains_mono = JetBrains_Mono({
 	weight: ['400', '700'],
@@ -34,9 +32,7 @@ export default function Skins() {
 				</h2>
 			</div>
 			<div>
-				<ul className='lg:px-20 px-10 list-decimal text-white font-semibold mt-5 text-3xl'>
-					
-				</ul>
+				<ul className='lg:px-20 px-10 list-decimal text-white font-semibold mt-5 text-3xl'></ul>
 			</div>
 		</section>
 	)

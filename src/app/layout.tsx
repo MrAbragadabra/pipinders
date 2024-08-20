@@ -55,7 +55,7 @@ export default function RootLayout({
 			>
 				<Header />
 				<main className='xl:px-20 px-5 mt-[100px]'>{children}</main>
-				<ScrollButton/>
+				<ScrollButton />
 			</body>
 		</html>
 	)
