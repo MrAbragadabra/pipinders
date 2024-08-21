@@ -78,45 +78,49 @@ export const History: React.FC<Props> = ({ className }) => {
 					сервере:
 				</p>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h2}
-						alt='Дома с высоты птичьего полёта (в майнкрафте ведь нет птичек, которые так высоко летают?)'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Дома с высоты птичьего полёта
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h2}
+							alt='Дома с высоты птичьего полёта (в майнкрафте ведь нет птичек, которые так высоко летают?)'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Дома с высоты птичьего полёта
+						</figcaption>
+					</figure>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					А теперь поподробнее о каждой территории игроков:
 				</p>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h3}
-						alt='Территория игроков MIKKUT и Armoryx'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Территория игроков MIKKUT и Armoryx
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h3}
+							alt='Территория игроков MIKKUT и Armoryx'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Территория игроков MIKKUT и Armoryx
+						</figcaption>
+					</figure>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Эту территорию с лёгкостью можно было увидеть благодаря высокой и
@@ -124,23 +128,25 @@ export const History: React.FC<Props> = ({ className }) => {
 					фпс упадут в ноль, скажем спасибо фермам Armoryx.
 				</p>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h4}
-						alt='Территория игроков Konstantin_mogg и Nurkaev'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Территория игроков Konstantin_mogg и Nurkaev
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h4}
+							alt='Территория игроков Konstantin_mogg и Nurkaev'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Территория игроков Konstantin_mogg и Nurkaev
+						</figcaption>
+					</figure>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					От такого количества коров все пк хотели взлетать в стратосферу, а вид
@@ -148,23 +154,25 @@ export const History: React.FC<Props> = ({ className }) => {
 					итоге все сбежали, что повлекло за собой нашествие коров на сервере).
 				</p>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h5}
-						alt='Территория игрока MrAbragadabra'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Территория игрока MrAbragadabra
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h5}
+							alt='Территория игрока MrAbragadabra'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Территория игрока MrAbragadabra
+						</figcaption>
+					</figure>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					На этой территории была начата стройка дома, которая шла до конца
@@ -172,46 +180,50 @@ export const History: React.FC<Props> = ({ className }) => {
 					(тут был сто проц лес).
 				</p>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h6}
-						alt='Территория игрока Steiden'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Территория игрока Steiden
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h6}
+							alt='Территория игрока Steiden'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Территория игрока Steiden
+						</figcaption>
+					</figure>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Изначально было самой высокой башней на сервере. Этот огонь виден даже
 					если ты в аду.
 				</p>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h7}
-						alt='Территория игрока SharkPop'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Территория игрока SharkPop
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h7}
+							alt='Территория игрока SharkPop'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Территория игрока SharkPop
+						</figcaption>
+					</figure>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					На этой территории SharkPop построил дом, но так и не использовал его
@@ -267,233 +279,257 @@ export const History: React.FC<Props> = ({ className }) => {
 					сезона, а также интересным скриншотам:
 				</p>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h8}
-						alt='Ферма кур Armoryx'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Ферма кур Armoryx
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h8}
+							alt='Ферма кур Armoryx'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Ферма кур Armoryx
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h9}
-						alt='Если ты это читаешь, я люблю тебя :з'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Если ты это читаешь, я люблю тебя :з
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h9}
+							alt='Если ты это читаешь, я люблю тебя :з'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Если ты это читаешь, я люблю тебя :з
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h10}
-						alt='Без комментариев…'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Без комментариев…
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h10}
+							alt='Без комментариев…'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Без комментариев…
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h11}
-						alt='Легендарные путешествия'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Легендарные путешествия
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h11}
+							alt='Легендарные путешествия'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Легендарные путешествия
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h12}
-						alt='«-5 фпс, спасибо за эти фермы»'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						«-5 фпс, спасибо за эти фермы»
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h12}
+							alt='«-5 фпс, спасибо за эти фермы»'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							«-5 фпс, спасибо за эти фермы»
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h13}
-						alt='Иногда так хочется просто сесть и сидеть у костра, не думая ни о чём…'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Иногда так хочется просто сесть и сидеть у костра, не думая ни о
-						чём…
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h13}
+							alt='Иногда так хочется просто сесть и сидеть у костра, не думая ни о чём…'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Иногда так хочется просто сесть и сидеть у костра, не думая ни о
+							чём…
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h14}
-						alt='Ферма мобов (НАСТОЛЬКО КРИВОЙ МИР ЕЩЁ НЕ ВИДЕЛ)'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Ферма мобов (НАСТОЛЬКО КРИВОЙ МИР ЕЩЁ НЕ ВИДЕЛ)
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h14}
+							alt='Ферма мобов (НАСТОЛЬКО КРИВОЙ МИР ЕЩЁ НЕ ВИДЕЛ)'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Ферма мобов (НАСТОЛЬКО КРИВОЙ МИР ЕЩЁ НЕ ВИДЕЛ)
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h15}
-						alt='Если ваша вечеринка не похожа на эту, даже не зовите меня'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Если ваша вечеринка не похожа на эту, даже не зовите меня
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h15}
+							alt='Если ваша вечеринка не похожа на эту, даже не зовите меня'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Если ваша вечеринка не похожа на эту, даже не зовите меня
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h16}
-						alt='Ещё один приятный вайбик на фото :з'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Ещё один приятный вайбик на фото :з
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h16}
+							alt='Ещё один приятный вайбик на фото :з'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Ещё один приятный вайбик на фото :з
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h17}
-						alt='От этого фото отходит атмосфера горящего пк'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						От этого фото отходит атмосфера горящего пк
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h17}
+							alt='От этого фото отходит атмосфера горящего пк'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							От этого фото отходит атмосфера горящего пк
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h18}
-						alt='Ферма опыта на эндерменах (с кучей жемчуга)'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Ферма опыта на эндерменах (с кучей жемчуга)
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h18}
+							alt='Ферма опыта на эндерменах (с кучей жемчуга)'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Ферма опыта на эндерменах (с кучей жемчуга)
+						</figcaption>
+					</figure>
 				</div>
 				<div className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h19}
-						alt='Игорь. Просто Игорь…'
-						height={h1.height}
-						width={h1.width}
-						sizes='85vw'
-						style={{
-							width: '85%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<p className='text-center mt-2 text-white text-2xl'>
-						Игорь. Просто Игорь…
-					</p>
+					<figure>
+						<Image
+							className='m-auto'
+							src={h19}
+							alt='Игорь. Просто Игорь…'
+							height={h1.height}
+							width={h1.width}
+							sizes='85vw'
+							style={{
+								width: '85%',
+								height: 'auto',
+							}}
+							quality={90}
+							draggable='false'
+						/>
+						<figcaption className='text-center mt-2 text-white text-2xl'>
+							Игорь. Просто Игорь…
+						</figcaption>
+					</figure>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					После прочитанного вы можете понять, что наш сервер окружен приятными
