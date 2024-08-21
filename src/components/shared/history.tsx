@@ -142,6 +142,50 @@ export const History: React.FC<Props> = ({ className }) => {
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 				От такого количества коров все пк хотели взлетать в стратосферу, а вид на этот дворец… Сразу видно богатых людей, опытных фермеров. (Коровы в итоге все сбежали, что повлекло за собой нашествие коров на сервере).
 				</p>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h5}
+						alt='Территория игрока MrAbragadabra'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+					Территория игрока MrAbragadabra
+					</p>
+				</div>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				На этой территории была начата стройка дома, которая шла до конца сезона, а также эта территория подверглась МАССОВОЙ вырубке деревьев (тут был сто проц лес).
+				</p>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h6}
+						alt='Территория игрока Steiden'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+					Территория игрока Steiden
+					</p>
+				</div>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				Изначально было самой высокой башней на сервере. Этот огонь виден даже если ты в аду.
+				</p>
 			</div>
 		</section>
 	)
