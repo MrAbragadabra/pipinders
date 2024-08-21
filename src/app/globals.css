@@ -98,6 +98,11 @@
 
 /* Form me, who don't know Tailwind :) */
 
+/* Общие стили */
+html {
+	color: white;
+}
+
 /* Анимашки для ссылок в навигации */
 .std-link {
 	position: relative;
