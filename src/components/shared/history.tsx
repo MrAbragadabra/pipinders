@@ -54,11 +54,11 @@ export const History: React.FC<Props> = ({ className }) => {
 					друг с другом. После поисков были выбраны небольшие острова,
 					разделенные большой рекой:
 				</p>
-				<div className='flex-col items-center my-5'>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h1}
-						alt='Игрок MIKKUT проник на территорию MrAbragadabra'
+						alt='MIKKUT и столб грязи'
 						height={h1.height}
 						width={h1.width}
 						sizes='85vw'
@@ -69,7 +69,10 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-				</div>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
+						MIKKUT и столб грязи
+					</figcaption>
+				</figure>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					После чего пошёл процесс облагораживания окружающей среды, была
 					освобождена большая территория и были построены дома. В процессе
@@ -77,7 +80,7 @@ export const History: React.FC<Props> = ({ className }) => {
 					обустраиваться. Далее представлены примеры построенных домов на
 					сервере:
 				</p>
-				<div className='flex-col items-center my-5'>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h2}
@@ -92,14 +95,14 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Дома с высоты птичьего полёта
-					</p>
-				</div>
+					</figcaption>
+				</figure>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					А теперь поподробнее о каждой территории игроков:
 				</p>
-				<div className='flex-col items-center my-5'>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h3}
@@ -114,16 +117,16 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Территория игроков MIKKUT и Armoryx
-					</p>
-				</div>
+					</figcaption>
+				</figure>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Эту территорию с лёгкостью можно было увидеть благодаря высокой и
 					кривой крыше игрока MIKKUT. Когда ты зайдешь на ту территорию, твои
 					фпс упадут в ноль, скажем спасибо фермам Armoryx.
 				</p>
-				<div className='flex-col items-center my-5'>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h4}
@@ -138,16 +141,16 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Территория игроков Konstantin_mogg и Nurkaev
-					</p>
-				</div>
+					</figcaption>
+				</figure>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					От такого количества коров все пк хотели взлетать в стратосферу, а вид
 					на этот дворец… Сразу видно богатых людей, опытных фермеров. (Коровы в
 					итоге все сбежали, что повлекло за собой нашествие коров на сервере).
 				</p>
-				<div className='flex-col items-center my-5'>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h5}
@@ -162,16 +165,16 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Территория игрока MrAbragadabra
-					</p>
-				</div>
+					</figcaption>
+				</figure>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					На этой территории была начата стройка дома, которая шла до конца
 					сезона, а также эта территория подверглась МАССОВОЙ вырубке деревьев
 					(тут был сто проц лес).
 				</p>
-				<div className='flex-col items-center my-5'>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h6}
@@ -186,15 +189,15 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Территория игрока Steiden
-					</p>
-				</div>
+					</figcaption>
+				</figure>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Изначально было самой высокой башней на сервере. Этот огонь виден даже
 					если ты в аду.
 				</p>
-				<div className='flex-col items-center my-5'>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h7}
@@ -209,10 +212,10 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Территория игрока SharkPop
-					</p>
-				</div>
+					</figcaption>
+				</figure>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					На этой территории SharkPop построил дом, но так и не использовал его
 					по назначению, но зато с радостью принял надпись SVO перед своим
@@ -266,7 +269,7 @@ export const History: React.FC<Props> = ({ className }) => {
 					После знакомства с персонажами первого сезона, перейдём к событиям
 					сезона, а также интересным скриншотам:
 				</p>
-				<div className='flex-col items-center my-5'>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h8}
@@ -281,11 +284,11 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Ферма кур Armoryx
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h9}
@@ -300,11 +303,11 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Если ты это читаешь, я люблю тебя :з
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h10}
@@ -319,11 +322,11 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Без комментариев…
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h11}
@@ -338,11 +341,11 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Легендарные путешествия
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h12}
@@ -357,11 +360,11 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						«-5 фпс, спасибо за эти фермы»
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h13}
@@ -376,12 +379,12 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Иногда так хочется просто сесть и сидеть у костра, не думая ни о
 						чём…
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h14}
@@ -396,11 +399,11 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Ферма мобов (НАСТОЛЬКО КРИВОЙ МИР ЕЩЁ НЕ ВИДЕЛ)
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h15}
@@ -415,11 +418,11 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Если ваша вечеринка не похожа на эту, даже не зовите меня
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h16}
@@ -434,11 +437,11 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Ещё один приятный вайбик на фото :з
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h17}
@@ -453,11 +456,11 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						От этого фото отходит атмосфера горящего пк
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h18}
@@ -472,11 +475,11 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Ферма опыта на эндерменах (с кучей жемчуга)
-					</p>
-				</div>
-				<div className='flex-col items-center my-5'>
+					</figcaption>
+				</figure>
+				<figure className='flex-col items-center my-5'>
 					<Image
 						className='m-auto'
 						src={h19}
@@ -491,10 +494,10 @@ export const History: React.FC<Props> = ({ className }) => {
 						quality={90}
 						draggable='false'
 					/>
-					<p className='text-center mt-2 text-white text-2xl'>
+					<figcaption className='text-center mt-2 text-white text-2xl'>
 						Игорь. Просто Игорь…
-					</p>
-				</div>
+					</figcaption>
+				</figure>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					После прочитанного вы можете понять, что наш сервер окружен приятными
 					людьми, которые могут смешно шутить (надеемся), а также помогут вам в
