@@ -186,6 +186,52 @@ export const History: React.FC<Props> = ({ className }) => {
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 				Изначально было самой высокой башней на сервере. Этот огонь виден даже если ты в аду.
 				</p>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h7}
+						alt='Территория игрока SharkPop'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+					Территория игрока SharkPop
+					</p>
+				</div>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				На этой территории SharkPop построил дом, но так и не использовал его по назначению, но зато с радостью принял надпись SVO перед своим выходом!).
+				</p>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				После того как мы рассмотрели дома игроков, естесно нужно узнать игроков поподробнее:
+				</p>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				MrAbragadabra – Игрок, который был основателем этой территории, именно благодаря ему мы видим дома именно здесь. Приложил руку к основым событиям на сервере. Ну и самое главное это МОДЕРАТОР, так что его нужно уважать и бояться, а то вдруг уххх. Очень многое привнёс в само устройство сервера, его правила и законы. Сервер избавил человека от дипрашн и подарил надежду.
+				</p>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				MIKKUT – Игрок, который строил такие невероятные сооружения как: фигня с большой крышей (дом), а также строил хайперлуп в нижнем мире (кривой). Сделал сортировку фермы мобов (сломал сортировку). Сервер также избавил человека от дипрашн и подарил надежду.
+				</p>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				Armoryx – Игрок, который майн видел лет 100 назад, когда динозавры котельникову жрали. Быстро погрузился в игру, познал множество новых механик. Построил ферму, которая ломала пк всем игрокам.
+				</p>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				SharkPop – Игрок, который прославился своим подходом к игре, он играет в игру как будто у нас спидран. Начал создание долгостроя, но так и не достроил. Смешно помирает. 
+				</p>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				Steiden – Эта легенда настолько много времени проводил в пещерах с самого старта сервера, что решил, что солнце это лишняя штука.  Построил большую башню.
+				</p>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				Nurkaev – Вместе с Konstantin_mogg застроил большую территорию, и развёл настолько большое количество животных, что лаги на их территории преследовали до самого конца сезона.
+				</p>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+				Konstantin_mogg – Во время игры на сервере ощутил себя землевладельцем, поэтому отстроил большой дворец, а самое главное засадил картофанчиком всё и коровами. Ходили слухи, что у него существовала секретная дача, которую не могли найти.
+				</p>
 			</div>
 		</section>
 	)
