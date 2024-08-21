@@ -240,6 +240,18 @@ export const Commands: React.FC<Props> = ({ className }) => {
 						- сообщит всем игрокам в чате о том, что вы больше не AFK (команду
 						вызывать можно раз в 10 секунд)
 					</li>
+					<li className='mb-5 text-left leading-10'>
+						<span
+							onClick={() => handleCopy('/stat')}
+							className={cn(
+								jetBrains_mono.className,
+								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+							)}
+						>
+							/stat
+						</span>{' '}
+						- вы получите небольшую статистику игры в чат
+					</li>
 				</ul>
 			</div>
 			{copied && (
