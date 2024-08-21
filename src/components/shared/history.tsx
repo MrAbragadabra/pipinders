@@ -1,13 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import h1 from '../../../public/history/h1.png'
-import h2 from '../../../public/history/h2.png'
-import h3 from '../../../public/history/h3.png'
-import h4 from '../../../public/history/h4.png'
-import h5 from '../../../public/history/h5.png'
-import h6 from '../../../public/history/h6.png'
-import h7 from '../../../public/history/h7.png'
-import h8 from '../../../public/history/h8.png'
-import h9 from '../../../public/history/h9.png'
 import h10 from '../../../public/history/h10.png'
 import h11 from '../../../public/history/h11.png'
 import h12 from '../../../public/history/h12.png'
@@ -17,7 +10,15 @@ import h15 from '../../../public/history/h15.png'
 import h16 from '../../../public/history/h16.png'
 import h17 from '../../../public/history/h17.png'
 import h18 from '../../../public/history/h18.png'
-import h119 from '../../../public/history/h19.png'
+import h19 from '../../../public/history/h19.png'
+import h2 from '../../../public/history/h2.png'
+import h3 from '../../../public/history/h3.png'
+import h4 from '../../../public/history/h4.png'
+import h5 from '../../../public/history/h5.png'
+import h6 from '../../../public/history/h6.png'
+import h7 from '../../../public/history/h7.png'
+import h8 from '../../../public/history/h8.png'
+import h9 from '../../../public/history/h9.png'
 
 interface Props {
 	className?: string
@@ -114,11 +115,13 @@ export const History: React.FC<Props> = ({ className }) => {
 						draggable='false'
 					/>
 					<p className='text-center mt-2 text-white text-2xl'>
-					Территория игроков MIKKUT и Armoryx
+						Территория игроков MIKKUT и Armoryx
 					</p>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				Эту территорию с лёгкостью можно было увидеть благодаря высокой и кривой крыше игрока MIKKUT. Когда ты зайдешь на ту территорию, твои фпс упадут в ноль, скажем спасибо фермам Armoryx.
+					Эту территорию с лёгкостью можно было увидеть благодаря высокой и
+					кривой крыше игрока MIKKUT. Когда ты зайдешь на ту территорию, твои
+					фпс упадут в ноль, скажем спасибо фермам Armoryx.
 				</p>
 				<div className='flex-col items-center my-5'>
 					<Image
@@ -136,11 +139,13 @@ export const History: React.FC<Props> = ({ className }) => {
 						draggable='false'
 					/>
 					<p className='text-center mt-2 text-white text-2xl'>
-					Территория игроков  Konstantin_mogg и Nurkaev
+						Территория игроков Konstantin_mogg и Nurkaev
 					</p>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				От такого количества коров все пк хотели взлетать в стратосферу, а вид на этот дворец… Сразу видно богатых людей, опытных фермеров. (Коровы в итоге все сбежали, что повлекло за собой нашествие коров на сервере).
+					От такого количества коров все пк хотели взлетать в стратосферу, а вид
+					на этот дворец… Сразу видно богатых людей, опытных фермеров. (Коровы в
+					итоге все сбежали, что повлекло за собой нашествие коров на сервере).
 				</p>
 				<div className='flex-col items-center my-5'>
 					<Image
@@ -158,11 +163,13 @@ export const History: React.FC<Props> = ({ className }) => {
 						draggable='false'
 					/>
 					<p className='text-center mt-2 text-white text-2xl'>
-					Территория игрока MrAbragadabra
+						Территория игрока MrAbragadabra
 					</p>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				На этой территории была начата стройка дома, которая шла до конца сезона, а также эта территория подверглась МАССОВОЙ вырубке деревьев (тут был сто проц лес).
+					На этой территории была начата стройка дома, которая шла до конца
+					сезона, а также эта территория подверглась МАССОВОЙ вырубке деревьев
+					(тут был сто проц лес).
 				</p>
 				<div className='flex-col items-center my-5'>
 					<Image
@@ -180,11 +187,12 @@ export const History: React.FC<Props> = ({ className }) => {
 						draggable='false'
 					/>
 					<p className='text-center mt-2 text-white text-2xl'>
-					Территория игрока Steiden
+						Территория игрока Steiden
 					</p>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				Изначально было самой высокой башней на сервере. Этот огонь виден даже если ты в аду.
+					Изначально было самой высокой башней на сервере. Этот огонь виден даже
+					если ты в аду.
 				</p>
 				<div className='flex-col items-center my-5'>
 					<Image
@@ -202,35 +210,300 @@ export const History: React.FC<Props> = ({ className }) => {
 						draggable='false'
 					/>
 					<p className='text-center mt-2 text-white text-2xl'>
-					Территория игрока SharkPop
+						Территория игрока SharkPop
 					</p>
 				</div>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				На этой территории SharkPop построил дом, но так и не использовал его по назначению, но зато с радостью принял надпись SVO перед своим выходом!).
+					На этой территории SharkPop построил дом, но так и не использовал его
+					по назначению, но зато с радостью принял надпись SVO перед своим
+					выходом!).
 				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				После того как мы рассмотрели дома игроков, естесно нужно узнать игроков поподробнее:
+					После того как мы рассмотрели дома игроков, естесно нужно узнать
+					игроков поподробнее:
 				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				MrAbragadabra – Игрок, который был основателем этой территории, именно благодаря ему мы видим дома именно здесь. Приложил руку к основым событиям на сервере. Ну и самое главное это МОДЕРАТОР, так что его нужно уважать и бояться, а то вдруг уххх. Очень многое привнёс в само устройство сервера, его правила и законы. Сервер избавил человека от дипрашн и подарил надежду.
+					MrAbragadabra – Игрок, который был основателем этой территории, именно
+					благодаря ему мы видим дома именно здесь. Приложил руку к основым
+					событиям на сервере. Ну и самое главное это МОДЕРАТОР, так что его
+					нужно уважать и бояться, а то вдруг уххх. Очень многое привнёс в само
+					устройство сервера, его правила и законы. Сервер избавил человека от
+					дипрашн и подарил надежду.
 				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				MIKKUT – Игрок, который строил такие невероятные сооружения как: фигня с большой крышей (дом), а также строил хайперлуп в нижнем мире (кривой). Сделал сортировку фермы мобов (сломал сортировку). Сервер также избавил человека от дипрашн и подарил надежду.
+					MIKKUT – Игрок, который строил такие невероятные сооружения как: фигня
+					с большой крышей (дом), а также строил хайперлуп в нижнем мире
+					(кривой). Сделал сортировку фермы мобов (сломал сортировку). Сервер
+					также избавил человека от дипрашн и подарил надежду.
 				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				Armoryx – Игрок, который майн видел лет 100 назад, когда динозавры котельникову жрали. Быстро погрузился в игру, познал множество новых механик. Построил ферму, которая ломала пк всем игрокам.
+					Armoryx – Игрок, который майн видел лет 100 назад, когда динозавры
+					котельникову жрали. Быстро погрузился в игру, познал множество новых
+					механик. Построил ферму, которая ломала пк всем игрокам.
 				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				SharkPop – Игрок, который прославился своим подходом к игре, он играет в игру как будто у нас спидран. Начал создание долгостроя, но так и не достроил. Смешно помирает. 
+					SharkPop – Игрок, который прославился своим подходом к игре, он играет
+					в игру как будто у нас спидран. Начал создание долгостроя, но так и не
+					достроил. Смешно помирает.
 				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				Steiden – Эта легенда настолько много времени проводил в пещерах с самого старта сервера, что решил, что солнце это лишняя штука.  Построил большую башню.
+					Steiden – Эта легенда настолько много времени проводил в пещерах с
+					самого старта сервера, что решил, что солнце это лишняя штука.
+					Построил большую башню.
 				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				Nurkaev – Вместе с Konstantin_mogg застроил большую территорию, и развёл настолько большое количество животных, что лаги на их территории преследовали до самого конца сезона.
+					Nurkaev – Вместе с Konstantin_mogg застроил большую территорию, и
+					развёл настолько большое количество животных, что лаги на их
+					территории преследовали до самого конца сезона.
 				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-				Konstantin_mogg – Во время игры на сервере ощутил себя землевладельцем, поэтому отстроил большой дворец, а самое главное засадил картофанчиком всё и коровами. Ходили слухи, что у него существовала секретная дача, которую не могли найти.
+					Konstantin_mogg – Во время игры на сервере ощутил себя
+					землевладельцем, поэтому отстроил большой дворец, а самое главное
+					засадил картофанчиком всё и коровами. Ходили слухи, что у него
+					существовала секретная дача, которую не могли найти.
+				</p>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+					После знакомства с персонажами первого сезона, перейдём к событиям
+					сезона, а также интересным скриншотам:
+				</p>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h8}
+						alt='Ферма кур Armoryx'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						Ферма кур Armoryx
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h9}
+						alt='Если ты это читаешь, я люблю тебя :з'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						Если ты это читаешь, я люблю тебя :з
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h10}
+						alt='Без комментариев…'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						Без комментариев…
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h11}
+						alt='Легендарные путешествия'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						Легендарные путешествия
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h12}
+						alt='«-5 фпс, спасибо за эти фермы»'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						«-5 фпс, спасибо за эти фермы»
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h13}
+						alt='Иногда так хочется просто сесть и сидеть у костра, не думая ни о чём…'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						Иногда так хочется просто сесть и сидеть у костра, не думая ни о
+						чём…
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h14}
+						alt='Ферма мобов (НАСТОЛЬКО КРИВОЙ МИР ЕЩЁ НЕ ВИДЕЛ)'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						Ферма мобов (НАСТОЛЬКО КРИВОЙ МИР ЕЩЁ НЕ ВИДЕЛ)
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h15}
+						alt='Если ваша вечеринка не похожа на эту, даже не зовите меня'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						Если ваша вечеринка не похожа на эту, даже не зовите меня
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h16}
+						alt='Ещё один приятный вайбик на фото :з'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						Ещё один приятный вайбик на фото :з
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h17}
+						alt='От этого фото отходит атмосфера горящего пк'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						От этого фото отходит атмосфера горящего пк
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h18}
+						alt='Ферма опыта на эндерменах (с кучей жемчуга)'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						Ферма опыта на эндерменах (с кучей жемчуга)
+					</p>
+				</div>
+				<div className='flex-col items-center my-5'>
+					<Image
+						className='m-auto'
+						src={h19}
+						alt='Игорь. Просто Игорь…'
+						height={h1.height}
+						width={h1.width}
+						sizes='85vw'
+						style={{
+							width: '85%',
+							height: 'auto',
+						}}
+						quality={90}
+						draggable='false'
+					/>
+					<p className='text-center mt-2 text-white text-2xl'>
+						Игорь. Просто Игорь…
+					</p>
+				</div>
+				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+					После прочитанного вы можете понять, что наш сервер окружен приятными
+					людьми, которые могут смешно шутить (надеемся), а также помогут вам в
+					игре. Заходите на сервер и погрузитесь в удивительные истории, которые
+					наверняка запомнятся вам надолго. А с вами был ваш любимый автор
+					текста Димочка, и помните
+				</p>
+				<p className='text-white mt-5 text-3xl leading-10 text-center font-black'>
+					<Link href='/donate'>ДАЙТЕ ДЕНЯГ</Link>
 				</p>
 			</div>
 		</section>
