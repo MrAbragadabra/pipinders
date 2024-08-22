@@ -40,7 +40,7 @@ export const Minecraft: React.FC<Props> = () => {
 			})
 
 			if (!hearts.length) {
-				const audio = new Audio('/audio/Да ты че.mp3')
+				const audio = new Audio('/audio/dead.mp3')
 				audio.play()
 
 				const overlayAnime = anime({
