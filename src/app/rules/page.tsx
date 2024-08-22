@@ -19,5 +19,9 @@ export const metadata: Metadata = {
 }
 
 export default function RulesPage() {
-	return <Rules />
+	return (
+		<>
+			<Rules />
+		</>
+	)
 }
