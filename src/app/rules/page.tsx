@@ -18,10 +18,8 @@ export const metadata: Metadata = {
 	},
 }
 
-export default function RulesPage() {
+export default async function RulesPage() {
 	return (
-		<>
-			<Rules />
-		</>
+		<Rules />
 	)
 }

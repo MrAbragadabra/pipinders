@@ -1,0 +1,38 @@
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+    z-index: 10000;
+
+	width: 100vw;
+	height: 100dvh;
+
+	&__title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+
+		animation: title-anim 1.2s linear infinite alternate;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 50px;
+	}
+}
+
+@keyframes title-anim {
+	from {
+		scale: 0.9;
+	}
+	to {
+		scale: 1.2;
+	}
+}
