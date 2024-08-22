@@ -32,6 +32,19 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 							Legacy Launcher и Simple Voice Chat (вместе с зависимостями).
 						</Link>
 					</li>
+					<li className='mb-5 text-left leading-10'>
+						Запустите{' '}
+						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+							LegacyLauncher.exe
+						</span>{' '}
+						и установите куда вам удобно.
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						Далее вам надо создать аккаунт на <Link className='underline hover:no-underline' href='https://ely.by' target='_blank'>ely.by</Link>  (бесплатная система скинов). ВНИМАНИЕ! Регистрируйте ник на сайте такой, который вы указали в заявке, либо сначала настройте всё для игры, а потом отправляйте заявку (чтобы не создавать лишние заботы для админа, спасибо :3).
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						После регистрации на ely.by откройте установленный Legacy Launcher.
+					</li>
 				</ul>
 			</div>
 		</section>
