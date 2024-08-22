@@ -23,7 +23,7 @@ export const Home: React.FC<Props> = ({ className }) => {
 				</p>
 				<div className='flex items-center justify-center mt-5'>
 					<form
-						action='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+						action='https://forms.yandex.ru/u/66b34efa3e9d080517e62485/'
 						target='_blank'
 					>
 						<Button
