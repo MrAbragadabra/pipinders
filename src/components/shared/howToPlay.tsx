@@ -2,6 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import how1 from '../../../public/how/how1.png'
 import how2 from '../../../public/how/how2.png'
+import how3 from '../../../public/how/how3.png'
+import how4 from '../../../public/how/how4.png'
+import how5 from '../../../public/how/how5.png'
 
 interface Props {
 	className?: string
@@ -21,7 +24,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					Minecraft. В частности, следует установить мод Simple Voice Chat, без
 					которого игра на сервере будет невозможна. Также рекомендуется
 					использовать Legacy Launcher, так как на нём реализована система
-					скинов, которая позволит вам находу менять скин во время игры. Ниже
+					скинов, которая позволит вам на ходу менять скин во время игры. Ниже
 					приведена инструкция по его установке и настройке.
 				</p>
 				<ul className='lg:px-20 px-10 list-decimal text-white font-semibold mt-5 text-3xl'>
@@ -108,6 +111,109 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 								draggable='false'
 							/>
 						</figure>
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						Далее приступим к подключению аккаунта ely.by. Переходим обратно на
+						главную страницу и в списке аккаунтов нажимаем на{' '}
+						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+							настроить аккаунты:
+						</span>
+						<figure className='flex-col items-center my-5'>
+							<Image
+								className='m-auto'
+								src={how3}
+								alt='На скриншоте открытие насроен лаунчера'
+								height={how3.height}
+								width={how3.width}
+								sizes='100vw'
+								style={{
+									width: '100%',
+									height: 'auto',
+								}}
+								quality={100}
+								draggable='false'
+							/>
+						</figure>
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						Далее надо выбрать ely.by в качестве аккаунта. После нажатия вас
+						перекинет в браузер, где произойдет аутентификация на ely.by и ваш
+						аккаунт будет добавлен:
+						<figure className='flex-col items-center my-5'>
+							<Image
+								className='m-auto'
+								src={how4}
+								alt='На скриншоте открытие насроен лаунчера'
+								height={how4.height}
+								width={how4.width}
+								sizes='100vw'
+								style={{
+									width: '100%',
+									height: 'auto',
+								}}
+								quality={100}
+								draggable='false'
+							/>
+						</figure>
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						Далее мы установим майнкрафт версии{' '}
+						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+							1.21.1
+						</span>{' '}
+						(на такой версии сервер) и установим моды. В главном меню в списке
+						версии выбирете{' '}
+						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+							Fabric 1.21.1
+						</span>
+						:
+						<figure className='flex-col items-center my-5'>
+							<Image
+								className='m-auto'
+								src={how5}
+								alt='На скриншоте открытие насроен лаунчера'
+								height={how5.height}
+								width={how5.width}
+								sizes='100vw'
+								style={{
+									width: '100%',
+									height: 'auto',
+								}}
+								quality={100}
+								draggable='false'
+							/>
+						</figure>
+					</li>
+					<li className='mb-5 text-left leading-10'>
+						Нажмите кнопку{' '}
+						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+							установить.
+						</span>
+					</li>
+					<li className='mb-5 text-left leading-loose'>
+						Если после установки у вас открылся майнкрафт, то можете его закрыть
+						(если он открылся после установки), чтобы установить моды. После
+						того как вы закрыли майнкрафт, на главно нажмите на значок папки и
+						нажмите{' '}
+						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+							Открыть папку Fabric-1.21
+						</span>
+						. У вас откроется проводник с папками майнкрафт. Среди этих папок
+						найдите папку{' '}
+						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+							mods
+						</span>{' '}
+						и скопируйте в неё ранее скачанные файлы{' '}
+						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+							fabric-api.jar
+						</span>{' '}
+						и{' '}
+						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+							voicechat.jar
+						</span>
+					</li>
+					<li className='mb-5 text-left leading-loose'>
+						На этом и завершена настройка Legacy Launcher для игры в майнкрафт.
 					</li>
 				</ul>
 			</div>
