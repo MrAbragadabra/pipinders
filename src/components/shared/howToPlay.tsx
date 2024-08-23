@@ -94,8 +94,9 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 						. На втрой стрелке выставляем нужное для вас количество оперативной
 						памяти. На третьей стрелке убираем галочку с{' '}
 						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
-							Автодобавление серверов:
+							Автодобавление серверов.
 						</span>
+						НЕ ЗАБУДЬТЕ НАЖАТЬ КНОПКУ СОХРАНИТЬ!!!
 						<figure className='flex-col items-center my-5'>
 							<Image
 								className='m-auto'
