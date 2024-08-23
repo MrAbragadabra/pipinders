@@ -1,24 +1,24 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import h1 from '../../../public/history/h1.png'
-import h10 from '../../../public/history/h10.png'
-import h11 from '../../../public/history/h11.png'
-import h12 from '../../../public/history/h12.png'
-import h13 from '../../../public/history/h13.png'
-import h14 from '../../../public/history/h14.png'
-import h15 from '../../../public/history/h15.png'
-import h16 from '../../../public/history/h16.png'
-import h17 from '../../../public/history/h17.png'
-import h18 from '../../../public/history/h18.png'
-import h19 from '../../../public/history/h19.png'
-import h2 from '../../../public/history/h2.png'
-import h3 from '../../../public/history/h3.png'
-import h4 from '../../../public/history/h4.png'
-import h5 from '../../../public/history/h5.png'
-import h6 from '../../../public/history/h6.png'
-import h7 from '../../../public/history/h7.png'
-import h8 from '../../../public/history/h8.png'
-import h9 from '../../../public/history/h9.png'
+import h1 from '../../../public/img/history/h1.png'
+import h10 from '../../../public/img/history/h10.png'
+import h11 from '../../../public/img/history/h11.png'
+import h12 from '../../../public/img/history/h12.png'
+import h13 from '../../../public/img/history/h13.png'
+import h14 from '../../../public/img/history/h14.png'
+import h15 from '../../../public/img/history/h15.png'
+import h16 from '../../../public/img/history/h16.png'
+import h17 from '../../../public/img/history/h17.png'
+import h18 from '../../../public/img/history/h18.png'
+import h19 from '../../../public/img/history/h19.png'
+import h2 from '../../../public/img/history/h2.png'
+import h3 from '../../../public/img/history/h3.png'
+import h4 from '../../../public/img/history/h4.png'
+import h5 from '../../../public/img/history/h5.png'
+import h6 from '../../../public/img/history/h6.png'
+import h7 from '../../../public/img/history/h7.png'
+import h8 from '../../../public/img/history/h8.png'
+import h9 from '../../../public/img/history/h9.png'
 
 interface Props {
 	className?: string
@@ -33,14 +33,7 @@ export const History: React.FC<Props> = ({ className }) => {
 				</h2>
 			</div>
 			<div>
-				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-					С самого появления человечества, люди стремились к творчеству. По сей
-					день находят наскальные рисунки и разные статуэтки. В наше время для
-					всего этого существуют видеоигры, и в первую очередь MINECRAFT.
-					Появление нашего сервера позволило множеству людей раскрыть свои
-					спрятанные качества. И сейчас мы расскажем интересный путь становления
-					нашего сервера.
-				</p>
+				img/
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Изначально у нас была идея объединения людей в одно маленькое, но
 					уютное комьюнити. Для этих целей был арендован хостинг, который

@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import how1 from '../../../public/how/how1.png'
-import how2 from '../../../public/how/how2.png'
-import how3 from '../../../public/how/how3.png'
-import how4 from '../../../public/how/how4.png'
-import how5 from '../../../public/how/how5.png'
+import how1 from '../../../public/img/how/how1.png'
+import how2 from '../../../public/img/how/how2.png'
+import how3 from '../../../public/img/how/how3.png'
+import how4 from '../../../public/img/how/how4.png'
+import how5 from '../../../public/img/how/how5.png'
+import how6 from '../../../public/img/how/how6.png'
 
 interface Props {
 	className?: string
@@ -71,7 +72,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 							<Image
 								className='m-auto'
 								src={how1}
-								alt='На скриншоте открытие настроен лаунчера'
+								alt='скриншот'
 								height={how1.height}
 								width={how1.width}
 								sizes='100vw'
@@ -99,7 +100,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 							<Image
 								className='m-auto'
 								src={how2}
-								alt='На скриншоте открытие насроен лаунчера'
+								alt='скриншот'
 								height={how2.height}
 								width={how2.width}
 								sizes='100vw'
@@ -122,7 +123,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 							<Image
 								className='m-auto'
 								src={how3}
-								alt='На скриншоте открытие насроен лаунчера'
+								alt='скриншот'
 								height={how3.height}
 								width={how3.width}
 								sizes='100vw'
@@ -143,7 +144,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 							<Image
 								className='m-auto'
 								src={how4}
-								alt='На скриншоте открытие насроен лаунчера'
+								alt='скриншот'
 								height={how4.height}
 								width={how4.width}
 								sizes='100vw'
@@ -171,7 +172,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 							<Image
 								className='m-auto'
 								src={how5}
-								alt='На скриншоте открытие насроен лаунчера'
+								alt='скриншот'
 								height={how5.height}
 								width={how5.width}
 								sizes='100vw'
@@ -194,11 +195,27 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 						Если после установки у вас открылся майнкрафт, то можете его закрыть
 						(если он открылся после установки), чтобы установить моды. После
 						того как вы закрыли майнкрафт, на главно нажмите на значок папки и
-						нажмите{' '}
+						затем{' '}
 						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
-							Открыть папку Fabric-1.21
+							Открыть папку Fabric-1.21:
 						</span>
-						. У вас откроется проводник с папками майнкрафт. Среди этих папок
+						<figure className='flex-col items-center my-5'>
+							<Image
+								className='m-auto'
+								src={how6}
+								alt='скриншот'
+								height={how6.height}
+								width={how6.width}
+								sizes='100vw'
+								style={{
+									width: '100%',
+									height: 'auto',
+								}}
+								quality={100}
+								draggable='false'
+							/>
+						</figure>
+						У вас откроется проводник с папками майнкрафт. Среди этих папок
 						найдите папку{' '}
 						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
 							mods
@@ -211,6 +228,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
 							voicechat.jar
 						</span>
+						.
 					</li>
 					<li className='mb-5 text-left leading-loose'>
 						На этом и завершена настройка Legacy Launcher для игры в майнкрафт.
