@@ -25,9 +25,9 @@ export const Commands: React.FC<Props> = ({ className }) => {
 	return (
 		<section>
 			<div>
-				<h2 className='text-white uppercase text-4xl font-bold text-center'>
+				<h1 className='text-white uppercase text-4xl font-bold text-center'>
 					Команды
-				</h2>
+				</h1>
 			</div>
 			<div>
 				<ul className='lg:px-20 px-10 list-disc text-white font-semibold mt-5 text-3xl'>

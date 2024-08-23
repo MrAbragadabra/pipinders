@@ -20,9 +20,9 @@ export const Donate: React.FC<Props> = ({ className }) => {
 					defer
 					src='https://forms.yandex.ru/_static/embed.js'
 				/>
-				<h2 className='text-white uppercase text-4xl font-bold text-center'>
+				<h1 className='text-white uppercase text-4xl font-bold text-center'>
 					Донат
-				</h2>
+				</h1>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Для работы сервера приходится оплачивать хостинг (ничего себе). Если
 					вы хотите помочь работе сервера, то можете оставлять донат в любое
