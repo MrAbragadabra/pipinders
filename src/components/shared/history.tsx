@@ -33,7 +33,6 @@ export const History: React.FC<Props> = ({ className }) => {
 				</h1>
 			</div>
 			<div>
-				img/
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Изначально у нас была идея объединения людей в одно маленькое, но
 					уютное комьюнити. Для этих целей был арендован хостинг, который
