@@ -1,8 +1,8 @@
 User-Agent: *
 Allow: /
-Disallow: /about
-Disallow: /commands
-Disallow: /donate
-Disallow: /history
-Disallow: /how-to-play
-Disallow: /rules
+Disallow: /about/
+Disallow: /commands/
+Disallow: /donate/
+Disallow: /history/
+Disallow: /how-to-play/
+Disallow: /rules/
