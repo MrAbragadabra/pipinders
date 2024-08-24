@@ -6,3 +6,5 @@ Disallow: /donate/
 Disallow: /history/
 Disallow: /how-to-play/
 Disallow: /rules/
+
+Sitemap: https://pipinders.ru/sitemap.xml
