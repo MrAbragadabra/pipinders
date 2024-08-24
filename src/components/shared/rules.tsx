@@ -36,9 +36,15 @@ export const Rules: React.FC<Props> = ({ className }) => {
 						<li className='mb-5 text-left leading-10'>
 							Лаг машины категорически запрещены.
 						</li>
-						<li className='mb-5 text-left leading-10'>
-							Большие и нагружающие сервер фермы обсуждать с админом
-							(adminchik@pipinders.ru).
+						<li className="mb-5 text-left leading-10">
+							Большие и нагружающие сервер фермы обсуждать с{" "}
+							<a
+								href="mailto:adminchik@pipinders.ru"
+								className="underline hover:no-underline"
+							>
+								админом
+							</a>
+							.
 						</li>
 						<li className='mb-5 text-left leading-10'>
 							Мы доверяем нашим игрокам, но очень сильно осуждаем использование
