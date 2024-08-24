@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 	},
 	robots: {
 		index: true,
-		follow: false
-	}
+		follow: false,
+	},
 }
 
 export default function HomePage() {

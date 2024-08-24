@@ -2,16 +2,16 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-    z-index: 10000;
+	z-index: 10000;
 
 	width: 100vw;
 	height: 100dvh;
 
 	&__title-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
 
 		position: absolute;
 		top: 50%;
