@@ -21,6 +21,16 @@ export const Home: React.FC<Props> = ({ className }) => {
 					комьюнити игроков, которые всегда смогут провести с вами приятный
 					вечер за игрой.
 				</p>
+				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10 '>
+					<span className='font-black'>28.08.2024</span> - начало приёма заявок и
+					прощание с 1 сезоном
+				</p>
+				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
+					<span className='font-black'>02.09.2024</span> - закрытие 1 сезона
+				</p>
+				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
+					<span className='font-black'>03.09.2024</span> - открытие 2 сезона
+				</p>
 				<div className='flex items-center justify-center mt-5'>
 					<form
 						action='https://forms.yandex.ru/u/66b34efa3e9d080517e62485/'
