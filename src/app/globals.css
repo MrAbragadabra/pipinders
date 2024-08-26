@@ -195,12 +195,12 @@ html {
 .std-toast {
 	-webkit-animation: std-toast-opened 2s linear;
 	animation: std-toast-opened 2s linear;
-	translate: -100% 0;
+	translate: 0 -100%;
 	opacity: 0;
 }
 @-webkit-keyframes std-toast-opened {
 	0% {
-		translate: 0 100%;
+		translate: 0 -100%;
 		opacity: 0;
 	}
 	10%,
@@ -209,13 +209,13 @@ html {
 		opacity: 1;
 	}
 	100% {
-		translate: -100% 0;
+		translate: 0 -100%;
 		opacity: 0;
 	}
 }
 @keyframes std-toast-opened {
 	0% {
-		translate: 0 100%;
+		translate: 0 -100%;
 		opacity: 0;
 	}
 	10%,
@@ -224,7 +224,7 @@ html {
 		opacity: 1;
 	}
 	100% {
-		translate: -100% 0;
+		translate: 0 -100%;
 		opacity: 0;
 	}
 }
