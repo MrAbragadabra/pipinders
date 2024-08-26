@@ -1,11 +1,21 @@
-import { Button } from '@/components/ui'
-import { ArrowUpRight } from 'lucide-react'
+'use client'
+
+import { useState } from 'react'
 
 interface Props {
 	className?: string
 }
 
 export const Home: React.FC<Props> = ({ className }) => {
+	const [copied, setCopied] = useState<string | null>(null)
+
+	const handleCopy = (command: string) => {
+		navigator.clipboard.writeText(command).then(() => {
+			setCopied(command)
+			setTimeout(() => setCopied(null), 2000)
+		})
+	}
+
 	return (
 		<section>
 			<div>
@@ -22,8 +32,8 @@ export const Home: React.FC<Props> = ({ className }) => {
 					вечер за игрой.
 				</p>
 				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10 '>
-					<span className='font-black'>28.08.2024</span> - начало приёма заявок и
-					прощание с 1 сезоном
+					<span className='font-black'>28.08.2024</span> - начало приёма заявок
+					и прощание с 1 сезоном
 				</p>
 				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
 					<span className='font-black'>02.09.2024</span> - закрытие 1 сезона
@@ -31,7 +41,15 @@ export const Home: React.FC<Props> = ({ className }) => {
 				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
 					<span className='font-black'>03.09.2024</span> - открытие 2 сезона
 				</p>
-				<div className='flex items-center justify-center mt-5'>
+				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
+					Адрес для подключения:
+				</p>
+				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
+					<span className='bg-lime-800 p-1 rounded-sm tracking-widest font-black cursor-pointer select-none' onClick={() => handleCopy('play.pipinders.ru')}>
+						play.pipinders.ru
+					</span>
+				</p>
+				{/* <div className='flex items-center justify-center mt-5'>
 					<form
 						action='https://forms.yandex.ru/u/66b34efa3e9d080517e62485/'
 						target='_blank'
@@ -44,8 +62,17 @@ export const Home: React.FC<Props> = ({ className }) => {
 							<ArrowUpRight color='#ffffff' strokeWidth={2.5} size={28} />
 						</Button>
 					</form>
-				</div>
+				</div> */}
 			</div>
+			{copied && (
+				<div
+					className={`fixed top-20 bg-lime-900 text-white py-2 px-4 rounded text-xl z-50 std-toast ${
+						copied !== null ? 'std-toast--active' : ''
+					}`}
+				>
+					Адрес успешно скопирован!
+				</div>
+			)}
 		</section>
 	)
 }
