@@ -20,9 +20,11 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 				</h1>
 			</div>
 			<div>
+			<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
+					Информация далее предназначеня для 2 сезона:
+				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-					Для корректной работы нашего сервера необходимо настроить клиент
-					Minecraft. В частности, следует установить мод Simple Voice Chat, без
+					Для игры на нашем сервере нужно правильно настроить клиент Minecraft. В частности, следует установить мод Simple Voice Chat, без
 					которого игра на сервере будет невозможна. Также рекомендуется
 					использовать Legacy Launcher, так как на нём реализована система
 					скинов, которая позволит вам на ходу менять скин во время игры. Ниже
