@@ -33,13 +33,13 @@ export const Home: React.FC<Props> = ({ className }) => {
 				</p>
 				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10 '>
 					<span className='font-black'>28.08.2024</span> - начало приёма заявок
-					и прощание с 1 сезоном
+					и прощание с 1 сезоном (версия 1.20.1)
 				</p>
 				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
 					<span className='font-black'>02.09.2024</span> - закрытие 1 сезона
 				</p>
 				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
-					<span className='font-black'>03.09.2024</span> - открытие 2 сезона
+					<span className='font-black'>03.09.2024</span> - открытие 2 сезона (версия 1.21.1)
 				</p>
 				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
 					Адрес для подключения:
