@@ -21,7 +21,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 			</div>
 			<div>
 			<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-					Информация далее предназначеня для 2 сезона:
+					ВНИМАНИЕ!!! Информация далее предназначеня для 2 сезона:
 				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Для игры на нашем сервере нужно правильно настроить клиент Minecraft. В частности, следует установить мод Simple Voice Chat, без
