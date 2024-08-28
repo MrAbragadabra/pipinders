@@ -43,7 +43,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						Запустите{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							LegacyLauncher.exe
 						</span>{' '}
 						и установите куда вам удобно.
@@ -67,7 +67,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						После открытия вам надо нажать на три полоски, далее{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							Настройка лаунчера и игры:
 						</span>
 						<figure className='flex-col items-center my-5'>
@@ -90,12 +90,12 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					<li className='mb-5 text-left leading-10'>
 						В настройках на вкладке Minecraft меняем 3 пукнта (указаны
 						стрелками). На первой стрелке меняем на{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							отдельная папка для каждой версии
 						</span>
 						. На втрой стрелке выставляем нужное для вас количество оперативной
 						памяти. На третьей стрелке убираем галочку с{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							Автодобавление серверов.
 						</span>
 						НЕ ЗАБУДЬТЕ НАЖАТЬ КНОПКУ СОХРАНИТЬ!!!
@@ -119,7 +119,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					<li className='mb-5 text-left leading-10'>
 						Далее приступим к подключению аккаунта ely.by. Переходим обратно на
 						главную страницу и в списке аккаунтов нажимаем на{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							настроить аккаунты:
 						</span>
 						<figure className='flex-col items-center my-5'>
@@ -162,12 +162,12 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						Далее мы установим майнкрафт версии{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							1.21.1
 						</span>{' '}
 						(на такой версии сервер) и установим моды. В главном меню в списке
 						версии выбирете{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							Fabric 1.21.1
 						</span>
 						:
@@ -190,7 +190,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						Нажмите кнопку{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							установить.
 						</span>
 					</li>
@@ -199,7 +199,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 						(если он открылся после установки), чтобы установить моды. После
 						того как вы закрыли майнкрафт, на главно нажмите на значок папки и
 						затем{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							Открыть папку Fabric-1.21:
 						</span>
 						<figure className='flex-col items-center my-5'>
@@ -220,15 +220,15 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 						</figure>
 						У вас откроется проводник с папками майнкрафт. Среди этих папок
 						найдите папку{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							mods
 						</span>{' '}
 						и скопируйте в неё ранее скачанные файлы{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							fabric-api.jar
 						</span>{' '}
 						и{' '}
-						<span className='bg-lime-800 p-1 rounded-sm tracking-widest'>
+						<span className='highlighting'>
 							voicechat.jar
 						</span>
 						.

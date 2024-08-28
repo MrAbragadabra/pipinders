@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.highlighting {
+	@apply bg-teal-950 p-1 rounded-sm tracking-widest;
+}
+
 ::selection {
-	background: #15803d;
+	background: #0d9488;
 }
 
 @layer base {
@@ -63,7 +67,6 @@
 	}
 }
 
-/* Scrollbar */
 *::-webkit-scrollbar {
 	height: 8px;
 	width: 8px;
@@ -83,15 +86,15 @@
 
 *::-webkit-scrollbar-thumb {
 	border-radius: 0px;
-	background-color: #397524;
+	background-color: #059669;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-	background-color: #62a34b;
+	background-color: #047857;
 }
 
 *::-webkit-scrollbar-thumb:active {
-	background-color: #62a34b;
+	background-color: #065f46;
 }
 
 /* Form me, who don't know Tailwind :) */

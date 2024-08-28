@@ -50,7 +50,7 @@ export default function RootLayout({
 			<body
 				className={cn(
 					nunito.className,
-					'min-h-screen bg-gradient-to-tl from-lime-500 to-lime-700 overflow-x-hidden pb-5'
+					'min-h-screen bg-gradient-to-tl from-emerald-700 to-emerald-900 overflow-x-hidden pb-5'
 				)}
 			>
 				<Header />

@@ -37,7 +37,7 @@ export const Rules: React.FC<Props> = ({ className }) => {
 							Лаг машины категорически запрещены.
 						</li>
 						<li className='mb-5 text-left leading-10'>
-							Большие и нагружающие сервер фермы обсуждать с{' '}
+							Большие и нагружающие сервер фермы (например: ферма золота, пороха и тд) обсуждать с{' '}
 							<a
 								href='mailto:adminchik@pipinders.ru'
 								className='underline hover:no-underline'

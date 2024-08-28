@@ -37,7 +37,7 @@ export const Home: React.FC<Props> = ({ className }) => {
 					<Button
 					onClick={() => handleCopy('season1.pipinders.ru')}
 						type='submit'
-						className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800 gap-2 w-[355px]'
+						className='font-bold text-3xl p-7 bg-teal-700 hover:bg-teal-800 gap-2 w-[355px]'
 					>
 						Адрес 1 сезона
 						<ClipboardCopy color='#ffffff' strokeWidth={2.5} size={28} />
@@ -50,7 +50,7 @@ export const Home: React.FC<Props> = ({ className }) => {
 					>
 						<Button
 							type='submit'
-							className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800 gap-2 w-[355px]'
+							className='font-bold text-3xl p-7 bg-teal-700 hover:bg-teal-800 gap-2 w-[355px]'
 						>
 							Заявка на 2 сезон
 							<ArrowUpRight color='#ffffff' strokeWidth={2.5} size={28} />
@@ -65,7 +65,7 @@ export const Home: React.FC<Props> = ({ className }) => {
 					>
 						<Button
 							type='submit'
-							className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800 gap-2 w-[355px]'
+							className='font-bold text-3xl p-7 bg-teal-700 hover:bg-teal-800 gap-2 w-[355px]'
 						>
 							Наш Telegram
 							<ArrowUpRight color='#ffffff' strokeWidth={2.5} size={28} />

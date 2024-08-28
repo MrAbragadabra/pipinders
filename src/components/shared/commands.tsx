@@ -36,7 +36,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/bellyflop')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/bellyflop
@@ -48,7 +48,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/crawl')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/crawl
@@ -60,7 +60,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/lay')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/lay
@@ -71,7 +71,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/sit
@@ -83,7 +83,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/spin')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/spin
@@ -95,7 +95,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/me привет!')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/me &lt;сообщение&gt;
@@ -107,7 +107,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/msg MrAbragadabra привет!')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/msg &lt;ник игрока&gt; &lt;сообщение&gt;
@@ -119,7 +119,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/skin set notch')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/skin set &lt;ник игрока&gt;
@@ -128,7 +128,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 						<span
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							notch
@@ -139,7 +139,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/skin update')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/skin update
@@ -155,7 +155,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/skin url &lt;ссылка на скин&gt;
@@ -169,7 +169,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/skin clear')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/skin clear
@@ -181,7 +181,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/skin undo')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/skin undo
@@ -193,7 +193,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/reg MegaPassword123 MegaPassword123')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/reg &lt;пароль&gt; &lt;повтор пароля&gt;
@@ -205,7 +205,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/log MegaPassword123')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/log &lt;пароль&gt;
@@ -219,7 +219,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/afk')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/afk
@@ -232,7 +232,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 							onClick={() => handleCopy('/comeback')}
 							className={cn(
 								jetBrains_mono.className,
-								'bg-lime-800 p-1 rounded-sm tracking-widest select-none cursor-pointer'
+								'highlighting select-none cursor-pointer'
 							)}
 						>
 							/comeback
@@ -244,7 +244,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 			</div>
 			{copied && (
 				<div
-					className={`max-w-[80%] w-max fixed top-20 left-1/2 -translate-x-1/2 bg-lime-900 text-white py-2 px-4 rounded text-xl z-50 m-2 std-toast ${
+					className={`max-w-[80%] w-max fixed top-20 left-1/2 -translate-x-1/2 bg-teal-950 text-white py-2 px-4 rounded text-xl z-50 m-2 std-toast ${
 						copied !== null ? 'std-toast--active' : ''
 					}`}
 				>
