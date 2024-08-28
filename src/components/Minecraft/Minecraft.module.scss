@@ -22,13 +22,14 @@
 .heart-container {
 	display: flex;
 	align-items: center;
+	flex-direction: row-reverse;
 
 	position: fixed;
-	top: 15%;
-	left: 50%;
-	translate: -50% 0;
+	top: 5%;
+	left: 10%;
+	// translate: -50% 0;
 
-	width: 200px;
+	width: fit-content;
 	visibility: hidden;
 
 	&--active {
@@ -38,6 +39,7 @@
 
 .heart {
 	opacity: 1;
+	width: 8vw !important;
 }
 
 .kill-cum {
@@ -49,6 +51,9 @@
 	top: 15%;
 	left: 50%;
 	translate: -50% 0;
+
+	width: 100%;
+	padding: 30px;
 
 	&__overlay {
 		background-color: rgba(0, 0, 0, 0.8);
@@ -72,7 +77,8 @@
 		font-family: 'Minecraft';
 		font-size: 36px;
 		font-weight: 400;
-		width: max-content;
+		width: 100%;
+		text-align: center;
 	}
 
 	&__button-container {
@@ -84,8 +90,25 @@
 	}
 
 	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 60%;
+
 		img {
 			width: 100%;
 		}
+	}
+}
+
+@media (width <= 1024px) {
+	.kill-cum__button {
+		width: 80%;
+	}
+}
+
+@media (width <= 600px) {
+	.kill-cum__button {
+		width: 100%;
 	}
 }
