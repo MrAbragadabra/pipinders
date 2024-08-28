@@ -9,7 +9,6 @@ interface Props {
 export const ScrollButton: React.FC<Props> = ({ className }) => {
 	const [isVisible, setIsVisible] = useState(false)
 
-	// Показать кнопку, когда пользователь прокручивает страницу вниз
 	const toggleVisibility = () => {
 		if (window.scrollY > 300) {
 			setIsVisible(true)

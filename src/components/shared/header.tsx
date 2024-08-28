@@ -54,22 +54,18 @@ export const Header: React.FC<Props> = ({ className }) => {
 						<CircleHelp color='#ffffff' size={24} />
 						Как играть?
 					</Link>
-
 					<Link className='flex items-center gap-2 std-link' href='/rules'>
 						<Scale color='#ffffff' size={24} />
 						Правила
 					</Link>
-
 					<Link className='flex items-center gap-2 std-link' href='/commands'>
 						<Terminal color='#ffffff' size={24} />
 						Команды
 					</Link>
-
 					<Link className='flex items-center gap-2 std-link' href='/history'>
 						<Clock color='#ffffff' size={24} />
 						История
 					</Link>
-
 					<Link className='flex items-center gap-2 std-link' href='/donate'>
 						<CircleDollarSign color='#ffffff' size={24} />
 						Донат

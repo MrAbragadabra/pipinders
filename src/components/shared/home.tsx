@@ -1,6 +1,8 @@
 'use client'
 
+import { ArrowUpRight, ClipboardCopy } from 'lucide-react'
 import { useState } from 'react'
+import { Button } from '../ui/button'
 
 interface Props {
 	className?: string
@@ -31,38 +33,58 @@ export const Home: React.FC<Props> = ({ className }) => {
 					комьюнити игроков, которые всегда смогут провести с вами приятный
 					вечер за игрой.
 				</p>
-				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10 '>
-					<span className='font-black'>28.08.2024</span> - начало приёма заявок
-					и прощание с 1 сезоном (версия 1.20.1)
-				</p>
-				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
-					<span className='font-black'>02.09.2024</span> - закрытие 1 сезона
-				</p>
-				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
-					<span className='font-black'>03.09.2024</span> - открытие 2 сезона (версия 1.21.1)
-				</p>
-				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
-					Адрес для подключения:
-				</p>
-				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
-					<span className='bg-lime-800 p-1 rounded-sm tracking-widest font-black cursor-pointer select-none' onClick={() => handleCopy('play.pipinders.ru')}>
-						play.pipinders.ru
-					</span>
-				</p>
-				{/* <div className='flex items-center justify-center mt-5'>
+				<div className='flex items-center justify-center mt-5'>
+					<Button
+					onClick={() => handleCopy('season1.pipinders.ru')}
+						type='submit'
+						className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800 gap-2 w-[355px]'
+					>
+						Адрес 1 сезона
+						<ClipboardCopy color='#ffffff' strokeWidth={2.5} size={28} />
+					</Button>
+				</div>
+				<div className='flex items-center justify-center mt-5'>
 					<form
-						action='https://forms.yandex.ru/u/66b34efa3e9d080517e62485/'
+						action='https://forms.yandex.ru/u/66cec1f443f74f2ba636df9a/'
 						target='_blank'
 					>
 						<Button
 							type='submit'
-							className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800 gap-2'
+							className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800 gap-2 w-[355px]'
 						>
-							Оставить заявку
+							Заявка на 2 сезон
 							<ArrowUpRight color='#ffffff' strokeWidth={2.5} size={28} />
 						</Button>
 					</form>
-				</div> */}
+				</div>
+				
+				<div className='flex items-center justify-center mt-5'>
+					<form
+						action='https://t.me/pipinders_news'
+						target='_blank'
+					>
+						<Button
+							type='submit'
+							className='font-bold text-3xl p-7 bg-lime-700 hover:bg-lime-800 gap-2 w-[355px]'
+						>
+							Наш Telegram
+							<ArrowUpRight color='#ffffff' strokeWidth={2.5} size={28} />
+						</Button>
+					</form>
+				</div>
+				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10 '>
+					<span className='font-black'>28.08.2024</span> - начало приёма заявок на 2 сезон
+				</p>
+				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10 '>
+					<span className='font-black'>28.08.2024</span> - открытие 1 сезона для прощания
+				</p>
+				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
+					<span className='font-black'>02.09.2024</span> - официальное закрытие 1 сезона
+				</p>
+				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
+					<span className='font-black'>03.09.2024</span> - открытие 2 сезона
+					(версия 1.21.1)
+				</p>
 			</div>
 			{copied && (
 				<div
