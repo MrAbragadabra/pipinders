@@ -243,3 +243,23 @@ html {
 .std-menu--active {
 	max-height: 100dvh;
 }
+
+
+
+img {
+	max-height: 60dvh;
+	width: fit-content !important;
+	object-fit: contain;
+}
+
+@media (width <= 1024px) {
+	img {
+		width: 80% !important;
+	}
+}
+
+@media (width <= 600px) {
+	img {
+		width: 100% !important;
+	}
+}

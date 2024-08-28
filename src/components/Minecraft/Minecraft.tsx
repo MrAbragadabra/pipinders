@@ -72,7 +72,7 @@ export const Minecraft: React.FC<Props> = () => {
 							translateY: anime.random(-15, 15),
 						},
 						{
-							translateX: 0,
+							translateX: '-50%',
 							translateY: 0,
 						},
 					],
