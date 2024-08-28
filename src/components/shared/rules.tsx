@@ -34,9 +34,9 @@ export const Rules: React.FC<Props> = ({ className }) => {
 							Не нарушать законы Российской Федерации.
 						</li>
 						<li className='mb-5 text-left leading-10'>
-							Лаг машины категорически запрещены.
+							Лаг машины категорически запрещены (не касается огромного скопления кур, коров, овец и т. п.).
 						</li>
-						<li className='mb-5 text-left leading-10'>
+						{/* <li className='mb-5 text-left leading-10'>
 							Большие и нагружающие сервер фермы (например: ферма золота, пороха и тд) обсуждать с{' '}
 							<a
 								href='mailto:adminchik@pipinders.ru'
@@ -45,7 +45,7 @@ export const Rules: React.FC<Props> = ({ className }) => {
 								админом
 							</a>
 							.
-						</li>
+						</li> */}
 						<li className='mb-5 text-left leading-10'>
 							Мы доверяем нашим игрокам, но очень сильно осуждаем использование
 							читов любого формата (xray в том числе).
