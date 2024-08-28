@@ -90,8 +90,25 @@
 	}
 
 	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 60%;
+
 		img {
 			width: 100%;
 		}
+	}
+}
+
+@media (width <= 1024px) {
+	.kill-cum__button {
+		width: 80%;
+	}
+}
+
+@media (width <= 600px) {
+	.kill-cum__button {
+		width: 100%;
 	}
 }

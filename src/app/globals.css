@@ -248,7 +248,7 @@ html {
 
 img {
 	max-height: 60dvh;
-	width: fit-content !important;
+	width: 70% !important;
 	object-fit: contain;
 }
 
