@@ -88,7 +88,7 @@ export const Home: React.FC<Props> = ({ className }) => {
 			</div>
 			{copied && (
 				<div
-					className={`max-w-[80%] w-max fixed top-20 left-1/2 -translate-x-1/2 bg-lime-900 text-white py-2 px-4 rounded text-xl z-50 std-toast ${
+					className={`max-w-[80%] w-max fixed top-20 left-1/2 -translate-x-1/2 bg-teal-950 text-white py-2 px-4 rounded text-xl z-50 std-toast ${
 						copied !== null ? 'std-toast--active' : ''
 					}`}
 				>
