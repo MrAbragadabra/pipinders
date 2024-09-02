@@ -37,7 +37,7 @@ export const Home: React.FC<Props> = ({ className }) => {
 				</div>
 
 				<div className='order-2 w-full'>
-					<div className='flex items-center justify-center mt-5'>
+					{/* <div className='flex items-center justify-center mt-5'>
 						<Button
 							onClick={() => handleCopy('season1.pipinders.ru')}
 							type='submit'
@@ -46,7 +46,7 @@ export const Home: React.FC<Props> = ({ className }) => {
 							Адрес 1 сезона
 							<ClipboardCopy color='#ffffff' strokeWidth={2.5} size={28} />
 						</Button>
-					</div>
+					</div> */}
 					<div className='flex items-center justify-center mt-5'>
 						<form
 							action='https://forms.yandex.ru/u/66cec1f443f74f2ba636df9a/'
