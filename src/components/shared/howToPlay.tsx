@@ -20,15 +20,13 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 				</h1>
 			</div>
 			<div>
-			<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-					ВНИМАНИЕ!!! Информация далее предназначеня для 2 сезона:
-				</p>
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
-					Для игры на нашем сервере нужно правильно настроить клиент Minecraft. В частности, следует установить мод Simple Voice Chat, без
-					которого игра на сервере будет невозможна. Также рекомендуется
-					использовать Legacy Launcher, так как на нём реализована система
-					скинов, которая позволит вам на ходу менять скин во время игры. Ниже
-					приведена инструкция по его установке и настройке.
+					Для игры на нашем сервере нужно правильно настроить клиент Minecraft.
+					В частности, следует установить мод Simple Voice Chat, без которого
+					игра на сервере будет невозможна. Также рекомендуется использовать
+					Legacy Launcher, так как на нём реализована система скинов, которая
+					позволит вам на ходу менять скин во время игры. Ниже приведена
+					инструкция по его установке и настройке.
 				</p>
 				<ul className='lg:px-20 px-10 list-decimal text-white font-semibold mt-5 text-3xl'>
 					<li className='mb-5 text-left leading-10'>
@@ -42,11 +40,8 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 						</Link>
 					</li>
 					<li className='mb-5 text-left leading-10'>
-						Запустите{' '}
-						<span className='highlighting'>
-							LegacyLauncher.exe
-						</span>{' '}
-						и установите куда вам удобно.
+						Запустите <span className='highlighting'>LegacyLauncher.exe</span> и
+						установите куда вам удобно.
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						Далее вам надо создать аккаунт на{' '}
@@ -67,9 +62,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						После открытия вам надо нажать на три полоски, далее{' '}
-						<span className='highlighting'>
-							Настройка лаунчера и игры:
-						</span>
+						<span className='highlighting'>Настройка лаунчера и игры:</span>
 						<figure className='flex-col items-center my-5'>
 							<Image
 								className='m-auto'
@@ -95,9 +88,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 						</span>
 						. На втрой стрелке выставляем нужное для вас количество оперативной
 						памяти. На третьей стрелке убираем галочку с{' '}
-						<span className='highlighting'>
-							Автодобавление серверов.
-						</span>
+						<span className='highlighting'>Автодобавление серверов.</span>
 						НЕ ЗАБУДЬТЕ НАЖАТЬ КНОПКУ СОХРАНИТЬ!!!
 						<figure className='flex-col items-center my-5'>
 							<Image
@@ -119,9 +110,7 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					<li className='mb-5 text-left leading-10'>
 						Далее приступим к подключению аккаунта ely.by. Переходим обратно на
 						главную страницу и в списке аккаунтов нажимаем на{' '}
-						<span className='highlighting'>
-							настроить аккаунты:
-						</span>
+						<span className='highlighting'>настроить аккаунты:</span>
 						<figure className='flex-col items-center my-5'>
 							<Image
 								className='m-auto'
@@ -162,15 +151,9 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						Далее мы установим майнкрафт версии{' '}
-						<span className='highlighting'>
-							1.21.1
-						</span>{' '}
-						(на такой версии сервер) и установим моды. В главном меню в списке
-						версии выбирете{' '}
-						<span className='highlighting'>
-							Fabric 1.21.1
-						</span>
-						:
+						<span className='highlighting'>1.21.1</span> (на такой версии
+						сервер) и установим моды. В главном меню в списке версии выбирете{' '}
+						<span className='highlighting'>Fabric 1.21.1</span>:
 						<figure className='flex-col items-center my-5'>
 							<Image
 								className='m-auto'
@@ -189,19 +172,14 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 						</figure>
 					</li>
 					<li className='mb-5 text-left leading-10'>
-						Нажмите кнопку{' '}
-						<span className='highlighting'>
-							установить.
-						</span>
+						Нажмите кнопку <span className='highlighting'>установить.</span>
 					</li>
 					<li className='mb-5 text-left leading-loose'>
 						Если после установки у вас открылся майнкрафт, то можете его закрыть
 						(если он открылся после установки), чтобы установить моды. После
 						того как вы закрыли майнкрафт, на главно нажмите на значок папки и
 						затем{' '}
-						<span className='highlighting'>
-							Открыть папку Fabric-1.21:
-						</span>
+						<span className='highlighting'>Открыть папку Fabric-1.21:</span>
 						<figure className='flex-col items-center my-5'>
 							<Image
 								className='m-auto'
@@ -219,19 +197,10 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 							/>
 						</figure>
 						У вас откроется проводник с папками майнкрафт. Среди этих папок
-						найдите папку{' '}
-						<span className='highlighting'>
-							mods
-						</span>{' '}
-						и скопируйте в неё ранее скачанные файлы{' '}
-						<span className='highlighting'>
-							fabric-api.jar
-						</span>{' '}
-						и{' '}
-						<span className='highlighting'>
-							voicechat.jar
-						</span>
-						.
+						найдите папку <span className='highlighting'>mods</span> и
+						скопируйте в неё ранее скачанные файлы{' '}
+						<span className='highlighting'>fabric-api.jar</span> и{' '}
+						<span className='highlighting'>voicechat.jar</span>.
 					</li>
 					<li className='mb-5 text-left leading-loose'>
 						На этом и завершена настройка Legacy Launcher для игры в майнкрафт.
