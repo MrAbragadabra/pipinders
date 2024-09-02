@@ -1,8 +1,8 @@
 'use client'
-
-import { ArrowUpRight, ClipboardCopy } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '../ui/button'
+import Timer from './timer'
 
 interface Props {
 	className?: string
@@ -78,25 +78,10 @@ export const Home: React.FC<Props> = ({ className }) => {
 							</Button>
 						</form>
 					</div>
+					<div className='flex items-center justify-center mt-5'>
+						<Timer targetDate={new Date('September 3, 2024 19:59:59')} />
+					</div>
 				</div>
-			</div>
-			<div>
-				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10 '>
-					<span className='font-black'>28.08.2024</span> - начало приёма заявок
-					на 2 сезон
-				</p>
-				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10 '>
-					<span className='font-black'>28.08.2024</span> - открытие 1 сезона для
-					прощания
-				</p>
-				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
-					<span className='font-black'>02.09.2024</span> - официальное закрытие
-					1 сезона
-				</p>
-				<p className='text-center text-white font-semibold mt-5 text-3xl leading-10'>
-					<span className='font-black'>03.09.2024</span> - открытие 2 сезона
-					(версия 1.21.1)
-				</p>
 			</div>
 
 			{copied && (
