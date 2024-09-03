@@ -1,8 +1,7 @@
 'use client'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, ClipboardCopy } from 'lucide-react'
 import { useState } from 'react'
 import { Button } from '../ui/button'
-import Timer from './timer'
 
 interface Props {
 	className?: string
@@ -37,16 +36,16 @@ export const Home: React.FC<Props> = ({ className }) => {
 				</div>
 
 				<div className='order-2 w-full'>
-					{/* <div className='flex items-center justify-center mt-5'>
+					<div className='flex items-center justify-center mt-5'>
 						<Button
-							onClick={() => handleCopy('season1.pipinders.ru')}
+							onClick={() => handleCopy('play.pipinders.ru')}
 							type='submit'
 							className='font-bold text-3xl p-7 bg-teal-700 hover:bg-teal-800 gap-2 sm:w-[355px] w-full'
 						>
-							Адрес 1 сезона
+							Адрес 2 сезона
 							<ClipboardCopy color='#ffffff' strokeWidth={2.5} size={28} />
 						</Button>
-					</div> */}
+					</div>
 					<div className='flex items-center justify-center mt-5'>
 						<form
 							action='https://forms.yandex.ru/u/66cec1f443f74f2ba636df9a/'
@@ -77,9 +76,6 @@ export const Home: React.FC<Props> = ({ className }) => {
 								<ArrowUpRight color='#ffffff' strokeWidth={2.5} size={28} />
 							</Button>
 						</form>
-					</div>
-					<div className='flex items-center justify-center mt-5'>
-						<Timer targetDate={new Date('September 3, 2024 19:59:59')} />
 					</div>
 				</div>
 			</div>
