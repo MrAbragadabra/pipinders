@@ -190,32 +190,6 @@ export const Commands: React.FC<Props> = ({ className }) => {
 					</li>
 					<li className='mb-5 text-left leading-10'>
 						<span
-							onClick={() => handleCopy('/reg MegaPassword123 MegaPassword123')}
-							className={cn(
-								jetBrains_mono.className,
-								'highlighting select-none cursor-pointer'
-							)}
-						>
-							/reg &lt;пароль&gt; &lt;повтор пароля&gt;
-						</span>{' '}
-						- регистрация при первом входе на сервер
-					</li>
-					<li className='mb-5 text-left leading-10'>
-						<span
-							onClick={() => handleCopy('/log MegaPassword123')}
-							className={cn(
-								jetBrains_mono.className,
-								'highlighting select-none cursor-pointer'
-							)}
-						>
-							/log &lt;пароль&gt;
-						</span>{' '}
-						- авторизация при входе на сервер (это требуется для безопасности
-						вашего аккаунта, чтобы никто не смог под вашим ником что-нибудь
-						натворить)
-					</li>
-					<li className='mb-5 text-left leading-10'>
-						<span
 							onClick={() => handleCopy('/afk')}
 							className={cn(
 								jetBrains_mono.className,
