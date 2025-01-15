@@ -63,10 +63,6 @@ export const About: React.FC<Props> = ({ className }) => {
 					</span>
 				</p>
 				<p className='text-center text-white mb-[60px] font-bold mt-5 leading-10'>
-					Armoryx:{' '}
-					<span className='text-teal-400 font-black'>Владелец концлагеря</span>
-				</p>
-				<p className='text-center text-white mb-[60px] font-bold mt-5 leading-10'>
 					SharkPop: <span className='text-teal-400 font-black'>Спидранер</span>
 				</p>
 				<p className='text-center text-white mb-[60px] font-bold mt-5 leading-10'>
