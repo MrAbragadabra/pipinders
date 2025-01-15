@@ -148,9 +148,9 @@ export const HowToPlay: React.FC<Props> = ({ className }) => {
 					</li>
 					<li className='mb-5 text-left leading-[55px]'>
 						Далее мы установим майнкрафт версии{' '}
-						<span className='highlighting'>1.21.1</span> (на такой версии
+						<span className='highlighting'>1.21.4</span> (на такой версии
 						сервер). В главном меню в списке версии выбирете{' '}
-						<span className='highlighting'>Fabric 1.21.1</span> (благодаря
+						<span className='highlighting'>Fabric 1.21.4</span> (благодаря
 						fabric вы сможете ставить моды для себя (оптимизация, мини карта и
 						тд)):
 						<figure className='flex-col items-center my-5'>
