@@ -224,7 +224,34 @@ export const Commands: React.FC<Props> = ({ className }) => {
 						>
 							/geo
 						</span>{' '}
-						- сообщит всем игрокам ваше текущее местоположение по координатам (XYZ)
+						- сообщит всем игрокам ваше текущее местоположение по координатам
+						(XYZ)
+					</li>
+
+					<li className='mb-5 text-left leading-10'>
+						<span
+							onClick={() => handleCopy('/login')}
+							className={cn(
+								jetBrains_mono.className,
+								'highlighting select-none cursor-pointer'
+							)}
+						>
+							/login &lt;пароль&gt;
+						</span>{' '}
+						- команда для авторизации на сервере
+					</li>
+
+					<li className='mb-5 text-left leading-10'>
+						<span
+							onClick={() => handleCopy('/register')}
+							className={cn(
+								jetBrains_mono.className,
+								'highlighting select-none cursor-pointer'
+							)}
+						>
+							/register &lt;пароль&gt; &lt;пароль&gt; 
+						</span>{' '}
+						- команда для регистрации на сервере
 					</li>
 				</ul>
 			</div>

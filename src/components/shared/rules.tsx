@@ -1,7 +1,7 @@
 'use client'
 
 import { useMinecraftStore } from '@/app/stores/minecraft'
-import { Minecraft } from '../Minecraft/Minecraft'
+import { Minecraft } from '../ui'
 
 interface Props {
 	className?: string
@@ -34,7 +34,8 @@ export const Rules: React.FC<Props> = ({ className }) => {
 							Не нарушать законы Российской Федерации.
 						</li>
 						<li className='mb-5 text-left leading-10'>
-							Лаг машины категорически запрещены (не касается огромного скопления кур, коров, овец и т. п.).
+							Лаг машины категорически запрещены (не касается огромного
+							скопления кур, коров, овец и т. п.).
 						</li>
 						{/* <li className='mb-5 text-left leading-10'>
 							Большие и нагружающие сервер фермы (например: ферма золота, пороха и тд) обсуждать с{' '}

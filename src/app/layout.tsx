@@ -1,4 +1,4 @@
-import { Header, ScrollButton } from '@/components/shared'
+import { Header } from '@/components/shared'
 import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
@@ -11,20 +11,6 @@ const nunito = Nunito({
 })
 
 export const metadata: Metadata = {
-	title: 'Приватный Minecraft сервер • PIPINDERS',
-	description:
-		'Наш сервер объединяет ванильное выживание и взаимодействие игроков, предлагая уютное и дружелюбное комьюнити, где вы сможете провести приятный вечер за игрой.',
-	keywords: [
-		'Ванильный Minecraft сервер',
-		'Чистый Minecraft',
-		'Без модов',
-		'Оригинальный игровой опыт',
-		'Survival сервер',
-		'Приключения в Minecraft',
-		'Minecraft сообщество',
-		'Minecraft строительные проекты',
-		'Выживание в Minecraft',
-	],
 	openGraph: {
 		title: 'Приватный Minecraft сервер • PIPINDERS',
 		description:

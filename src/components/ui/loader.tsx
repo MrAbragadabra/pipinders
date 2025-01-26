@@ -1,7 +1,7 @@
 'use client'
 
 import { Box } from 'lucide-react'
-import styles from './Loader.module.scss'
+import styles from './styles/loader.module.scss'
 
 interface Props {}
 
