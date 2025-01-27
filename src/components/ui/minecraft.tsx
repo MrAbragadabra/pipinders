@@ -35,7 +35,7 @@ export const Minecraft: React.FC<Props> = () => {
 			const hearts = heartContainers[1].querySelectorAll(`.${styles['heart']}`)
 
 			overlay.current?.classList.add(styles['overlay--active'])
-			heartContainers.forEach(container => {
+			heartContainers.forEach((container) => {
 				container.classList.add(styles['heart-container--active'])
 			})
 
@@ -89,7 +89,7 @@ export const Minecraft: React.FC<Props> = () => {
 					])
 
 					overlay.current?.classList.remove(styles['overlay--active'])
-					heartContainers.forEach(container => {
+					heartContainers.forEach((container) => {
 						container.classList.remove(styles['heart-container--active'])
 					})
 
@@ -148,7 +148,7 @@ export const Minecraft: React.FC<Props> = () => {
 						},
 					],
 					complete: () => {
-						heartContainers.forEach(container => {
+						heartContainers.forEach((container) => {
 							container.classList.remove(styles['heart-container--active'])
 						})
 					},

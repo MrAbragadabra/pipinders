@@ -249,7 +249,7 @@ export const Commands: React.FC<Props> = ({ className }) => {
 								'highlighting select-none cursor-pointer'
 							)}
 						>
-							/register &lt;пароль&gt; &lt;пароль&gt; 
+							/register &lt;пароль&gt; &lt;пароль&gt;
 						</span>{' '}
 						- команда для регистрации на сервере
 					</li>

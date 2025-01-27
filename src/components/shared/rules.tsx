@@ -37,16 +37,6 @@ export const Rules: React.FC<Props> = ({ className }) => {
 							Лаг машины категорически запрещены (не касается огромного
 							скопления кур, коров, овец и т. п.).
 						</li>
-						{/* <li className='mb-5 text-left leading-10'>
-							Большие и нагружающие сервер фермы (например: ферма золота, пороха и тд) обсуждать с{' '}
-							<a
-								href='mailto:adminchik@pipinders.ru'
-								className='underline hover:no-underline'
-							>
-								админом
-							</a>
-							.
-						</li> */}
 						<li className='mb-5 text-left leading-10'>
 							Мы доверяем нашим игрокам, но очень сильно осуждаем использование
 							читов любого формата (xray в том числе).

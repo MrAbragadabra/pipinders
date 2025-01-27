@@ -1,7 +1,7 @@
 import { MouseEventHandler } from 'react'
 import { create } from 'zustand'
 
-export const useMinecraftStore = create(set => ({
+export const useMinecraftStore = create((set) => ({
 	handlerClick: () => {},
 	setHandlerClick: (handler: MouseEventHandler) => {
 		set({ handlerClick: handler })

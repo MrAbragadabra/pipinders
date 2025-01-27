@@ -7,7 +7,6 @@ import {
 	Clock,
 	House,
 	Scale,
-	Sparkles,
 	Terminal,
 } from 'lucide-react'
 import Link from 'next/link'
@@ -70,9 +69,6 @@ export const Header: React.FC<Props> = ({ className }) => {
 						<CircleDollarSign color='#ffffff' size={24} />
 						Донат
 					</Link>
-					{/* <Link className='flex items-center gap-2 std-link' href='/about'>
-						<Sparkles color='#ffffff' size={24} />О нас
-					</Link> */}
 				</div>
 
 				<button
@@ -155,16 +151,6 @@ export const Header: React.FC<Props> = ({ className }) => {
 							Донат
 						</Link>
 					</div>
-					{/* <div className='flex items-center gap-2 w-full justify-left mt-4'>
-						<Sparkles color='#ffffff' size={24} />
-						<Link
-							onClick={clickOnLink}
-							className='block std-link'
-							href='/about'
-						>
-							О нас
-						</Link>
-					</div> */}
 				</div>
 			</div>
 		</>
