@@ -6,6 +6,10 @@
 	@apply bg-teal-950 p-1 rounded-sm tracking-widest;
 }
 
+.just-text {
+	@apply text-justify text-white font-semibold mt-5 text-3xl leading-10
+}
+
 ::selection {
 	background: #0d9488;
 }
