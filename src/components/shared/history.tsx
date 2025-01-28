@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import h1 from '../../../public/img/history/h1.png'
 import h10 from '../../../public/img/history/h10.png'
@@ -19,6 +18,7 @@ import h6 from '../../../public/img/history/h6.png'
 import h7 from '../../../public/img/history/h7.png'
 import h8 from '../../../public/img/history/h8.png'
 import h9 from '../../../public/img/history/h9.png'
+import { ImageWithCaption } from '../ui'
 
 interface Props {
 	className?: string
@@ -46,25 +46,9 @@ export const History: React.FC<Props> = ({ className }) => {
 					друг с другом. После поисков были выбраны небольшие острова,
 					разделенные большой рекой:
 				</p>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h1}
-						alt='MIKKUT и столб грязи'
-						height={h1.height}
-						width={h1.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						MIKKUT и столб грязи
-					</figcaption>
-				</figure>
+
+				<ImageWithCaption src={h1} caption='MIKKUT и столб грязи' />
+
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					После чего пошёл процесс облагораживания окружающей среды, была
 					освобождена большая территория и были построены дома. В процессе
@@ -72,142 +56,52 @@ export const History: React.FC<Props> = ({ className }) => {
 					обустраиваться. Далее представлены примеры построенных домов на
 					сервере:
 				</p>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h2}
-						alt='Дома с высоты птичьего полёта (в майнкрафте ведь нет птичек, которые так высоко летают?)'
-						height={h2.height}
-						width={h2.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Дома с высоты птичьего полёта
-					</figcaption>
-				</figure>
+
+				<ImageWithCaption src={h2} caption='Дома с высоты птичьего полёта' />
+
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					А теперь поподробнее о каждой территории игроков:
 				</p>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h3}
-						alt='Территория игроков MIKKUT и Armoryx'
-						height={h3.height}
-						width={h3.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Территория игроков MIKKUT и Armoryx
-					</figcaption>
-				</figure>
+
+				<ImageWithCaption
+					src={h3}
+					caption='Территория игроков MIKKUT и Armoryx'
+				/>
+
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Эту территорию с лёгкостью можно было увидеть благодаря высокой и
 					кривой крыше игрока MIKKUT. Когда ты зайдешь на ту территорию, твои
 					фпс упадут в ноль, скажем спасибо фермам Armoryx.
 				</p>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h4}
-						alt='Территория игроков Konstantin_mogg и Nurkaev'
-						height={h4.height}
-						width={h4.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Территория игроков Konstantin_mogg и Nurkaev
-					</figcaption>
-				</figure>
+
+				<ImageWithCaption
+					src={h4}
+					caption='Территория игроков Konstantin_mogg и Nurkaev'
+				/>
+
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					От такого количества коров все пк хотели взлетать в стратосферу, а вид
 					на этот дворец… Сразу видно богатых людей, опытных фермеров. (Коровы в
 					итоге все сбежали, что повлекло за собой нашествие коров на сервере).
 				</p>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h5}
-						alt='Территория игрока MrAbragadabra'
-						height={h5.height}
-						width={h5.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Территория игрока MrAbragadabra
-					</figcaption>
-				</figure>
+
+				<ImageWithCaption src={h5} caption='Территория игрока MrAbragadabra' />
+
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					На этой территории была начата стройка дома, которая шла до конца
 					сезона, а также эта территория подверглась МАССОВОЙ вырубке деревьев
 					(тут был сто проц лес).
 				</p>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h6}
-						alt='Территория игрока Steiden'
-						height={h6.height}
-						width={h6.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Территория игрока Steiden
-					</figcaption>
-				</figure>
+
+				<ImageWithCaption src={h6} caption='Территория игрока Steiden' />
+
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					Изначально было самой высокой башней на сервере. Этот огонь виден даже
 					если ты в аду.
 				</p>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h7}
-						alt='Территория игрока SharkPop'
-						height={h7.height}
-						width={h7.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Территория игрока SharkPop
-					</figcaption>
-				</figure>
+
+				<ImageWithCaption src={h7} caption='Территория игрока SharkPop' />
+
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					На этой территории SharkPop построил дом, но так и не использовал его
 					по назначению, но зато с радостью принял надпись SVO перед своим
@@ -261,235 +155,53 @@ export const History: React.FC<Props> = ({ className }) => {
 					После знакомства с персонажами первого сезона, перейдём к событиям
 					сезона, а также интересным скриншотам:
 				</p>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h8}
-						alt='Ферма кур Armoryx'
-						height={h8.height}
-						width={h8.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Ферма кур Armoryx
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h9}
-						alt='Если ты это читаешь, я люблю тебя :з'
-						height={h9.height}
-						width={h9.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Если ты это читаешь, я люблю тебя :з
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h10}
-						alt='Без комментариев…'
-						height={h10.height}
-						width={h10.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Без комментариев…
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h11}
-						alt='Легендарные путешествия'
-						height={h11.height}
-						width={h11.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Легендарные путешествия
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h12}
-						alt='«-5 фпс, спасибо за эти фермы»'
-						height={h12.height}
-						width={h12.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						«-5 фпс, спасибо за эти фермы»
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h13}
-						alt='Иногда так хочется просто сесть и сидеть у костра, не думая ни о чём…'
-						height={h13.height}
-						width={h13.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Иногда так хочется просто сесть и сидеть у костра, не думая ни о
-						чём…
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h14}
-						alt='Ферма мобов (НАСТОЛЬКО КРИВОЙ МИР ЕЩЁ НЕ ВИДЕЛ)'
-						height={h14.height}
-						width={h14.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Ферма мобов (НАСТОЛЬКО КРИВОЙ МИР ЕЩЁ НЕ ВИДЕЛ)
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h15}
-						alt='Если ваша вечеринка не похожа на эту, даже не зовите меня'
-						height={h15.height}
-						width={h15.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Если ваша вечеринка не похожа на эту, даже не зовите меня
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h16}
-						alt='Ещё один приятный вайбик на фото :з'
-						height={h16.height}
-						width={h16.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Ещё один приятный вайбик на фото :з
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h17}
-						alt='От этого фото отходит атмосфера горящего пк'
-						height={h17.height}
-						width={h17.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						От этого фото отходит атмосфера горящего пк
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h18}
-						alt='Ферма опыта на эндерменах (с кучей жемчуга)'
-						height={h18.height}
-						width={h18.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Ферма опыта на эндерменах (с кучей жемчуга)
-					</figcaption>
-				</figure>
-				<figure className='flex-col items-center my-5'>
-					<Image
-						className='m-auto'
-						src={h19}
-						alt='Игорь. Просто Игорь…'
-						height={h19.height}
-						width={h19.width}
-						sizes='100vw'
-						style={{
-							width: '100%',
-							height: 'auto',
-						}}
-						quality={90}
-						draggable='false'
-					/>
-					<figcaption className='text-center mt-2 text-white text-2xl'>
-						Игорь. Просто Игорь…
-					</figcaption>
-				</figure>
+
+				<ImageWithCaption src={h8} caption='Ферма кур Armoryx' />
+
+				<ImageWithCaption
+					src={h9}
+					caption='Если ты это читаешь, я люблю тебя :з'
+				/>
+
+				<ImageWithCaption src={h10} caption='Без комментариев…' />
+
+				<ImageWithCaption src={h11} caption='Легендарные путешествия' />
+
+				<ImageWithCaption src={h12} caption='«-5 фпс, спасибо за эти фермы»' />
+
+				<ImageWithCaption
+					src={h13}
+					caption='Иногда так хочется просто сесть и сидеть у костра, не думая ни о
+						чём…'
+				/>
+
+				<ImageWithCaption
+					src={h14}
+					caption='Ферма мобов (НАСТОЛЬКО КРИВОЙ МИР ЕЩЁ НЕ ВИДЕЛ)'
+				/>
+
+				<ImageWithCaption
+					src={h15}
+					caption='Если ваша вечеринка не похожа на эту, даже не зовите меня'
+				/>
+
+				<ImageWithCaption
+					src={h16}
+					caption='Ещё один приятный вайбик на фото :з'
+				/>
+
+				<ImageWithCaption
+					src={h17}
+					caption='От этого фото отходит атмосфера горящего пк'
+				/>
+
+				<ImageWithCaption
+					src={h18}
+					caption='Ферма опыта на эндерменах (с кучей жемчуга)'
+				/>
+
+				<ImageWithCaption src={h19} caption='Игорь. Просто Игорь…' />
+
 				<p className='text-justify text-white font-semibold mt-5 text-3xl leading-10'>
 					После прочитанного вы можете понять, что наш сервер окружен приятными
 					людьми, которые могут смешно шутить (надеемся), а также помогут вам в
