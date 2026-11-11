@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pipinders.ru/sitemap.xml

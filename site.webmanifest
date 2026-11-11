@@ -1,0 +1,14 @@
+{
+  "name": "PIPINDERS — Minecraft-сервер",
+  "short_name": "PIPINDERS",
+  "description": "Новый мир. Твоя история. Скоро открытие.",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#080e0b",
+  "theme_color": "#080e0b",
+  "icons": [
+    {"src": "/assets/favicon-32.png", "sizes": "32x32", "type": "image/png"},
+    {"src": "/assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}
+  ]
+}
