@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#080e0b">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="description" content="PIPINDERS — камерный Minecraft-сервер с выживанием, близким к ваниле. Новый мир, свои люди и тысячи историй. Скоро открытие.">
+  <meta name="description" content="PIPINDERS — камерный Minecraft-сервер с выживанием, близким к ваниле. Открытие 19 декабря 2026 в 14:00 МСК. Правила и заявка на вступление.">
   <meta name="author" content="PIPINDERS">
   <meta name="application-name" content="PIPINDERS">
   <meta name="format-detection" content="telephone=no">
@@ -21,19 +21,19 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:site_name" content="PIPINDERS">
-  <meta property="og:title" content="PIPINDERS — Скоро открытие">
-  <meta property="og:description" content="Каждая легенда начинается с первого блока. Minecraft-сервер PIPINDERS. Скоро.">
+  <meta property="og:title" content="PIPINDERS — Открытие 19 декабря 2026">
+  <meta property="og:description" content="Открытие 19 декабря 2026 в 14:00 МСК. Подай заявку и стань частью нового Minecraft-мира.">
   <meta property="og:url" content="https://pipinders.ru/">
   <meta property="og:image" content="https://pipinders.ru/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="PIPINDERS — СКОРО. Новый мир начинается здесь.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PIPINDERS — Скоро открытие">
-  <meta name="twitter:description" content="Новый мир. Свои люди. Своя история. Minecraft-сервер PIPINDERS.">
+  <meta name="twitter:title" content="PIPINDERS — Открытие 19 декабря 2026">
+  <meta name="twitter:description" content="Minecraft-сервер PIPINDERS. Открытие 19 декабря 2026 в 14:00 МСК. Правила и заявки.">
   <meta name="twitter:image" content="https://pipinders.ru/assets/og-image.png">
-  <title>PIPINDERS — Minecraft-сервер | Скоро открытие</title>
-  <link rel="stylesheet" href="./styles.css">
+  <title>PIPINDERS — Minecraft-сервер | Открытие 19 декабря 2026</title>
+  <link rel="stylesheet" href="./styles.css?v=4">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -41,10 +41,11 @@
       "name": "PIPINDERS",
       "url": "https://pipinders.ru/",
       "inLanguage": "ru-RU",
-      "description": "PIPINDERS — Minecraft-сервер с выживанием, близким к ваниле. Скоро открытие."
+      "description": "PIPINDERS — Minecraft-сервер с выживанием, близким к ваниле. Открытие 19 декабря 2026 года в 14:00 МСК."
     }
   </script>
-  <script src="./script.js" defer></script>
+  <script src="./form-config.js?v=4" defer></script>
+  <script src="./script.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержанию</a>
@@ -60,7 +61,7 @@
       </a>
       <div class="header-right">
         <span class="header-coordinate">WORLD_001 <span class="coordinate-dash">/</span> INITIALIZING</span>
-        <span class="status-pill"><span class="status-light"></span> МИР СОЗДАЁТСЯ</span>
+        <a class="header-nav" href="#rules">ПРАВИЛА</a><a class="status-pill status-link" href="#apply"><span class="status-light"></span> ПРИЁМ ЗАЯВОК</a>
       </div>
     </header>
 
@@ -95,8 +96,19 @@
           <div class="hero-title-rule" aria-hidden="true"><span></span></div>
           <h2 class="hero-subtitle">Новый мир. <span>Твоя история.</span></h2>
           <p class="hero-description">Каждая легенда начинается с первого блока.<br class="desktop-break"> Совсем скоро мы поставим его вместе.</p>
+          <div class="launch" aria-labelledby="launch-label">
+            <p class="launch-label" id="launch-label"><span class="tiny-square" aria-hidden="true"></span> ОТКРЫТИЕ СЕРВЕРА</p>
+            <time class="launch-date" datetime="2026-12-19T14:00:00+03:00">19 декабря 2026 <span>·</span> 14:00 МСК</time>
+            <div class="countdown" id="countdown" role="group" aria-label="До открытия">
+              <div class="countdown-cell"><span class="countdown-value" id="days">--</span><span class="countdown-unit">ДНИ</span></div>
+              <div class="countdown-cell"><span class="countdown-value" id="hours">--</span><span class="countdown-unit">ЧАСЫ</span></div>
+              <div class="countdown-cell"><span class="countdown-value" id="minutes">--</span><span class="countdown-unit">МИНУТЫ</span></div>
+              <div class="countdown-cell"><span class="countdown-value" id="seconds">--</span><span class="countdown-unit">СЕКУНДЫ</span></div>
+            </div>
+            <p class="launch-passed" id="launch-passed" hidden>Назначенное время открытия наступило. Статус уточняйте у администрации.</p>
+          </div>
           <div class="hero-actions">
-            <a class="action-primary" href="#about"><span>ЗАГЛЯНУТЬ В БУДУЩЕЕ</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="action-primary" href="#apply"><span>ПОДАТЬ ЗАЯВКУ</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <button class="action-secondary" id="shareButton" type="button"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="shareLabel">ПОДЕЛИТЬСЯ</span></button>
           </div>
         </div>
@@ -132,12 +144,60 @@
         </div>
       </section>
 
+      <section class="rules content-section" id="rules" aria-labelledby="rules-title">
+        <div class="section-header">
+          <div class="section-kicker"><span class="section-index">02 /</span> КОДЕКС МИРА</div>
+          <div class="section-heading-row">
+            <h2 id="rules-title">Играй честно.<br><span>Уважай других.</span></h2>
+            <p>Всего несколько простых правил, чтобы всем было комфортно в нашем общем мире.</p>
+          </div>
+        </div>
+        <ol class="rules-list">
+          <li class="rule"><span class="rule-index">01</span><div><h3>Играй честно.</h3><p>Запрещены читы, X-Ray, дюпы и намеренное использование багов ради преимущества. Не обходи ограничения сервера.</p></div></li>
+          <li class="rule"><span class="rule-index">02</span><div><h3>Береги чужой труд.</h3><p>Не гриферить, не воровать ресурсы и не разрушать чужие постройки. Не трогай чужое без разрешения владельца.</p></div></li>
+          <li class="rule"><span class="rule-index">03</span><div><h3>Уважай игроков.</h3><p>Без оскорблений, травли, угроз и спама. PvP и розыгрыши — только по взаимному согласию.</p></div></li>
+          <li class="rule"><span class="rule-index">04</span><div><h3>Береги общий мир.</h3><p>Не создавай намеренно лаги и не мешай другим играть. Если возник спор или нашёл баг — сообщи администрации.</p></div></li>
+        </ol>
+        <p class="rules-note"><span aria-hidden="true">◇</span> За нарушения администрация может выдать предупреждение или ограничить доступ к серверу, в зависимости от ситуации.</p>
+      </section>
+
+      <section class="apply content-section" id="apply" aria-labelledby="apply-title">
+        <div class="section-kicker"><span class="section-index">03 /</span> ПРИСОЕДИНИСЬ К НАМ</div>
+        <div class="apply-layout">
+          <div class="apply-intro">
+            <h2 id="apply-title">Твоя история<br><span>начинается здесь.</span></h2>
+            <p>Мы собираем небольшое сообщество людей, которым нравится Minecraft. Расскажи немного о себе — мы вдвоём прочитаем твою заявку и свяжемся с тобой.</p>
+            <div class="apply-info"><span class="status-light" aria-hidden="true"></span><div><strong>ДОСТУП ПО WHITELIST</strong><p>Заявки рассматриваются вручную. Отправка анкеты не гарантирует доступ.</p></div></div>
+            <a class="text-link" href="#rules">Ознакомиться с правилами <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="application-panel">
+            <div class="panel-header"><span><span class="tiny-square" aria-hidden="true"></span> APPLICATION / 001</span><span>∎</span></div>
+            <h3>Заявка на вступление</h3>
+            <p class="form-intro">Никаких длинных анкет. Все поля обязательны.</p>
+            <form id="application-form" method="post" autocomplete="on">
+              <div class="form-field"><label for="nickname">Ник в Minecraft <span>*</span></label><input id="nickname" name="nickname" type="text" placeholder="Steve" required minlength="3" maxlength="16" pattern="[A-Za-z0-9_]{3,16}" autocapitalize="off" spellcheck="false" aria-describedby="nickname-hint"><small id="nickname-hint">Java Edition: 3–16 символов, латиница, цифры и _.</small></div>
+              <div class="form-field"><label for="contact">Как с тобой связаться? <span>*</span></label><input id="contact" name="contact" type="text" placeholder="Telegram @username / Discord / email" required maxlength="160" minlength="3" aria-describedby="contact-hint"><small id="contact-hint">Укажи один удобный способ связи и свой контакт.</small></div>
+              <div class="form-field"><label for="about-player">Расскажи немного о себе <span>*</span></label><textarea id="about-player" name="about" rows="5" placeholder="Что любишь делать в Minecraft? Почему хочешь играть с нами?" required minlength="10" maxlength="1000" aria-describedby="about-hint"></textarea><div class="field-meta"><small id="about-hint">Пары предложений достаточно.</small><small id="about-count" aria-hidden="true">0 / 1000</small></div></div>
+              <div class="form-check"><input id="rules-ok" name="rules" type="checkbox" required><label for="rules-ok">Я ознакомлен(а) с <a href="#rules">правилами сервера</a> и согласен(на) их соблюдать.</label></div>
+              <div class="privacy-note" id="privacy-note">Ник, контакт и текст заявки будут переданы администрации PIPINDERS для рассмотрения и связи с тобой. Онлайн-отправка использует Yandex Cloud, SmartCaptcha и почту Timeweb Cloud. Не указывай пароли, адрес проживания и другие лишние личные сведения. По вопросам удаления заявки: <a href="mailto:apply@pipinders.ru">apply@pipinders.ru</a>.</div>
+              <div class="form-check"><input id="privacy-ok" name="privacy" type="checkbox" required><label for="privacy-ok">Я согласен(на) на обработку указанных данных для рассмотрения моей заявки и связи со мной.</label></div>
+              <div class="form-trap" aria-hidden="true" inert><label for="website">Оставьте пустым</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+              <div id="application-captcha" class="application-captcha" hidden></div>
+              <button class="action-primary form-submit" type="submit" id="apply-submit" disabled><span id="apply-submit-label">ПОДГОТОВИТЬ ПИСЬМО</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite">Заявка будет подготовлена для отправки на почту.</p>
+              <button class="copy-application text-link" id="copy-application" type="button" disabled>Скопировать заявку для отправки вручную</button>
+              <noscript><p>Для формы нужен JavaScript. Напиши нам напрямую: <a href="mailto:apply@pipinders.ru">apply@pipinders.ru</a>.</p></noscript>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <section class="outro" aria-label="Ожидание открытия">
-        <div class="outro-topline"><span class="section-index">02 /</span> УВИДИМСЯ В ИГРЕ</div>
+        <div class="outro-topline"><span class="section-index">04 /</span> УВИДИМСЯ В ИГРЕ</div>
         <div class="outro-inner">
           <div class="outro-signal" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-          <p>МИР ПОКА ЗАКРЫТ.<br><strong>НО ЭТО НЕНАДОЛГО.</strong></p>
-          <span class="outro-note">IP-адрес и информация о запуске появятся здесь позднее.</span>
+          <p>ДО ВСТРЕЧИ.<br><strong>19 ДЕКАБРЯ.</strong></p>
+          <span class="outro-note">14:00 МСК · Информацию для входа в мир получат принятые игроки.</span>
         </div>
       </section>
     </main>
@@ -145,7 +205,7 @@
     <footer class="site-footer" id="footer">
       <span>© 2026 PIPINDERS. ПОСТРОЕНО С НУЛЯ.</span>
       <a href="https://pipinders.ru/" aria-label="PIPINDERS.RU">PIPINDERS.RU <span aria-hidden="true">↗</span></a>
-      <span class="footer-right">MADE FOR THE ADVENTURE <span>✳</span></span>
+      <a class="footer-mail" href="mailto:apply@pipinders.ru">apply@pipinders.ru</a>
     </footer>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
