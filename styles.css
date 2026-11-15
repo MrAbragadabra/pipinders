@@ -1,3 +1,7 @@
+/*
+ * PIPINDERS / Цвета анимации TAB (подтверждены владельцем сервера).
+ * Основной: #54fc54, светлый: #c0f1c0.
+ */
 :root {
   --bg: #080e0b;
   --surface: #101a14;
@@ -26,6 +30,7 @@ button { font: inherit; }
 .particles { position: absolute; inset: 0; z-index: 0; width: 100%; height: 1100px; pointer-events: none; opacity: .6; }
 .site-header, main, .site-footer { position: relative; z-index: 1; }
 
+/* Header */
 .site-header { display: flex; align-items: center; justify-content: space-between; min-height: 104px; padding: 22px clamp(24px, 5.6vw, 100px); border-bottom: 1px solid var(--border); }
 .brand { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; }
 .brand-emblem { width: 48px; height: 48px; display: grid; place-items: center; flex-shrink: 0; color: var(--accent-2); border: 1px solid rgba(192,241,192,.36); background: linear-gradient(135deg, rgba(84,252,84,.13), rgba(192,241,192,.05)); clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 20% 100%, 0 80%); }
@@ -38,6 +43,7 @@ button { font: inherit; }
 .status-pill { display: inline-flex; align-items: center; gap: 12px; padding: 12px 17px; border: 1px solid rgba(84,252,84,.22); background: rgba(84,252,84,.035); color: #d3f9d3; font: 800 10px/1 var(--font-body); letter-spacing: .14em; white-space: nowrap; }
 .status-light { display: block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-3); box-shadow: 0 0 12px rgba(84,252,84,.9); animation: pulse 2.2s infinite; }
 
+/* Hero */
 .hero { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: min(920px, calc(100svh - 104px)); min-height: max(730px, calc(100svh - 104px)); padding: 95px 24px 125px; overflow: hidden; text-align: center; }
 .hero::before { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(125,209,132,.038) 1px,transparent 1px), linear-gradient(90deg,rgba(125,209,132,.038) 1px,transparent 1px); background-size: 74px 74px; -webkit-mask-image: radial-gradient(ellipse at 50% 42%, black 0%, transparent 66%); mask-image: radial-gradient(ellipse at 50% 42%, black 0%, transparent 66%); }
 .hero::after { content: ''; position: absolute; z-index: 0; left: -10%; right: -10%; bottom: -1px; height: 280px; background: linear-gradient(180deg,transparent, var(--bg) 86%); pointer-events: none; }
@@ -72,6 +78,7 @@ button { font: inherit; }
 .scroll-mouse { display: flex; justify-content: center; width: 20px; height: 32px; border: 1px solid #566c5c; border-radius: 12px; padding-top: 7px; }
 .scroll-mouse i { display: block; width: 2px; height: 6px; background: var(--accent-2); animation: scrolldown 2s infinite; }
 
+/* The CSS portal: decorative, zero image assets, GPU-friendly */
 .hero-scenery { position: absolute; z-index: 1; inset: 0; pointer-events: none; overflow: hidden; }
 .portal-scene { position: absolute; left: 50%; top: 39%; width: min(650px, 59vw); height: min(650px, 59vw); transform: translate(-50%,-50%); filter: drop-shadow(0 0 115px rgba(84,252,84,.12)); opacity: .92; }
 .portal-scene::before, .portal-scene::after { content: ''; position: absolute; inset: -30%; border-radius: 50%; }
@@ -100,6 +107,7 @@ button { font: inherit; }
 .portal-rune--one { left: 18%; top: 26%; }
 .portal-rune--two { right: 16%; top: 68%; font-size: 13px; }
 
+/* Information */
 .about { position: relative; padding: 125px clamp(24px, 5.6vw, 100px) 140px; border-top: 1px solid var(--border); background: linear-gradient(180deg,rgba(12,23,14,.9),rgba(8,14,11,.92)); }
 .about::before { content: ''; position: absolute; right: -140px; top: -120px; width: 560px; height: 560px; border-radius: 50%; background: radial-gradient(circle,rgba(84,252,84,.06),transparent 70%); pointer-events: none; }
 .section-kicker, .outro-topline { color: var(--accent-2); font-size: 11px; font-weight: 800; letter-spacing: .22em; }
@@ -123,10 +131,11 @@ button { font: inherit; }
 .feature h3 { margin: 15px 0 9px; font: 800 clamp(18px,1.7vw,24px)/1.35 var(--font-display); letter-spacing: -.06em; }
 .feature p { margin: 0; color: #96ad9b; font-size: 14px; line-height: 1.85; max-width: 320px; }
 
+/* Closing statement */
 .outro { position: relative; margin: 0 clamp(24px, 5.6vw, 100px); border-top: 1px solid var(--border); padding: 40px 0 110px; }
 .outro-topline { color: #a3bba5; }
 .outro-inner { padding: 80px 0 10px; text-align: center; }
-
+/* Индикатор занимает неизменный слот; движутся только внутренние полоски. */
 .outro-signal { position: relative; display: block; width: 70px; height: 24px; min-height: 24px; margin: 0 auto; contain: layout; }
 .outro-signal span { position: absolute; top: 0; width: 3px; height: 24px; background: var(--accent-1); box-shadow: 0 0 11px rgba(84,252,84,.65); transform: scaleY(.33); transform-origin: center; animation: soundwave 1.5s infinite ease-in-out; will-change: transform; }
 .outro-signal span:nth-child(1){ left: 22px; }
@@ -154,7 +163,7 @@ button { font: inherit; }
 @keyframes portalspin { from{transform:translate(-50%,-50%) rotate(45deg)} to{transform:translate(-50%,-50%) rotate(405deg)} }
 @keyframes portalspinback { from{transform:translate(-50%,-50%) rotate(45deg)} to{transform:translate(-50%,-50%) rotate(-315deg)} }
 @keyframes corebreathe { 50% { box-shadow:inset 0 0 70px rgba(192,241,192,.2),0 0 85px rgba(84,252,84,.36); } }
-
+/* Transform анимируется на compositor, а размеры блока остаются неизменными. */
 @keyframes soundwave { 0%,100% { transform: scaleY(.33); } 50% { transform: scaleY(1); } }
 
 @media (max-width: 1050px) {
@@ -222,7 +231,7 @@ button { font: inherit; }
   .js .reveal { opacity: 1; transform: none; }
 }
 
-
+/* v3 — launch, world rules and applications. Stable dimensions for ticking UI. */
 [hidden] { display: none !important; }
 .header-nav { font-size: 10px; font-weight: 800; letter-spacing: .12em; text-decoration: none; color: var(--muted); }
 .header-nav:hover, .text-link:hover { color: var(--accent-1); }
@@ -293,5 +302,14 @@ button { font: inherit; }
 }
 @media (max-width: 350px) { .header-right { gap: 8px; } .header-nav { font-size: 8px; } .countdown-unit { letter-spacing: 0; } }
 
+/* Reserve the SmartCaptcha widget space before it loads. */
 .application-captcha:not([hidden]) { height: 100px; margin: 14px 0; width: 100%; }
 .application-captcha[hidden] { display: none; }
+
+/* v5 — static game requirements, styled to match the launch UI. */
+.game-requirements { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 7px; margin-top: 15px; max-width: 100%; }
+.game-tag { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 30px; padding: 5px 10px; border: 1px solid rgba(192,241,192,.18); background: rgba(10,24,13,.62); color: var(--accent-2); font: 800 10px/1.5 var(--font-body); letter-spacing: .08em; white-space: nowrap; }
+.game-tag strong, .game-tag-mark { color: var(--accent-1); }
+.game-tag-mark { font-size: 12px; line-height: 1; }
+.apply-info .apply-requirement { margin-top: 10px; color: var(--accent-2); }
+@media (max-width: 375px) { .game-tag { padding-inline: 7px; font-size: 9px; letter-spacing: .035em; } }
