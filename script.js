@@ -50,7 +50,8 @@ shareButton.addEventListener('click', async () => {
 
 const canvas = document.getElementById('particles');
 const context = canvas.getContext('2d', { alpha: true });
-if (context && !reducedMotion.matches) {
+// The original background canvas is hidden in the voxel edition. Do not animate it.
+if (context && !reducedMotion.matches && !document.body.classList.contains('minecraft-edition')) {
   let width = 0, height = 0, dpr = 1, points = [], raf = null;
   let lastTime = 0;
   const palette = ['84,252,84', '192,241,192', '220,255,220'];

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" shape-rendering="crispEdges" aria-hidden="true">
+  <!-- Light spilling over log walls: square pixels, no blur or large radial filters. -->
+  <g opacity=".35" fill="#efb965">
+    <path d="M560 516h52v8h8v33h-8v8h-52v-8h-8v-33h8z"/>
+    <path d="M723 516h52v8h8v33h-8v8h-52v-8h-8v-33h8z"/>
+  </g>
+  <g opacity=".28" fill="#efcd77">
+    <path d="M552 524h8v32h-8zm60-4h8v40h-8zM715 524h8v32h-8zm60-4h8v40h-8z"/>
+  </g>
+  <g fill="#ffd887">
+    <rect x="572" y="524" width="27" height="31"/>
+    <rect x="735" y="524" width="27" height="31"/>
+  </g>
+  <g fill="#fff1bb">
+    <path d="M573 525h8v10h-8zM736 525h8v10h-8z"/>
+  </g>
+  <g fill="#604a32">
+    <path d="M583 524h5v31h-5zM572 537h27v5h-27zM746 524h5v31h-5zM735 537h27v5h-27z"/>
+  </g>
+</svg>
