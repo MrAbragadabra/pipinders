@@ -320,3 +320,7 @@ button { font: inherit; }
 .game-tag-mark { display: inline-flex; flex: 0 0 13px; width: 13px; height: 13px; align-items: center; justify-content: center; }
 .apply-info .apply-requirement { margin-top: 10px; color: var(--accent-2); }
 @media (max-width: 375px) { .game-tag { padding-inline: 7px; font-size: 9px; letter-spacing: .035em; } }
+
+body { -webkit-user-select: none; user-select: none; }
+input, textarea, select, [contenteditable="true"] { -webkit-user-select: text; user-select: text; }
+a, button { -webkit-tap-highlight-color: transparent; }
