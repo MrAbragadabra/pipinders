@@ -1,0 +1,12 @@
+# Local development artifacts
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+node_modules/
+__pycache__/
+.vscode/
+.idea/
+dist/
+build/

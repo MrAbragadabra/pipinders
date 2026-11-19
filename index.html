@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080e0b">
+  <meta name="theme-color" content="#10281b">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="description" content="PIPINDERS — камерный сервер Minecraft: Java Edition 26.3 с выживанием, близким к ваниле. Только лицензия. Открытие 19 декабря 2026 в 14:00 МСК. Правила и заявки.">
@@ -11,9 +11,9 @@
   <meta name="application-name" content="PIPINDERS">
   <meta name="format-detection" content="telephone=no">
   <link rel="canonical" href="https://pipinders.ru/">
-  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="./assets/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="./site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,16 +24,17 @@
   <meta property="og:title" content="PIPINDERS — Открытие 19 декабря 2026">
   <meta property="og:description" content="Minecraft: Java Edition 26.3, только лицензия. Открытие 19 декабря 2026 в 14:00 МСК. Подай заявку и стань частью нового мира.">
   <meta property="og:url" content="https://pipinders.ru/">
-  <meta property="og:image" content="https://pipinders.ru/assets/og-image.png">
+  <meta property="og:image" content="https://pipinders.ru/assets/images/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PIPINDERS — СКОРО. Новый мир начинается здесь.">
+  <meta property="og:image:alt" content="PIPINDERS — пиксельный зелёный мир, деревья и уютная база.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PIPINDERS — Открытие 19 декабря 2026">
   <meta name="twitter:description" content="PIPINDERS — Minecraft: Java Edition 26.3, только лицензия. Открытие 19 декабря 2026 в 14:00 МСК. Правила и заявки.">
-  <meta name="twitter:image" content="https://pipinders.ru/assets/og-image.png">
+  <meta name="twitter:image" content="https://pipinders.ru/assets/images/og-image.png">
   <title>PIPINDERS — Minecraft Java 26.3 | Открытие 19 декабря 2026</title>
-  <link rel="stylesheet" href="./styles.css?v=7">
+  <link rel="stylesheet" href="./css/base.css?v=20261119">
+  <link rel="stylesheet" href="./css/overworld.css?v=20261119">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -44,12 +45,13 @@
       "description": "PIPINDERS — сервер Minecraft: Java Edition 26.3 с выживанием, близким к ваниле. Только лицензионные аккаунты. Открытие 19 декабря 2026 года в 14:00 МСК."
     }
   </script>
-  <script src="./form-config.js?v=4" defer></script>
-  <script src="./script.js?v=4" defer></script>
+  <script src="./js/form-config.js?v=20261119" defer></script>
+  <script src="./js/main.js?v=20261119" defer></script>
+  <script src="./js/overworld.js?v=20261119" defer></script>
 </head>
-<body>
+<body class="minecraft-edition overworld-edition">
   <a class="skip-link" href="#main">Перейти к содержанию</a>
-  <canvas class="particles" id="particles" aria-hidden="true"></canvas>
+  
   <div class="page-noise" aria-hidden="true"></div>
   <div class="page-glow" aria-hidden="true"></div>
 
@@ -60,7 +62,7 @@
         <span class="brand-name"><span class="brand-word">PIPINDERS<span class="brand-period">.</span></span><small>MINECRAFT SERVER</small></span>
       </a>
       <div class="header-right">
-        <span class="header-coordinate">WORLD_001 <span class="coordinate-dash">/</span> INITIALIZING</span>
+        <span class="header-coordinate">WORLD_001 <span class="coordinate-dash">/</span> OVERWORLD</span>
         <a class="header-nav" href="#rules">ПРАВИЛА</a><a class="status-pill status-link" href="#apply"><span class="status-light"></span> ПРИЁМ ЗАЯВОК</a>
       </div>
     </header>
@@ -68,30 +70,17 @@
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-scenery" aria-hidden="true">
-          <div class="ambient-orb ambient-orb--one"></div>
-          <div class="ambient-orb ambient-orb--two"></div>
-          <div class="portal-rune portal-rune--one"><svg viewBox="0 0 32 32" focusable="false" aria-hidden="true"><path d="M16 4v24M4 16h24M7.5 7.5l17 17M24.5 7.5l-17 17" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></svg></div>
-          <div class="portal-rune portal-rune--two"><svg viewBox="0 0 32 32" focusable="false" aria-hidden="true"><path d="M16 4v24M4 16h24M7.5 7.5l17 17M24.5 7.5l-17 17" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" /></svg></div>
-          <div class="portal-scene" id="portalScene">
-            <div class="portal-axis portal-axis--one"></div>
-            <div class="portal-axis portal-axis--two"></div>
-            <div class="portal-ring portal-ring--outer"></div>
-            <div class="portal-ring portal-ring--mid"></div>
-            <div class="portal-ring portal-ring--inner"></div>
-            <div class="portal-core">
-              <div class="portal-core-inner"></div>
-              <div class="portal-cross portal-cross--a"></div>
-              <div class="portal-cross portal-cross--b"></div>
-            </div>
-            <div class="portal-satellite portal-satellite--one"></div>
-            <div class="portal-satellite portal-satellite--two"></div>
-            <div class="portal-satellite portal-satellite--three"></div>
+          <div class="block-world">
+            <img class="world-art" src="./assets/images/overworld.svg" width="1600" height="820" alt="" loading="eager" decoding="async">
+            <img class="house-light-overlay" src="./assets/images/overworld-light.svg" width="1600" height="820" alt="" loading="eager" decoding="async">
           </div>
+          <span class="world-label world-label--left">BIOME: FOREST / PLAINS</span>
+          <span class="world-label world-label--right" id="world-time-label">МСК / ДЕНЬ</span>
         </div>
 
         <div class="hero-content">
-          <div class="hero-kicker"><span class="kicker-line"></span> СИГНАЛ ИЗ БУДУЩЕГО <span class="kicker-index">// 001</span></div>
-          <p class="hero-overline">ПРИГОТОВЬСЯ. ЭТО ТОЛЬКО НАЧАЛО.</p>
+          <div class="hero-kicker"><span class="kicker-line"></span> НОВАЯ ГЛАВА <span class="kicker-index">// 001</span></div>
+          <p class="hero-overline">ПЕРВЫЙ БЛОК. ПЕРВАЯ ИСТОРИЯ.</p>
           <h1 class="hero-title" id="hero-title">СКОРО<span class="hero-dot">.</span></h1>
           <div class="hero-title-rule" aria-hidden="true"><span></span></div>
           <h2 class="hero-subtitle">Новый мир. <span>Твоя история.</span></h2>
@@ -118,7 +107,7 @@
         </div>
 
         <div class="hero-bottom" aria-hidden="true">
-          <div class="hero-counter"><span class="tiny-square"></span> CONNECTION <span class="muted">/</span> ESTABLISHING<span class="loading-dots" aria-hidden="true"></span></div>
+          <div class="hero-counter"><span class="tiny-square"></span> CHUNKS <span class="muted">/</span> LOADING<span class="loading-dots" aria-hidden="true"></span></div>
           <div class="hero-scroll"><span>ЛИСТАЙ НИЖЕ</span><span class="scroll-mouse"><i></i></span></div>
           <div class="hero-version">PIPINDERS <span class="muted">/</span> © 2026</div>
         </div>
@@ -199,6 +188,7 @@
       <section class="outro" aria-label="Ожидание открытия">
         <div class="outro-topline"><span class="section-index">04 /</span> УВИДИМСЯ В ИГРЕ</div>
         <div class="outro-inner">
+          <div class="overworld-grass-block" aria-hidden="true"><svg viewBox="0 0 48 48" shape-rendering="crispEdges"><path d="M7 13h34v24H7Z" fill="#674b32"/><path d="M7 11h34v10H7Z" fill="#368544"/><path d="M10 11h9v6h-9ZM25 11h13v5H25Z" fill="#54fc54"/><path d="M14 23h7v6h-7ZM30 30h6v5h-6Z" fill="#94704a"/><path d="M23 24h4v4h-4Z" fill="#b58a57"/></svg></div>
           <div class="outro-signal" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
           <p>ДО ВСТРЕЧИ.<br><strong>19 ДЕКАБРЯ.</strong></p>
           <span class="outro-note">14:00 МСК · Информацию для входа в мир получат принятые игроки.</span>

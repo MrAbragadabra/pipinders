@@ -49,7 +49,7 @@ shareButton.addEventListener('click', async () => {
 });
 
 const canvas = document.getElementById('particles');
-const context = canvas.getContext('2d', { alpha: true });
+const context = canvas ? canvas.getContext('2d', { alpha: true }) : null;
 if (context && !reducedMotion.matches) {
   let width = 0, height = 0, dpr = 1, points = [], raf = null;
   let lastTime = 0;
