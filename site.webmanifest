@@ -9,12 +9,12 @@
   "theme_color": "#071210",
   "icons": [
     {
-      "src": "/assets/favicon-32.png",
+      "src": "/assets/icons/favicon-32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/assets/apple-touch-icon.png",
+      "src": "/assets/icons/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     }
