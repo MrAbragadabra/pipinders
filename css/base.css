@@ -324,3 +324,10 @@ button { font: inherit; }
 body { -webkit-user-select: none; user-select: none; }
 input, textarea, select, [contenteditable="true"] { -webkit-user-select: text; user-select: text; }
 a, button { -webkit-tap-highlight-color: transparent; }
+
+/* Legal links, keep the site's pixel theme and accessibility. */
+.footer-legal { display:flex; flex-wrap:wrap; justify-content:center; gap:12px 18px; align-items:center; }
+.footer-legal a { text-decoration:none; font:800 10px/1.6 ui-monospace,Consolas,monospace; color:#c0f1c0; letter-spacing:.05em; }
+.footer-legal a:hover, .footer-legal a:focus-visible { color:#54fc54; text-decoration:underline; }
+.privacy-note a, .form-check label a { text-decoration: underline; text-underline-offset:2px; }
+.privacy-note a:focus-visible, .form-check label a:focus-visible { outline:2px solid #c0f1c0; outline-offset:2px; }
