@@ -1,40 +1,57 @@
+
 name: Publish PIPINDERS with season gallery
 
 on:
   push:
+    branches:
+      - winter
   workflow_dispatch:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
 concurrency:
-  group: github-pages
+  group: pipinders-winter-pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    if: github.ref_name == 'winter'
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      pages_source: ${{ steps.pages_source.outputs.build_type }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Python for screenshots
+      - name: Detect Pages publishing source
+        id: pages_source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          build_type="$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.build_type')"
+          case "$build_type" in
+            legacy|workflow) ;;
+            *) echo "::error::Unexpected Pages publishing source: $build_type"; exit 1 ;;
+          esac
+          echo "build_type=$build_type" >> "$GITHUB_OUTPUT"
+          echo "Pages source: $build_type"
+
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: 'pip'
+          cache: pip
           cache-dependency-path: scripts/requirements-gallery.txt
 
       - name: Install image processor
         run: python -m pip install -r scripts/requirements-gallery.txt
 
-      - name: Prepare static site and gallery
+      - name: Build website and gallery
         run: |
           mkdir -p _site
           rsync -a ./ _site/ \
@@ -48,13 +65,66 @@ jobs:
             --exclude='.editorconfig'
           python scripts/build_gallery.py --root _site
 
-      - name: Configure GitHub Pages
+      - name: Verify website
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path("_site")
+          for name in ("index.html", "gallery.html", "gallery/manifest.json", "CNAME"):
+              if not (root / name).is_file():
+                  raise SystemExit(f"Missing file: {name}")
+
+          manifest = json.loads(
+              (root / "gallery/manifest.json").read_text(encoding="utf-8")
+          )
+
+          for season in ("season-1", "season-2"):
+              for item in manifest["seasons"][season]:
+                  for key in ("src", "thumb"):
+                      path = root / item[key].removeprefix("./")
+                      if not path.is_file():
+                          raise SystemExit(f"Missing gallery asset: {path}")
+
+          print("Website and gallery verified")
+          PY
+
+      - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload website
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
+
+  deploy:
+    name: Deploy GitHub Pages
+    needs: build
+    if: ${{ needs.build.outputs.pages_source == 'workflow' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Wait for Pages artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            count="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts?per_page=100" --jq '[.artifacts[] | select(.name == "github-pages" and .expired == false)] | length')"
+            if [ "$count" = "1" ]; then
+              echo "Pages artifact is available"
+              sleep 5
+              exit 0
+            fi
+            echo "Waiting for Pages artifact: $attempt"
+            sleep 5
+          done
+          echo "::error::Pages artifact unavailable"
+          exit 1
 
       - name: Publish
         id: deployment
