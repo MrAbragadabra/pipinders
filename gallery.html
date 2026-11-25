@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; form-action 'none';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e2520">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description" content="Летопись PIPINDERS — скриншоты первого и второго сезонов нашего приватного Minecraft-сервера. Галерея миров и воспоминаний в пиксельном стиле.">
+  <link rel="canonical" href="https://pipinders.ru/gallery.html">
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="PIPINDERS">
+  <meta property="og:title" content="Летопись PIPINDERS — сезоны I и II">
+  <meta property="og:description" content="Два сезона Minecraft — скриншоты наших миров.">
+  <meta property="og:url" content="https://pipinders.ru/gallery.html">
+  <meta property="og:image" content="https://pipinders.ru/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Летопись миров — сезоны I и II | PIPINDERS</title>
+  <link rel="stylesheet" href="./css/base.css?v=9">
+  <link rel="stylesheet" href="./css/winter.css?v=3">
+  <link rel="stylesheet" href="./css/minecraft.css?v=2">
+  <link rel="stylesheet" href="./css/gallery.css?v=2">
+  <script src="./js/gallery.js?v=2" defer></script>
+</head>
+<body class="winter-edition minecraft-edition gallery-page">
+  <a class="skip-link" href="#main">Перейти к галерее</a>
+  <canvas class="gallery-snow" id="gallery-snow" aria-hidden="true"></canvas>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="PIPINDERS — на главную">
+        <span class="brand-emblem" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 32 32" fill="none"><path d="M6 26V6h12l8 8-8 8h-6v4H6Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M12 12h6l3 3-3 3h-6v-6Z" fill="currentColor"/></svg></span>
+        <span class="brand-name"><span class="brand-word">PIPINDERS<span class="brand-period">.</span></span><small>MINECRAFT SERVER</small></span>
+      </a>
+      <div class="header-right">
+        <span class="header-coordinate">WORLD_001 <span class="coordinate-dash">/</span> ARCHIVE</span>
+        <a class="header-nav gallery-header-home" href="/">НА ГЛАВНУЮ</a>
+        <a class="status-pill gallery-header-cta" href="/#apply"><span class="status-light" aria-hidden="true"></span> ПОДАТЬ ЗАЯВКУ</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="gallery-hero" aria-labelledby="gallery-title">
+        <div class="gallery-pixel-sky" aria-hidden="true">
+          <span class="gallery-pixel-moon"></span>
+          <span class="gallery-pixel-cloud cloud-one"></span>
+          <span class="gallery-pixel-cloud cloud-two"></span>
+          <span class="gallery-pixel-trees"></span>
+        </div>
+        <div class="gallery-hero-content">
+          <div class="section-kicker"><span class="section-index">АРХИВ /</span> СКРИНШОТЫ МИРОВ</div>
+          <h1 id="gallery-title">ЛЕТОПИСЬ<span>.</span></h1>
+          <div class="gallery-hero-line" aria-hidden="true"></div>
+          <p class="gallery-hero-subtitle">PIPINDERS <span>·</span> СЕЗОНЫ I И II</p>
+          <div class="gallery-hero-navigation" aria-label="Перейти к сезону">
+            <a href="#season-1" class="gallery-season-tile">
+              <span class="gallery-season-tile-mark">01 <span>/ 02</span></span>
+              <span class="gallery-season-tile-title">СЕЗОН I</span>
+              <span class="gallery-season-tile-lower"><span id="season-1-hero-count">— КАДРОВ</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none"/></svg></span>
+            </a>
+            <a href="#season-2" class="gallery-season-tile">
+              <span class="gallery-season-tile-mark">02 <span>/ 02</span></span>
+              <span class="gallery-season-tile-title">СЕЗОН II</span>
+              <span class="gallery-season-tile-lower"><span id="season-2-hero-count">— КАДРОВ</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none"/></svg></span>
+            </a>
+          </div>
+        </div>
+        <div class="gallery-hero-ground" aria-hidden="true"></div>
+      </section>
+
+      <div class="gallery-content">
+        <section class="gallery-season" id="season-1" aria-labelledby="season-1-title">
+          <div class="gallery-season-heading">
+            <div>
+              <span class="section-kicker"><span class="section-index">01 /</span> ФОТОАРХИВ</span>
+              <h2 id="season-1-title">СЕЗОН <span>I</span></h2>
+            </div>
+            <div class="gallery-season-count" id="season-1-count" aria-live="polite">ЗАГРУЗКА...</div>
+          </div>
+          <div class="gallery-grid" id="season-1-grid" aria-live="polite" aria-busy="true">
+            <div class="gallery-empty gallery-loading" role="status"><span class="gallery-empty-art" aria-hidden="true"></span><span>ЗАГРУЖАЕМ СНИМКИ...</span></div>
+          </div>
+        </section>
+
+        <section class="gallery-season" id="season-2" aria-labelledby="season-2-title">
+          <div class="gallery-season-heading">
+            <div>
+              <span class="section-kicker"><span class="section-index">02 /</span> ФОТОАРХИВ</span>
+              <h2 id="season-2-title">СЕЗОН <span>II</span></h2>
+            </div>
+            <div class="gallery-season-count" id="season-2-count" aria-live="polite">ЗАГРУЗКА...</div>
+          </div>
+          <div class="gallery-grid" id="season-2-grid" aria-live="polite" aria-busy="true">
+            <div class="gallery-empty gallery-loading" role="status"><span class="gallery-empty-art" aria-hidden="true"></span><span>ЗАГРУЖАЕМ СНИМКИ...</span></div>
+          </div>
+        </section>
+      </div>
+      <div class="gallery-back-wrap"><a class="gallery-back" href="/">← ВЕРНУТЬСЯ В МИР PIPINDERS</a></div>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <span>© 2026 PIPINDERS. ПОСТРОЕНО С НУЛЯ.</span>
+      <a href="/" aria-label="Вернуться на главную">PIPINDERS.RU</a>
+      <nav class="footer-legal" aria-label="Разделы сайта"><a href="/">ГЛАВНАЯ</a><a href="/privacy.html">ПОЛИТИКА ДАННЫХ</a><a href="/consent.html">СОГЛАСИЕ</a></nav>
+      <a class="footer-mail" href="mailto:apply@pipinders.ru">apply@pipinders.ru</a>
+    </footer>
+  </div>
+
+  <dialog class="gallery-lightbox" id="gallery-lightbox" aria-label="Просмотр скриншота">
+    <div class="gallery-lightbox-top">
+      <span class="gallery-lightbox-badge" id="gallery-lightbox-season">СЕЗОН I</span>
+      <span class="gallery-lightbox-counter" id="gallery-lightbox-counter">1 / 1</span>
+      <button class="gallery-lightbox-close" id="gallery-lightbox-close" type="button" aria-label="Закрыть просмотр"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" fill="none" stroke="currentColor" stroke-width="3"/></svg></button>
+    </div>
+    <div class="gallery-lightbox-stage" id="gallery-lightbox-stage">
+      <button class="gallery-lightbox-arrow gallery-lightbox-arrow--prev" id="gallery-lightbox-prev" type="button" aria-label="Предыдущий скриншот"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="3"/></svg></button>
+      <img class="gallery-lightbox-image" id="gallery-lightbox-image" alt="" decoding="async">
+      <button class="gallery-lightbox-arrow gallery-lightbox-arrow--next" id="gallery-lightbox-next" type="button" aria-label="Следующий скриншот"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="3"/></svg></button>
+    </div>
+    <div class="gallery-lightbox-bottom">
+      <span class="gallery-lightbox-hint">← → ЛИСТАТЬ <span>·</span> ESC ЗАКРЫТЬ</span>
+      <a class="gallery-lightbox-original" id="gallery-lightbox-original" target="_blank" rel="noopener noreferrer">ОТКРЫТЬ ОРИГИНАЛ <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
+    </div>
+  </dialog>
+</body>
+</html>

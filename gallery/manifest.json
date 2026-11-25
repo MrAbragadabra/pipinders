@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "seasons": {
+    "season-1": [
+      {
+        "src": "./gallery/season-1/001.png",
+        "thumb": "./assets/images/gallery-thumbs/season-1/f778d3562c3ab84518.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "./gallery/season-1/002.png",
+        "thumb": "./assets/images/gallery-thumbs/season-1/ce9ded94f8262d32a5.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "./gallery/season-1/003.png",
+        "thumb": "./assets/images/gallery-thumbs/season-1/268aa4cd257fe7443c.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "./gallery/season-1/004.png",
+        "thumb": "./assets/images/gallery-thumbs/season-1/a3722ba86d58cc2198.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "./gallery/season-1/005.png",
+        "thumb": "./assets/images/gallery-thumbs/season-1/b73c84ab1b4cd92be4.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "./gallery/season-1/006.png",
+        "thumb": "./assets/images/gallery-thumbs/season-1/7a8cf91accd7cb2aa5.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "./gallery/season-1/007.png",
+        "thumb": "./assets/images/gallery-thumbs/season-1/d47a131d24de4e5cc2.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "./gallery/season-1/008.png",
+        "thumb": "./assets/images/gallery-thumbs/season-1/da5ec87ebdf84f2045.webp",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "src": "./gallery/season-1/009.png",
+        "thumb": "./assets/images/gallery-thumbs/season-1/e3ef589ab75e01c614.webp",
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "season-2": [
+      {
+        "src": "./gallery/season-2/001.png",
+        "thumb": "./assets/images/gallery-thumbs/season-2/1aee0df0eecc40f06f.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "./gallery/season-2/002.png",
+        "thumb": "./assets/images/gallery-thumbs/season-2/e2d44858e4737becb2.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "./gallery/season-2/003.png",
+        "thumb": "./assets/images/gallery-thumbs/season-2/097fb0c7091c759d74.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "./gallery/season-2/004.png",
+        "thumb": "./assets/images/gallery-thumbs/season-2/210fa34899c546f468.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "./gallery/season-2/005.png",
+        "thumb": "./assets/images/gallery-thumbs/season-2/115bd07629b87c8047.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "./gallery/season-2/006.png",
+        "thumb": "./assets/images/gallery-thumbs/season-2/fdbe673c0f3f307bdd.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "./gallery/season-2/007.png",
+        "thumb": "./assets/images/gallery-thumbs/season-2/40a9c1f5cf9bcb4355.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "./gallery/season-2/008.png",
+        "thumb": "./assets/images/gallery-thumbs/season-2/732112bd88b86dbfc4.webp",
+        "width": 1920,
+        "height": 1200
+      },
+      {
+        "src": "./gallery/season-2/009.png",
+        "thumb": "./assets/images/gallery-thumbs/season-2/d0f3d3f6e92444fe34.webp",
+        "width": 1920,
+        "height": 1200
+      }
+    ]
+  }
+}

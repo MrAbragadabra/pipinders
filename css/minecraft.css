@@ -1,14 +1,8 @@
-/* ===============================================================
-   PIPINDERS · OVERWORLD VOXEL EDITION
-   Everyday Minecraft visual skin. No holiday effects or heavy animation.
-   Preserves DOM IDs, JavaScript integrations, forms and countdown.
-   Brand greens: #54fc54 / #c0f1c0.
-   =============================================================== */
 :root {
   --mc-grass: #54fc54;
   --mc-light: #c0f1c0;
-  --mc-grass-light: #8ddf7a;
-  --mc-grass-dark: #245d34;
+  --mc-snow: #e9f4e8;
+  --mc-snow-shadow: #9ebcb0;
   --mc-pine: #10281e;
   --mc-wood: #4a3928;
   --mc-wood-light: #63503a;
@@ -19,9 +13,9 @@
   --font-body: 'Manrope', 'Segoe UI', Arial, sans-serif;
 }
 
-/* Site-wide changes: no glassmorphism, nebulas, soft circles or cyber-grid. */
+
 .minecraft-edition {
-  background: #0b1e14;
+  background: #0a1b15;
   color: #f1fbef;
   background-image:
     linear-gradient(90deg, rgba(225,255,223,.017) 2px, transparent 2px),
@@ -68,11 +62,11 @@
 }
 @keyframes mc-status { 50% { opacity: .6; } }
 
-/* Pixel forest and village replace the original sci-fi portal. */
+
 .minecraft-edition .hero {
-  min-height: max(850px, calc(100svh - 91px));
-  padding: 96px 24px 125px;
-  background: #122f26;
+  min-height: max(945px, calc(100svh - 91px));
+  padding: 150px 24px 148px;
+  background: #0e2520;
   isolation: isolate;
 }
 .minecraft-edition .hero::before {
@@ -84,7 +78,7 @@
 }
 .minecraft-edition .hero::after {
   z-index: 2; left: 0; right: 0; height: 125px; bottom: 0;
-  background: linear-gradient(to bottom, transparent, #0b1e14 94%);
+  background: linear-gradient(to bottom, transparent, #0a1b15 94%);
 }
 .minecraft-edition .hero-scenery { z-index: 1; }
 .minecraft-edition .block-world {
@@ -99,7 +93,7 @@
 }
 .minecraft-edition .block-world::after {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg,#122f26 4%,rgba(18,47,38,.66) 24%,rgba(18,47,38,.48) 49%,rgba(18,47,38,.13) 76%,transparent 100%);
+  background: linear-gradient(180deg,#0e2520 4%,rgba(14,37,32,.66) 24%,rgba(14,37,32,.48) 49%,rgba(14,37,32,.1) 76%,transparent 100%);
 }
 .minecraft-edition .world-label {
   position: absolute; color: #b5d7bb; opacity: .76;
@@ -225,14 +219,80 @@
 .minecraft-edition .scroll-mouse i { width: 4px; height: 5px; }
 .minecraft-edition .hero-version { color: #cfe5d0; }
 
-/* Lower sections: pixel turf, stone, dirt and timber textures. */
+
+.minecraft-edition .winter-garland {
+  z-index: 7; pointer-events: none; top: -36px; height: 100px; overflow: visible;
+}
+.minecraft-edition .winter-wire { height: 100px; overflow: visible; }
+.minecraft-edition .winter-wire-shadow { stroke: #101d11; stroke-width: 8; }
+.minecraft-edition .winter-wire-highlight { stroke: #806b4a; stroke-width: 3; }
+.minecraft-edition .winter-bulbs { pointer-events: none; }
+.minecraft-edition .winter-bulb {
+  position: absolute; left: var(--x); top: calc(var(--y) + 6px);
+  width: 27px; height: 29px; transform: translateX(-50%);
+  padding: 0; margin: 0; border: 0; border-radius: 0;
+  pointer-events: auto; cursor: pointer;
+  background: transparent; box-shadow: none;
+  animation: none; touch-action: manipulation;
+}
+.minecraft-edition .winter-bulb::before,
+.minecraft-edition .winter-bulb::after { content: none; }
+.minecraft-edition .pixel-bulb-core {
+  position: absolute; top: 9px; left: 8px; width: 12px; height: 16px;
+  background: var(--bulb-color); border: 2px solid #18271a;
+  box-shadow: inset -2px -3px #213b27, inset 2px 2px rgba(255,255,255,.4), 0 0 0 2px #0b1c12;
+  animation: mc-lamp 2.1s steps(1,end) infinite;
+  animation-duration: var(--duration); animation-delay: var(--delay);
+  transition: none;
+}
+.minecraft-edition .pixel-bulb-core::before {
+  content: ''; position: absolute; width: 8px; height: 7px;
+  bottom: 100%; left: 0; background: #504632;
+  border-left: 2px solid #1b281e; border-right: 2px solid #18271c;
+}
+.minecraft-edition .pixel-bulb-core::after {
+  content: ''; position: absolute; top: 2px; left: 2px; width: 3px; height: 3px; background: #f7ffea;
+}
+@keyframes mc-lamp { 0%,28%,56%,100% { opacity: 1; } 29%,55% { opacity: .72; } }
+.minecraft-edition .winter-bulb.is-off .pixel-bulb-core {
+  animation: none; opacity: 1; background: #405346;
+  border-color: #162c20;
+  box-shadow: inset -3px -3px 0 #1c2e23, inset 1px 1px 0 #5b695c, 0 0 0 2px #0b1c12;
+}
+.minecraft-edition .winter-bulb.is-off .pixel-bulb-core::after { opacity: .13; }
+.minecraft-edition .winter-bulb:hover .pixel-bulb-core { outline: 2px solid #f7f1be; outline-offset: 3px; }
+.minecraft-edition .winter-bulb:focus-visible {
+  outline: 2px dashed #f8ebbd; outline-offset: 0;
+}
+.minecraft-edition .winter-effects-controls { z-index: 10; top: 113px; right: clamp(24px,5.6vw,100px); gap: 9px; }
+.minecraft-edition .winter-toggle {
+  min-height: 39px; color: #efffed; padding: 8px 11px;
+  border: 2px solid #07180e; background: #2a4230; backdrop-filter: none;
+  box-shadow: inset 2px 2px 0 #607967, inset -3px -3px 0 #162b1b, 3px 3px 0 #04120b;
+  font: 900 10px/1 ui-monospace, 'Courier New', monospace;
+  letter-spacing: .04em;
+}
+.minecraft-edition .winter-toggle svg { stroke: #e8d093; }
+.minecraft-edition .winter-toggle-state { color: #e9d298; }
+.minecraft-edition .winter-toggle:hover { background: #3c5840; border-color: #c0f1c0; }
+.minecraft-edition .winter-toggle:focus-visible { outline: 3px solid #e7f3cc; outline-offset: 3px; }
+.minecraft-edition .winter-toggle[data-state="mixed"] .winter-toggle-state { color: #f2d489; }
+.minecraft-edition .lamp-easter-egg {
+  position: absolute; z-index: 8; top: 163px; right: clamp(24px,5.6vw,100px);
+  color: #b6ceb6; font: 900 8px/1.5 ui-monospace,'Courier New',monospace;
+  letter-spacing: .08em; opacity: .9; white-space: nowrap;
+}
+.minecraft-edition .winter-snow { z-index: 6; opacity: .87; image-rendering: pixelated; }
+.minecraft-edition .winter-side-mark { display: none; }
+
+
 .minecraft-edition .about {
   padding-top: 112px; padding-bottom: 130px;
   background:
     repeating-linear-gradient(90deg, transparent 0 40px,rgba(191,234,199,.023) 40px 42px),
     linear-gradient(180deg, #112b21,#0c201a 92%);
-  border-top: 9px solid #367d40;
-  box-shadow: inset 0 5px #78b45e;
+  border-top: 9px solid #dceee1;
+  box-shadow: inset 0 5px #719c7c;
 }
 .minecraft-edition .about::before { display: none; }
 .minecraft-edition .about::after { height: 0; background: none; }
@@ -263,7 +323,7 @@
 }
 .minecraft-edition .feature::before {
   inset: 0 0 auto 0; width: auto; height: 11px; transform: none;
-  border: 0; background: repeating-linear-gradient(90deg,#54a651 0 32px,#2d783f 32px 52px,#65bb58 52px 74px);
+  border: 0; background: repeating-linear-gradient(90deg,#e4f2df 0 32px,#b8ddc5 32px 52px,#d7eade 52px 74px);
 }
 .minecraft-edition .feature::after { content: none; }
 .minecraft-edition .feature:nth-child(2) {
@@ -294,7 +354,7 @@
 .minecraft-edition .rules { position: relative; }
 .minecraft-edition .rules::before {
   content:''; position:absolute; left:0; top:0; width:100%; height:5px;
-  background: repeating-linear-gradient(90deg,#54ad60 0 30px, #246c39 30px 50px); opacity:.5;
+  background: repeating-linear-gradient(90deg,#c6e0d1 0 30px, #7caa94 30px 50px); opacity:.5;
 }
 .minecraft-edition .rules-list { gap: 16px; }
 .minecraft-edition .rules-list .rule {
@@ -338,7 +398,7 @@
 }
 .minecraft-edition .application-panel::before {
   content:''; position:absolute; top:-4px; left:-4px; right:-4px; height:12px;
-  background: repeating-linear-gradient(90deg,#54fc54 0 30px,#99d883 30px 55px,#2c7c3a 55px 75px);
+  background: repeating-linear-gradient(90deg,#c0f1c0 0 30px,#e8f8e4 30px 55px,#8eb7a0 55px 75px);
   border: 4px solid #07160f; border-bottom: none; pointer-events:none;
 }
 .minecraft-edition .panel-header { padding-top: 14px; font-family:ui-monospace,'Courier New',monospace; color:#c0f1c0; }
@@ -366,11 +426,12 @@
 .minecraft-edition .form-status[data-state="error"] { color:#ffd8cc; }
 .minecraft-edition .form-status[data-state="success"] { color:#9dff9d; }
 .minecraft-edition .copy-application { font-size:12px; }
-.minecraft-edition .outro { border-top: 8px solid #368247; margin-top: 0; }
+.minecraft-edition .outro { border-top: 8px solid #bddfc8; margin-top: 0; }
 .minecraft-edition .outro-topline { color:#c2e3c9; }
 .minecraft-edition .outro-inner { position:relative; }
 .minecraft-edition .outro-inner p { color:#a5c4b0; font-family:var(--font-display); text-shadow:2px 3px #081b10; }
 .minecraft-edition .outro-inner p strong { color:#e7f9e6; }
+.minecraft-edition .winter-outro-star svg { stroke: #c0f1c0; stroke-width:3; stroke-linecap:square; }
 .minecraft-edition .outro-signal span { background:#54fc54; box-shadow:none; width:6px; animation-timing-function:steps(4,end); }
 .minecraft-edition .outro-note { color:#afcdb6; }
 .minecraft-edition .site-footer {
@@ -396,9 +457,9 @@
   .minecraft-edition .header-nav { font-size:8px; }
   .minecraft-edition .status-pill { padding: 9px 8px; gap:6px; font-size:8px; }
   .minecraft-edition .status-light { width:7px; height:7px; }
-  .minecraft-edition .hero { min-height: max(790px, calc(100svh - 84px)); padding: 92px 14px 105px; }
+  .minecraft-edition .hero { min-height: max(900px, calc(100svh - 84px)); padding: 154px 14px 105px; }
   .minecraft-edition .block-world img { width:max(100%,820px); height:auto; opacity:.74; }
-  .minecraft-edition .block-world::after { background:linear-gradient(180deg,#122f26 8%,rgba(18,47,38,.75) 35%,rgba(18,47,38,.42) 75%,transparent); }
+  .minecraft-edition .block-world::after { background:linear-gradient(180deg,#0e2520 8%,rgba(14,37,32,.75) 35%,rgba(14,37,32,.42) 75%,transparent); }
   .minecraft-edition .hero-kicker { font-size:9px; padding:7px 8px; gap:5px; letter-spacing:.07em; }
   .minecraft-edition .hero-overline { font-size:9px; margin-top:27px; letter-spacing:.045em; }
   .minecraft-edition .hero-title { font-size:clamp(56px,15vw,108px); text-shadow:0 3px #bad7bd,0 7px #50775b,0 11px #18382a,4px 15px #07130f; }
@@ -416,6 +477,14 @@
   .minecraft-edition .game-tag { padding:5px 6px; min-height:34px; font-size:9px; }
   .minecraft-edition .hero-actions { margin-top:20px; gap:10px; }
   .minecraft-edition .action-primary,.minecraft-edition .action-secondary { font-size:10px; }
+  .minecraft-edition .winter-garland { top:0; height:74px; }
+  .minecraft-edition .winter-wire { height:74px; }
+  .minecraft-edition .winter-bulb { width:24px; height:25px; top:calc(var(--y) + 3px); }
+  .minecraft-edition .pixel-bulb-core { top:7px; left:7px; width:10px; height:13px; }
+  .minecraft-edition .pixel-bulb-core::before { width:7px; height:5px; }
+  .minecraft-edition .winter-effects-controls { top:88px; left:50%; right:auto; transform:translateX(-50%); gap:7px; }
+  .minecraft-edition .winter-toggle { min-height:35px; padding:6px 9px; font-size:9px; }
+  .minecraft-edition .lamp-easter-egg { top:137px; right:0; left:0; text-align:center; font-size:7px; }
   .minecraft-edition .hero-bottom { bottom:28px; left:16px; right:16px; }
   .minecraft-edition .about { padding:72px 21px 92px; }
   .minecraft-edition .section-heading-row h2 { font-size:clamp(31px,7.7vw,48px); }
@@ -437,63 +506,20 @@
   .minecraft-edition .brand-name { font-size:11px; }
   .minecraft-edition .header-nav { font-size:7px; }
   .minecraft-edition .status-pill { font-size:7px; padding:7px 5px; }
-  .minecraft-edition .hero { min-height:820px; }
+  .minecraft-edition .hero { min-height:940px; }
   .minecraft-edition .hero-overline { font-size:8px; }
   .minecraft-edition .hero-title { font-size:15vw; }
   .minecraft-edition .hero-subtitle { font-size:18px; }
   .minecraft-edition .game-tag { font-size:8px; }
+  .minecraft-edition .lamp-easter-egg { font-size:6.6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .minecraft-edition .pixel-bulb-core { animation: none !important; }
+  .minecraft-edition .winter-snow { display:none; }
 }
 
-/* Four independent block segments stay in their reserved 70 × 24 px slot. */
 .minecraft-edition .outro-signal span {
   width: 7px; height: 24px; border-radius: 0;
   transform: scaleY(.34); transform-origin: center;
   box-shadow: inset -2px 0 #258d2d;
-}
-
-/* ================================================
-   Overworld edition: reusable daylight biome
-   ================================================ */
-.overworld-edition .block-world img {
-  image-rendering: pixelated;
-}
-.overworld-edition .block-world .house-light-overlay { opacity: 0; }
-.overworld-edition[data-dayphase="dusk"] .block-world .house-light-overlay { opacity: .7; }
-.overworld-edition[data-dayphase="night"] .block-world .house-light-overlay { opacity: 1; }
-.overworld-edition[data-dayphase="dawn"] .block-world .house-light-overlay { opacity: .32; }
-.overworld-edition .hero-scenery .block-world::after {
-  background: linear-gradient(180deg,#122f26 2%,rgba(18,47,38,.73) 27%,rgba(18,47,38,.52) 53%,rgba(18,47,38,.1) 81%,transparent 100%);
-}
-.overworld-edition[data-dayphase="night"] .hero-scenery .block-world::after {
-  background: linear-gradient(180deg,rgba(6,21,22,.64),rgba(7,27,24,.74) 30%,rgba(4,22,15,.53) 62%,rgba(4,18,13,.12));
-}
-.overworld-edition[data-dayphase="dusk"] .hero-scenery .block-world::after {
-  background: linear-gradient(180deg,rgba(23,31,28,.42),rgba(20,35,30,.72) 30%,rgba(25,35,22,.36) 67%,transparent);
-}
-.overworld-edition[data-dayphase="dawn"] .hero-scenery .block-world::after {
-  background: linear-gradient(180deg,rgba(23,34,30,.28),rgba(20,44,34,.6) 30%,rgba(21,47,37,.3) 70%,transparent);
-}
-.overworld-edition .world-label { border: 2px solid #294c36; }
-.overworld-edition .overworld-grass-block {
-  width: 54px; height: 54px; margin-inline:auto;
-  border: 3px solid #081e10; background: #25472a;
-  box-shadow: inset 3px 3px #4b6d3a, 5px 5px #07140b;
-  display: grid; place-items: center;
-}
-.overworld-edition .overworld-grass-block svg { width: 42px; height: 42px; }
-.overworld-edition .hero-actions { margin-top: 26px; }
-.overworld-edition .hero-content { will-change: auto; }
-.overworld-edition :is(.action-primary,.action-secondary,.status-pill,.feature,.application-panel,.form-field input,.form-field textarea) { border-radius: 0; }
-.overworld-edition .hero-scenery,
-.overworld-edition .block-world,
-.overworld-edition .block-world img { pointer-events: none; }
-@media (max-width:700px) {
- .overworld-edition .hero { padding-top: 85px; padding-bottom:105px; }
- .overworld-edition .hero-content { transform: none; }
- .overworld-edition .hero-overline { margin-top:28px; }
- .overworld-edition .block-world img { width:max(100%,850px); }
- .overworld-edition .hero-bottom { bottom:25px; }
-}
-@media (prefers-reduced-motion:reduce) {
- .overworld-edition *, .overworld-edition *::before, .overworld-edition *::after { scroll-behavior: auto; }
 }

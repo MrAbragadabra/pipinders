@@ -1,0 +1,205 @@
+.winter-edition {
+  --winter-ice: #e3fff3;
+  --winter-glow: #c4f2df;
+  --winter-gold: #f1cc8c;
+  --winter-copper: #dca18b;
+  background: #071210;
+}
+.winter-edition .page-glow {
+  background:
+    radial-gradient(ellipse 55% 23% at 48% 13%, rgba(100, 209, 151, .20), transparent 78%),
+    radial-gradient(ellipse 32% 15% at 79% 32%, rgba(205, 176, 112, .065), transparent 88%),
+    linear-gradient(180deg, #071210 0%, #0b1814 43%, #07110e 100%);
+}
+.winter-edition .site-header {
+  border-bottom-color: rgba(214, 251, 226, .16);
+  background: linear-gradient(180deg, rgba(9,26,18,.86), rgba(9,26,18,.16));
+}
+.winter-edition .brand-emblem { border-color: rgba(241, 204, 140, .42); box-shadow: 0 0 23px rgba(241, 204, 140, .065); }
+.winter-edition .brand-period { color: var(--winter-gold); }
+.winter-edition .header-coordinate { color: #b1c9af; }
+.winter-edition .coordinate-dash { color: var(--winter-gold); }
+.winter-edition .hero {
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse 37% 45% at 50% 37%, rgba(112, 249, 175, .075), transparent 78%),
+    radial-gradient(ellipse 58% 32% at 50% -10%, rgba(231, 255, 231, .08), transparent 100%);
+}
+.winter-edition .hero::before { opacity: .65; }
+.winter-edition .hero::after { background: linear-gradient(180deg, transparent, #071210 92%); }
+.winter-edition .hero-kicker { color: var(--winter-gold); }
+.winter-edition .kicker-line { background: var(--winter-gold); box-shadow: 0 0 16px rgba(241,204,140,.5); }
+.winter-edition .kicker-index { color: #a2c2ac; }
+.winter-edition .hero-overline { color: #e7f5e9; }
+.winter-edition .hero-title {
+  background-image: linear-gradient(180deg, #fff 12%, #f0fff6 42%, #b6dccc 91%);
+  text-shadow: 0 12px 70px rgba(223,255,238,.14);
+}
+.winter-edition .hero-dot { background-image: linear-gradient(145deg, #d4ffe0, #f1cc8c 75%); }
+.winter-edition .hero-subtitle span { color: var(--winter-gold); }
+.winter-edition .hero-description { color: #b6c9ba; }
+.winter-edition .hero-title-rule { background: linear-gradient(90deg, transparent, rgba(241,204,140,.6), transparent); }
+.winter-edition .hero-title-rule span { background: var(--winter-gold); box-shadow: 0 0 20px rgba(241,204,140,.4); }
+.winter-edition .portal-scene { filter: drop-shadow(0 0 105px rgba(134,252,177,.15)); }
+.winter-edition .portal-ring--mid { border-color: rgba(219,251,223,.4); }
+.winter-edition .portal-ring--outer { border-color: rgba(246,217,163,.24); }
+.winter-edition .portal-core { border-color: rgba(241,204,140,.28); }
+.winter-edition .ambient-orb--one { background: rgba(73, 185, 133, .19); }
+.winter-edition .ambient-orb--two { background: rgba(226, 190, 112, .095); }
+.winter-edition .action-primary { background: linear-gradient(110deg,#54fc54,#bdf2bb); }
+.winter-edition .action-primary:hover { box-shadow: 0 10px 68px rgba(84,252,84,.28); }
+.winter-edition .hero-bottom .tiny-square { background: var(--winter-gold); box-shadow: 0 0 10px rgba(241,204,140,.5); }
+.winter-edition .hero-version { color: #b2bda2; }
+
+
+.winter-garland {
+  position: absolute; z-index: 6; top: -38px; left: 0; right: 0;
+  height: 100px; pointer-events: none; overflow: hidden;
+}
+.winter-wire {
+  position: absolute; inset: 0; display: block; width: 100%; height: 100%;
+  fill: none; shape-rendering: crispEdges;
+}
+.winter-wire path {
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+.winter-wire-shadow { stroke: #10251b; stroke-width: 6; opacity: .96; }
+.winter-wire-highlight { stroke: #73977c; stroke-width: 2; opacity: .94; }
+.winter-bulbs { position: absolute; inset: 0; }
+.winter-bulb {
+  position: absolute; left: var(--x); top: calc(var(--y) + 6px);
+  width: 12px; height: 16px; box-sizing: border-box;
+  transform: translateX(-50%);
+  border: 2px solid #123022; border-radius: 0;
+  background: var(--bulb-color);
+  
+  box-shadow:
+    inset -3px -3px 0 rgba(8, 30, 17, .43),
+    inset 2px 2px 0 rgba(255, 255, 255, .21),
+    0 0 0 2px #10291c,
+    0 0 0 5px var(--bulb-halo);
+  animation: winter-pixel-twinkle var(--duration) steps(1, end) infinite;
+  animation-delay: var(--delay);
+}
+.winter-bulb::before {
+  content: ''; position: absolute; box-sizing: border-box;
+  bottom: 100%; left: 0; right: 0; height: 6px;
+  background: linear-gradient(90deg, #34543e 0 34%, #819982 34% 67%, #2c4737 67%);
+  border: 1px solid #152a20; border-radius: 0;
+}
+.winter-bulb::after {
+  content: ''; position: absolute; inset: 2px auto auto 2px;
+  width: 3px; height: 3px; background: rgba(255,255,255,.88); border-radius: 0;
+}
+@keyframes winter-pixel-twinkle {
+  0%, 30%, 70%, 100% { opacity: 1; }
+  31%, 69% { opacity: .55; }
+}
+.winter-lights-off .winter-bulb {
+  animation: none !important; opacity: .38;
+  box-shadow: inset -3px -3px 0 rgba(8,30,17,.55), 0 0 0 2px #10291c;
+  background: #637766; border-color: #233a2b;
+}
+.winter-lights-off .winter-bulb::after { opacity: .12; }
+
+
+.winter-effects-controls {
+  position: absolute; z-index: 9; top: 113px; right: clamp(24px, 5.6vw, 100px);
+  display: flex; gap: 8px; align-items: center;
+}
+.winter-toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 35px; padding: 7px 11px;
+  border: 1px solid rgba(190,232,202,.23);
+  color: #e4f6e6; background: rgba(8,28,17,.73);
+  backdrop-filter: blur(12px);
+  font: 800 9px/1.1 var(--font-body); letter-spacing: .105em;
+  cursor: pointer; transition: border-color .2s ease, background .2s ease;
+}
+.winter-toggle svg { width: 16px; height: 16px; flex: none; fill: none; stroke: var(--winter-gold); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+#winter-lights-toggle svg { color: var(--winter-gold); stroke: none; }
+.winter-toggle-state { color: var(--winter-gold); min-width: 28px; text-align: right; }
+.winter-toggle:hover, .winter-toggle:focus-visible { border-color: rgba(241,204,140,.7); background: rgba(19,46,31,.95); }
+.winter-toggle[aria-pressed="false"] .winter-toggle-state, .winter-toggle[aria-pressed="false"] svg { color: #869a89; stroke: #869a89; }
+#winter-lights-toggle[aria-pressed="false"] svg { color: #869a89; }
+.winter-toggle[aria-pressed="false"] { border-color: rgba(176,205,180,.15); }
+
+
+.winter-snow { position: absolute; z-index: 4; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; opacity: .84; }
+.winter-snow-off .winter-snow { opacity: 0; }
+.winter-side-mark {
+  position: absolute; z-index: 2; top: 26%; right: clamp(22px,6vw,100px);
+  display: flex; flex-direction: column; align-items: center; gap: 13px;
+  color: rgba(230,245,222,.54); font: 800 9px/1 var(--font-body); letter-spacing: .26em;
+  writing-mode: vertical-rl;
+}
+.winter-side-mark svg { width: 44px; height: 44px; fill: none; stroke: var(--winter-gold); stroke-width: 1.4; opacity: .7; transform: rotate(22.5deg); }
+.winter-edition .about {
+  background: linear-gradient(180deg, #0c1d16, #09140f 82%);
+  border-color: rgba(214,251,226,.15);
+}
+.winter-edition .about::after {
+  content:''; position:absolute; top: 0; left: 0; right: 0; height: 7px; pointer-events:none;
+  background: linear-gradient(90deg, transparent, rgba(240,255,243,.38) 15%, rgba(240,255,243,.75) 50%, rgba(240,255,243,.34) 84%, transparent);
+  opacity: .21; filter: blur(2px);
+}
+.winter-edition .section-index { color: #e3c490; }
+.winter-edition .feature {
+  border-color: rgba(190,235,196,.19);
+  background:
+    linear-gradient(180deg,rgba(217,255,235,.055),transparent 18%),
+    linear-gradient(135deg,rgba(20,54,37,.66),rgba(11,30,22,.76) 85%);
+}
+.winter-edition .feature::before { border-color: rgba(237,214,160,.19); }
+.winter-edition .feature:hover { border-color: rgba(241,204,140,.55); }
+.winter-edition .feature-id span { color: var(--winter-gold); }
+.winter-edition .feature-symbol { color: rgba(241,204,140,.73); }
+.winter-edition .rules-list .rule {
+  border-color: rgba(193,233,200,.18);
+  background: linear-gradient(140deg, rgba(18,46,32,.77), rgba(9,27,19,.74));
+}
+.winter-edition .rules-list .rule:hover { border-color: rgba(241,204,140,.3); }
+.winter-edition .application-panel {
+  border-color: rgba(225,251,229,.29);
+  background: linear-gradient(145deg, rgba(217,251,224,.09), rgba(9,31,19,.84) 45%, rgba(8,17,13,.97));
+  box-shadow: 0 24px 80px rgba(0,0,0,.24), inset 0 1px 0 rgba(245,255,244,.06);
+}
+.winter-edition .panel-header-icon { color: var(--winter-gold); }
+.winter-edition .outro { border-color: rgba(225,249,230,.22); }
+.winter-outro-star { width: 52px; height: 52px; margin: 0 auto 14px; opacity: .75; }
+.winter-outro-star svg { display: block; width: 100%; height: 100%; fill:none; stroke: var(--winter-gold); stroke-width: 1.7; stroke-linecap: round; }
+.winter-edition .outro-signal span { box-shadow: 0 0 11px rgba(241,204,140,.28); }
+.winter-edition .site-footer { border-color: rgba(241,204,140,.16); }
+
+@media (max-width: 1050px) {
+  .winter-side-mark { display: none; }
+  .winter-effects-controls { top: 98px; }
+}
+@media (max-width: 700px) {
+  .winter-garland { top: 0; height: 77px; }
+  .winter-wire { height: 77px; }
+  .winter-bulb { width: 8px; height: 12px; top: calc(var(--y) + 5px); border-width: 1px; box-shadow: inset -2px -2px 0 rgba(8,30,17,.43), inset 1px 1px 0 rgba(255,255,255,.24), 0 0 0 1px #10291c, 0 0 0 3px var(--bulb-halo); }
+  .winter-bulb::before { height: 5px; }
+  .winter-bulb::after { width: 2px; height: 2px; inset: 2px auto auto 1px; }
+  .winter-lights-off .winter-bulb { box-shadow: inset -2px -2px 0 rgba(8,30,17,.55), 0 0 0 1px #10291c; }
+  .winter-effects-controls { top: 85px; left: 50%; right: auto; transform: translateX(-50%); gap: 6px; white-space: nowrap; }
+  .winter-toggle { min-height: 33px; padding: 6px 10px; font-size: 8px; }
+  .winter-toggle svg { width: 15px; height: 15px; }
+  .winter-edition .hero { min-height: max(870px, calc(100svh - 82px)); padding-top: 102px; }
+  .winter-edition .hero-kicker { font-size: 8px; letter-spacing: .14em; }
+  .winter-edition .hero-overline { font-size: 8px; letter-spacing: .11em; }
+  .winter-edition .hero-subtitle { font-size: clamp(18px,4.45vw,30px); }
+  .winter-edition .hero-description { font-size: 12px; }
+  .winter-edition .feature { min-height: 258px; }
+}
+@media (max-width: 370px) {
+  .winter-edition .hero-overline { letter-spacing: .045em; }
+  .winter-edition .hero-kicker { font-size: 7.5px; }
+  .winter-edition .hero { min-height: 930px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .winter-bulb { animation: none !important; }
+  .winter-snow { display: none; }
+}
