@@ -1,6 +1,5 @@
 'use strict';
-/* PIPINDERS WINTER — interactive pixel garland and blocky snowfall.
-   No external dependencies. Does not read or modify application-form data. */
+
 (() => {
   const hero = document.querySelector('.hero');
   const bulbsRoot = document.getElementById('winter-bulbs');
@@ -18,8 +17,7 @@
   const saveData = Boolean(navigator.connection?.saveData);
   const totalBulbs = 25;
   let prefs = {};
-  try { prefs = JSON.parse(localStorage.getItem(storageKey) || '{}') || {}; } catch { /* storage optional */ }
-  // Retain the previous Winter Edition master-switch preference for existing visitors.
+  try { prefs = JSON.parse(localStorage.getItem(storageKey) || '{}') || {}; } catch {  }
   let bulbStates = Array.isArray(prefs.bulbs) && prefs.bulbs.length === totalBulbs
     ? prefs.bulbs.map(Boolean)
     : Array(totalBulbs).fill(prefs.lights !== false);
@@ -27,7 +25,7 @@
   if (reduceMotion.matches) snowEnabled = false;
   const save = () => {
     try { localStorage.setItem(storageKey, JSON.stringify({ bulbs: bulbStates, lights: bulbStates.every(Boolean), snow: snowEnabled })); }
-    catch { /* localStorage is optional */ }
+    catch {  }
   };
 
   const colors = ['#54fc54', '#e9be83', '#c0f1c0', '#eaa49a', '#e6e7b2'];
@@ -114,9 +112,6 @@
   buildBulbs();
   if (isMobile.addEventListener) isMobile.addEventListener('change', buildBulbs);
   else if (isMobile.addListener) isMobile.addListener(buildBulbs);
-
-  // One low-resolution canvas follows the viewport, not the full document.
-  // It keeps snowfall visible on all sections without thousands of DOM particles.
   const ctx = snowCanvas.getContext('2d', { alpha: true, desynchronized: true });
   let width = 1, height = 1, flakes = [], raf = null, lastFrame = 0;
   let resizePending = false;
@@ -127,13 +122,15 @@
     size: mobileSnow() ? 2 + Math.floor(Math.random() * 2) : 2 + Math.floor(Math.random() * 3),
     speed: .32 + Math.random() * .62,
     drift: .1 + Math.random() * .3,
-    alpha: .17 + Math.random() * .34
+    color: `rgba(234,255,239,${(.17 + Math.random() * .34).toFixed(2)})`
   });
   function resize() {
     if (!ctx) return;
-    width = Math.max(1, window.innerWidth);
-    height = Math.max(1, window.innerHeight);
-    // Pixel-sized particles need no 2× or 3× canvas on high-DPI phones.
+    const nextWidth = Math.max(1, window.innerWidth);
+    const nextHeight = Math.max(1, window.innerHeight);
+    if (width === nextWidth && height === nextHeight && flakes.length) return;
+    width = nextWidth;
+    height = nextHeight;
     snowCanvas.width = width;
     snowCanvas.height = height;
     ctx.imageSmoothingEnabled = false;
@@ -148,7 +145,6 @@
   function draw(time) {
     raf = null;
     if (!snowEnabled || document.hidden || !ctx || reduceMotion.matches) return;
-    // About 24 frames/s on desktop, 20 on phones; motion is intentionally slow.
     const frameInterval = mobileSnow() ? 50 : 42;
     if (lastFrame && time - lastFrame < frameInterval) {
       raf = requestAnimationFrame(draw);
@@ -163,7 +159,7 @@
       f.x += (breeze + f.drift) * step;
       if (f.y > height + 10) Object.assign(f, randomFlake(false));
       if (f.x > width + 10) f.x = -6;
-      ctx.fillStyle = `rgba(234,255,239,${f.alpha.toFixed(2)})`;
+      ctx.fillStyle = f.color;
       const x = Math.round(f.x / 2) * 2, y = Math.round(f.y / 2) * 2;
       ctx.fillRect(x, y, f.size, f.size);
     }
@@ -181,7 +177,6 @@
     snowButton.setAttribute('aria-label', snowEnabled ? 'Выключить снег' : 'Включить снег');
     snowState.textContent = snowEnabled ? 'ВКЛ' : 'ВЫКЛ';
     if (snowEnabled) start(); else stop(true);
-    // Snow caps listen to this event; no polling or duplicate animation loop.
     window.dispatchEvent(new CustomEvent('pipinders:snow', { detail: { enabled: snowEnabled } }));
     save();
   }

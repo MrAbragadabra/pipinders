@@ -1,9 +1,3 @@
-/* ===============================================================
-   PIPINDERS · WINTER VOXEL EDITION
-   A Minecraft-inspired visual skin. Pure CSS / original SVG art.
-   Preserves DOM IDs, JavaScript integrations, forms and countdown.
-   Brand greens: #54fc54 / #c0f1c0.
-   =============================================================== */
 :root {
   --mc-grass: #54fc54;
   --mc-light: #c0f1c0;
@@ -19,7 +13,7 @@
   --font-body: 'Manrope', 'Segoe UI', Arial, sans-serif;
 }
 
-/* Site-wide changes: no glassmorphism, nebulas, soft circles or cyber-grid. */
+
 .minecraft-edition {
   background: #0a1b15;
   color: #f1fbef;
@@ -68,7 +62,7 @@
 }
 @keyframes mc-status { 50% { opacity: .6; } }
 
-/* Minecraft-like snowy taiga replaces the old sci-fi portal completely. */
+
 .minecraft-edition .hero {
   min-height: max(945px, calc(100svh - 91px));
   padding: 150px 24px 148px;
@@ -225,8 +219,7 @@
 .minecraft-edition .scroll-mouse i { width: 4px; height: 5px; }
 .minecraft-edition .hero-version { color: #cfe5d0; }
 
-/* Pixel fairylights: each small lamp is a real button. Hit area is much
-   larger than the visible bulb; only the bulb image changes. */
+
 .minecraft-edition .winter-garland {
   z-index: 7; pointer-events: none; top: -36px; height: 100px; overflow: visible;
 }
@@ -292,7 +285,7 @@
 .minecraft-edition .winter-snow { z-index: 6; opacity: .87; image-rendering: pixelated; }
 .minecraft-edition .winter-side-mark { display: none; }
 
-/* Lower sections: slabs, snow caps, grass and timber textures. */
+
 .minecraft-edition .about {
   padding-top: 112px; padding-bottom: 130px;
   background:
@@ -524,7 +517,7 @@
   .minecraft-edition .pixel-bulb-core { animation: none !important; }
   .minecraft-edition .winter-snow { display:none; }
 }
-/* Four independent block segments stay in their reserved 70 × 24 px slot. */
+
 .minecraft-edition .outro-signal span {
   width: 7px; height: 24px; border-radius: 0;
   transform: scaleY(.34); transform-origin: center;

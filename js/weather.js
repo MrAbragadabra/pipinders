@@ -1,12 +1,9 @@
 'use strict';
-/* PIPINDERS — House lights (Moscow clock) and shakeable pixel snow on the title.
- * No libraries, external requests, input/form hooks, or persistent animation loop. */
+
 (() => {
   const worldLabel = document.getElementById('world-time-label');
   const body = document.body;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-  // Moscow clock is consistent for all visitors, just like the server launch time.
   const moscowClock = new Intl.DateTimeFormat('en-GB', {
     timeZone: 'Europe/Moscow', hour: '2-digit', hourCycle: 'h23'
   });
@@ -19,9 +16,14 @@
     if (worldLabel) worldLabel.textContent = captions[phase];
   }
   updateWorldTime();
-  // No per-frame work for the house; update at minute boundaries or tab return.
-  const worldClockInterval = setInterval(updateWorldTime, 60_000);
-  document.addEventListener('visibilitychange', () => { if (!document.hidden) updateWorldTime(); });
+  let worldClockInterval = null;
+  function syncClock() {
+    if (worldClockInterval !== null) clearInterval(worldClockInterval);
+    worldClockInterval = null;
+    if (!document.hidden) { updateWorldTime(); worldClockInterval = setInterval(updateWorldTime, 60_000); }
+  }
+  syncClock();
+  document.addEventListener('visibilitychange', syncClock);
 
   const word = document.getElementById('snowy-word');
   const canvas = document.getElementById('title-snow');
@@ -30,7 +32,8 @@
   if (!ctx) return;
 
   let width = 1, height = 1, topEdges = [], flakes = [], shakeFrame = null;
-  let level = .28;             // start with a dusting, then slowly grow
+  let level = .28;
+  let fontPx = 0, geometryKey = null, shakeTimer = null;
   let snowActive = !body.classList.contains('winter-snow-off') && !reducedMotion.matches;
   const wordText = 'СКОРО';
   const rand = n => (Math.sin(n * 19.137 + 11.78) * 43758.5453) % 1;
@@ -40,9 +43,13 @@
     const rect = word.getBoundingClientRect();
     width = Math.max(1, Math.round(rect.width));
     height = Math.max(1, Math.round(rect.height));
+    const style = getComputedStyle(word);
+    const key = [width, height, style.fontWeight, style.fontSize, style.fontFamily, style.letterSpacing].join("|");
+    if (geometryKey === key) return;
+    geometryKey = key;
+    fontPx = parseFloat(style.fontSize);
     canvas.width = width;
     canvas.height = height;
-    const style = getComputedStyle(word);
     const mask = document.createElement('canvas');
     mask.width = width;
     mask.height = height;
@@ -70,7 +77,6 @@
       }
       if (top >= 0) topEdges.push({ x, y: top });
     }
-    // Keep only the upper face of the glyphs; snow cannot coat vertical sides.
     if (topEdges.length) {
       const minY = Math.min(...topEdges.map(e => e.y));
       const band = Math.max(11, Math.round(parseFloat(style.fontSize) * .085));
@@ -82,7 +88,6 @@
   function drawTitle() {
     ctx.clearRect(0, 0, width, height);
     if (!snowActive) return;
-    const fontPx = parseFloat(getComputedStyle(word).fontSize);
     const depth = Math.min(Math.max(3, fontPx * .044), 8) * level;
     for (const p of topEdges) {
       const n = noise(p.x);
@@ -127,10 +132,10 @@
     });
     level = 0;
     word.classList.remove('is-shaking');
-    // Force restart without changing the size or flow position of the title.
     void word.offsetWidth;
     word.classList.add('is-shaking');
-    setTimeout(() => word.classList.remove('is-shaking'), 440);
+    clearTimeout(shakeTimer);
+    shakeTimer = setTimeout(() => word.classList.remove('is-shaking'), 440);
     if (shakeFrame !== null) cancelAnimationFrame(shakeFrame);
     prev = 0;
     shakeFrame = requestAnimationFrame(burstFrame);
@@ -152,7 +157,6 @@
     snowActive = !reducedMotion.matches && !body.classList.contains('winter-snow-off');
     drawTitle();
   });
-  // Snow has an upper bound, never affects layout, and doesn't need RAF to grow.
   setInterval(() => {
     if (!snowActive || document.hidden || level >= 1) return;
     level = Math.min(1, level + .075);
@@ -161,5 +165,5 @@
   if ('ResizeObserver' in window) new ResizeObserver(measureWord).observe(word);
   else window.addEventListener('resize', measureWord, { passive: true });
   measureWord();
-  if (document.fonts?.ready) document.fonts.ready.then(measureWord).catch(() => {});
+  if (document.fonts?.ready) document.fonts.ready.then(() => { geometryKey = null; measureWord(); }).catch(() => {});
 })();

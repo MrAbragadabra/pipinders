@@ -1,4 +1,3 @@
-/* PIPINDERS / Winter photo chronicle. No frameworks or font downloads. */
 .gallery-page { background: #091910; }
 .gallery-page .site-shell { min-height: 100svh; display: flex; flex-direction: column; overflow: clip; }
 .gallery-page main { flex: 1; }
@@ -8,7 +7,7 @@
 .gallery-page .status-pill { text-decoration: none; }
 .gallery-page .site-footer { background: #102218; }
 
-/* Blocky, snowy overworld — light-weight CSS scenery rather than an image request. */
+
 .gallery-hero { isolation: isolate; position: relative; overflow: hidden; padding: clamp(72px, 8vw, 130px) 24px 105px; min-height: 500px; background: linear-gradient(180deg, #142e2e 0%, #18382f 45%, #1d3c32 75%, #0b2117 100%); border-bottom: 8px solid #264632; }
 .gallery-hero::before { content: ''; z-index: -1; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(192,241,192,.045) 1px,transparent 1px), linear-gradient(rgba(192,241,192,.045) 1px,transparent 1px); background-size: 24px 24px; pointer-events: none; }
 .gallery-hero::after { content: ''; z-index: 0; position: absolute; inset: auto 0 0; height: 20px; background: repeating-linear-gradient(90deg,#e2f4e9 0 32px,#cae6d9 32px 50px,#f2fff5 50px 72px); clip-path: polygon(0 40%,5% 40%,5% 5%,9% 5%,9% 35%,17% 35%,17% 0%,20% 0%,20% 60%,28% 60%,28% 15%,34% 15%,34% 40%,41% 40%,41% 5%,47% 5%,47% 45%,56% 45%,56% 15%,64% 15%,64% 48%,75% 48%,75% 5%,81% 5%,81% 35%,90% 35%,90% 0%,96% 0%,96% 44%,100% 44%,100% 100%,0 100%); }
@@ -37,7 +36,7 @@
 .gallery-season-tile-lower { display: flex; justify-content:space-between; align-items:center; gap: 15px; font: 800 10px/1.5 ui-monospace,Consolas,monospace; color:#a3d5a9; letter-spacing:.08em; }
 .gallery-season-tile-lower svg { width:20px; height:20px; color:#54fc54; flex:none; }
 
-/* Season grids (filled only from gallery/manifest.json). */
+
 .gallery-content { width: min(1300px,calc(100% - 2 * clamp(20px,5.6vw,100px))); margin:0 auto; padding: 60px 0 0; }
 .gallery-season { padding: 40px 0 80px; scroll-margin-top:25px; border-bottom: 3px solid #25422d; }
 .gallery-season:last-child { border-bottom: 0; }
@@ -64,7 +63,7 @@
 .gallery-back { display:inline-block; color:#071509; background:#54fc54; border:3px solid #07180e; padding:14px 18px; box-shadow: 4px 4px 0 #07130b; font:900 11px/1.4 ui-monospace,Consolas,monospace; text-decoration:none; }
 .gallery-back:hover { background:#c0f1c0; }
 
-/* Fullscreen dialog: escape, arrows and swipe handled without a framework. */
+
 .gallery-lightbox { margin:0; inset:0; width:100%; height:100%; max-width:none; max-height:none; padding:0; border:0; color:#f3fff1; background:rgba(4,14,8,.98); }
 .gallery-lightbox::backdrop { background:rgba(2,9,5,.95); }
 .gallery-lightbox[open] { display:flex; flex-direction:column; }
@@ -91,7 +90,7 @@
 .gallery-lightbox-original svg { width:17px; height:17px; }
 .gallery-lightbox-original:hover { background:#c0f1c0; }
 
-/* Decorative pixel snow across the visible screen, not a giant document canvas. */
+
 .gallery-snow { position:fixed; inset:0; width:100%; height:100dvh; z-index:9; pointer-events:none; opacity:.65; contain:strict; }
 .gallery-page .site-header,.gallery-page .site-footer,.gallery-page main { z-index:1; }
 

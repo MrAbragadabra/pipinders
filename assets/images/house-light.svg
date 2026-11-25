@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" shape-rendering="crispEdges" aria-hidden="true">
-  <!-- Light spilling over log walls: square pixels, no blur or large radial filters. -->
+  
   <g opacity=".35" fill="#efb965">
     <path d="M560 516h52v8h8v33h-8v8h-52v-8h-8v-33h8z"/>
     <path d="M723 516h52v8h8v33h-8v8h-52v-8h-8v-33h8z"/>

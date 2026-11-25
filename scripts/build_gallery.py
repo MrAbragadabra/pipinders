@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
-"""PIPINDERS: generate a static season manifest and lightweight WebP thumbnails.
-
-This script runs at deployment time; upload images to gallery/season-1 or season-2.
-No human-edited image lists and no network calls are needed.
-"""
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 from urllib.parse import quote
 
@@ -19,8 +15,8 @@ Image.MAX_IMAGE_PIXELS = MAX_PIXELS
 
 
 def natural_key(path: Path):
-    import re
-    return [int(bit) if bit.isdecimal() else bit.casefold() for bit in re.split(r"(\d+)", path.name)]
+    parts = tuple(int(bit) if bit.isdecimal() else bit.casefold() for bit in re.split(r"(\d+)", path.name))
+    return (parts, path.name)
 
 
 def run(root: Path):
@@ -33,7 +29,6 @@ def run(root: Path):
         directory.mkdir(parents=True, exist_ok=True)
         target_dir = thumbs_root / season
         target_dir.mkdir(parents=True, exist_ok=True)
-        # The deployment is created fresh, but clean even if run repeatedly locally.
         for old in target_dir.glob("*.webp"):
             old.unlink()
         found = []
@@ -41,21 +36,27 @@ def run(root: Path):
             if not file.is_file() or file.is_symlink() or file.suffix.lower() not in EXTENSIONS or file.name.startswith("."):
                 continue
             try:
-                with Image.open(file) as source:
-                    source.load()
+                expected = {".png": "PNG", ".jpg": "JPEG", ".jpeg": "JPEG", ".webp": "WEBP"}[file.suffix.lower()]
+                with Image.open(file, formats=[expected]) as source:
                     if source.width * source.height > MAX_PIXELS:
                         raise ValueError("image too large")
+                    if source.format != expected:
+                        raise ValueError("image format does not match extension")
+                    source.load()
                     img = ImageOps.exif_transpose(source)
                     width, height = img.size
                     img.thumbnail((1100, 825), Image.Resampling.LANCZOS)
                     if img.mode not in ("RGB", "RGBA"):
                         img = img.convert("RGBA" if "A" in img.getbands() else "RGB")
                     if img.mode == "RGBA":
-                        # Compositing once avoids white/black surprises with transparency.
                         canvas = Image.new("RGB", img.size, "#102019")
                         canvas.paste(img, mask=img.getchannel("A"))
                         img = canvas
-                    thumb_name = hashlib.sha256(file.name.encode("utf-8") + file.read_bytes()).hexdigest()[:18] + ".webp"
+                    digest = hashlib.sha256(file.name.encode("utf-8"))
+                    with file.open("rb") as stream:
+                        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+                            digest.update(chunk)
+                    thumb_name = digest.hexdigest()[:18] + ".webp"
                     img.save(target_dir / thumb_name, "WEBP", quality=82, method=6)
             except (UnidentifiedImageError, OSError, ValueError, Image.DecompressionBombError) as exc:
                 raise SystemExit(f"Invalid screenshot: {file.relative_to(root)} ({type(exc).__name__}: {exc})") from exc

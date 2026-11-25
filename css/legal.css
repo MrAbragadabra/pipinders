@@ -1,4 +1,3 @@
-/* PIPINDERS legal pages — readable pixel panels, no JavaScript required. */
 .legal-page { background: #0a1b15; }
 .legal-page .site-shell { min-height: 100svh; display:flex; flex-direction:column; }
 .legal-page .site-header { flex: 0 0 auto; }

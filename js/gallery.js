@@ -1,6 +1,5 @@
 'use strict';
-/* PIPINDERS — gallery rendered from an automatically built manifest.
- * The browser never needs GitHub API or a server-side directory listing. */
+
 (() => {
   const lightbox = document.getElementById('gallery-lightbox');
   const photo = document.getElementById('gallery-lightbox-image');
@@ -18,16 +17,16 @@
   let activeSeason = SEASONS[0];
   let activeIndex = 0;
   let touchStart = null;
-
-  // Only local paths in the two photo directories (and generated thumbnail folder) are allowed.
-  // Never turn arbitrary manifest strings into active HTML.
   function localImage(value, allowedRoot) {
     if (typeof value !== 'string') return null;
     try {
       const url = new URL(value, document.baseURI);
       const root = new URL(allowedRoot, document.baseURI);
-      return url.origin === root.origin && url.pathname.startsWith(root.pathname) &&
-        !url.search && !url.hash ? url.href : null;
+      if (!['http:', 'https:'].includes(url.protocol) || url.origin !== root.origin ||
+          url.username || url.password || !url.pathname.startsWith(root.pathname) || url.search || url.hash) return null;
+      const name = decodeURIComponent(url.pathname.slice(root.pathname.length));
+      if (!name || name.startsWith('.') || /[\\/\x00-\x1f\x7f]/.test(name) || !/\.(png|jpe?g|webp)$/i.test(name)) return null;
+      return url.href;
     } catch { return null; }
   }
 
@@ -45,7 +44,7 @@
     prev.disabled = activeIndex === 0;
     next.disabled = activeIndex === pictures[activeSeason].length - 1;
     const upcoming = pictures[activeSeason][activeIndex + 1];
-    if (upcoming) { const cached = new Image(); cached.src = upcoming.src; }
+    if (upcoming && !navigator.connection?.saveData) { const cached = new Image(); cached.src = upcoming.src; }
   }
 
   function showPicture(season, index) {
@@ -73,7 +72,7 @@
   lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
   lightbox.addEventListener('close', () => {
     document.body.classList.remove('gallery-dialog-open');
-    photo.removeAttribute('src'); // release potentially huge full-resolution image
+    photo.removeAttribute('src');
   });
   document.addEventListener('keydown', event => {
     if (!lightbox.open) return;
@@ -84,8 +83,9 @@
     if (event.touches.length !== 1) return;
     touchStart = { x: event.touches[0].clientX, y: event.touches[0].clientY };
   }, { passive: true });
+  stage.addEventListener('touchcancel', () => { touchStart = null; }, { passive: true });
   stage.addEventListener('touchend', event => {
-    if (!touchStart || event.changedTouches.length !== 1) return;
+    if (!touchStart || event.changedTouches.length !== 1) { touchStart = null; return; }
     const dx = event.changedTouches[0].clientX - touchStart.x;
     const dy = event.changedTouches[0].clientY - touchStart.y;
     if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.25) step(dx < 0 ? 1 : -1);
@@ -110,7 +110,17 @@
     const expand = document.createElement('span');
     expand.className = 'gallery-card-expand';
     expand.setAttribute('aria-hidden', 'true');
-    expand.innerHTML = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 10V5h5M14 5h5v5M19 14v5h-5M10 19H5v-5" stroke="currentColor" stroke-width="2.5"/></svg>';
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('aria-hidden', 'true');
+    const path = document.createElementNS(ns, 'path');
+    path.setAttribute('d', 'M5 10V5h5M14 5h5v5M19 14v5h-5M10 19H5v-5');
+    path.setAttribute('stroke', 'currentColor');
+    path.setAttribute('stroke-width', '2.5');
+    svg.append(path);
+    expand.append(svg);
     button.append(img, count, expand);
     button.addEventListener('click', () => showPicture(season, index));
     return button;
@@ -138,7 +148,7 @@
       const src = localImage(item.src, `./gallery/${season}/`);
       const thumb = localImage(item.thumb, `./assets/images/gallery-thumbs/${season}/`);
       const w = Number(item.width), h = Number(item.height);
-      if (!src || !thumb || !Number.isFinite(w) || !Number.isFinite(h) || w < 1 || h < 1) return null;
+      if (!src || !thumb || !Number.isSafeInteger(w) || !Number.isSafeInteger(h) || w < 1 || h < 1 || w * h > 70000000) return null;
       return { src, thumb, width: w, height: h };
     }).filter(Boolean);
     pictures[season] = safe;
@@ -155,7 +165,7 @@
 
   async function loadGallery() {
     try {
-      const response = await fetch('./gallery/manifest.json', { cache: 'no-cache' });
+      const response = await fetch('./gallery/manifest.json', { cache: 'no-cache', credentials: 'same-origin', redirect: 'error' });
       if (!response.ok) throw new Error('manifest unavailable');
       const data = await response.json();
       if (data?.version !== 1 || !data.seasons) throw new Error('invalid manifest');
@@ -171,9 +181,6 @@
     }
   }
   loadGallery();
-
-  // Lightweight pixel snowfall independent of the main page's interactive bulbs.
-  // Respects the visitor's existing Winter Edition snow preference.
   const snow = document.getElementById('gallery-snow');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const saveData = Boolean(navigator.connection?.saveData);
@@ -181,7 +188,7 @@
   try {
     const saved = JSON.parse(localStorage.getItem('pipinders-winter-2026') || '{}');
     if (typeof saved.snow === 'boolean') snowAllowed = saved.snow && !motion.matches && !saveData;
-  } catch { /* optional */ }
+  } catch {  }
   if (snow && snowAllowed) {
     const ctx = snow.getContext('2d', { alpha: true });
     if (ctx) {
@@ -200,8 +207,10 @@
         }));
       }
       function tick(time) {
+        frame = null;
+        if (document.hidden || motion.matches || lightbox.open) return;
         frame = requestAnimationFrame(tick);
-        if (document.hidden || time - last < 48) return; // ~20 FPS max
+        if (time - last < 48) return;
         const delta = Math.min(2.2, last ? (time - last) / 50 : 1);
         last = time;
         ctx.clearRect(0, 0, width, height);
