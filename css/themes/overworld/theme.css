@@ -1,0 +1,13 @@
+.minecraft-edition .site-header::after { background: repeating-linear-gradient(90deg,#70a75a 0 22px,#9ec875 22px 40px,#4f884a 40px 48px); }
+.minecraft-edition .hero { min-height: max(850px,calc(100svh - 91px)); padding-top: 85px; padding-bottom: 140px; }
+.minecraft-edition .about { border-top-color: #78ac56; box-shadow: inset 0 5px #41683a; }
+.minecraft-edition .feature::before { background: repeating-linear-gradient(90deg,#75a953 0 32px,#528a41 32px 52px,#8cba62 52px 74px); }
+.minecraft-edition .rules::before { background: repeating-linear-gradient(90deg,#82b260 0 30px,#497f3d 30px 50px); }
+.minecraft-edition .application-panel::before { background: repeating-linear-gradient(90deg,#7ab65a 0 30px,#a2c982 30px 55px,#4c8746 55px 75px); }
+.minecraft-edition .outro { border-top-color: #6ca052; }
+.gallery-hero::after { background: repeating-linear-gradient(90deg,#70a34e 0 32px,#548942 32px 50px,#8eba67 50px 72px); }
+.gallery-card::after { background: repeating-linear-gradient(90deg,#7aaf56 0 20px,#4e8642 20px 38px,transparent 38px 72px); }
+.gallery-pixel-moon { background: #f2d28b; box-shadow: 14px 0 0 #c59b53,0 0 0 7px rgba(242,210,139,.1); }
+@media (max-width: 1050px) { .minecraft-edition .hero { min-height: 850px; } }
+@media (max-width: 700px) { .minecraft-edition .hero { min-height: max(780px,calc(100svh - 84px)); padding-top: 65px; padding-bottom: 105px; } }
+@media (max-width: 365px) { .minecraft-edition .hero { min-height: 810px; } }

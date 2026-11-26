@@ -1,0 +1,7 @@
+.theme-picker[hidden] { display: none; }
+.theme-picker { display: inline-flex; align-items: center; gap: 8px; color: #c0f1c0; font: 800 10px/1.4 ui-monospace, Consolas, monospace; letter-spacing: .08em; }
+.theme-picker select { min-height: 36px; max-width: 100%; padding: 6px 9px; border: 2px solid #071910; background: #254a2e; color: #eaffea; box-shadow: inset 2px 2px #52785a, 2px 2px #071910; font: inherit; letter-spacing: normal; cursor: pointer; }
+.theme-picker select:focus-visible { outline: 2px solid #54fc54; outline-offset: 3px; }
+.hero-word { display: inline-block; position: relative; vertical-align: baseline; }
+.world-art:not([src]) { visibility: hidden; }
+@media (max-width: 700px) { .theme-picker { flex-wrap: wrap; } }

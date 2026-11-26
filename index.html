@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0e2520">
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="description" content="PIPINDERS — приватный Minecraft-сервер Java Edition 26.3. Зимний Minecraft-мир — открытие 19 декабря 2026 в 14:00 МСК. Только лицензия, правила и заявки на вступление.">
+  <meta name="description" content="PIPINDERS — приватный Minecraft-сервер Java Edition 26.3. Minecraft-мир — открытие 19 декабря 2026 в 14:00 МСК. Только лицензия, правила и заявки на вступление.">
   <meta name="author" content="PIPINDERS">
   <meta name="application-name" content="PIPINDERS">
   <meta name="format-detection" content="telephone=no">
@@ -20,22 +20,23 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:site_name" content="PIPINDERS">
-  <meta property="og:title" content="PIPINDERS — Зимний Minecraft-мир — открытие 19 декабря 2026">
+  <meta property="og:title" content="PIPINDERS — Minecraft-мир — открытие 19 декабря 2026">
   <meta property="og:description" content="Minecraft: Java Edition 26.3, только лицензия. Открытие 19 декабря 2026 в 14:00 МСК. Подай заявку и стань частью нового мира.">
   <meta property="og:url" content="https://pipinders.ru/">
   <meta property="og:image" content="https://pipinders.ru/assets/images/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PIPINDERS — пиксельная заснеженная тайга и дата открытия 19 декабря 2026 года.">
+  <meta property="og:image:alt" content="PIPINDERS — пиксельный Minecraft-мир и дата открытия 19 декабря 2026 года.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PIPINDERS — Зимний Minecraft-мир — открытие 19 декабря 2026">
+  <meta name="twitter:title" content="PIPINDERS — Minecraft-мир — открытие 19 декабря 2026">
   <meta name="twitter:description" content="PIPINDERS — Minecraft: Java Edition 26.3, только лицензия. Открытие 19 декабря 2026 в 14:00 МСК. Правила и заявки.">
   <meta name="twitter:image" content="https://pipinders.ru/assets/images/og-image.png">
-  <title>PIPINDERS — Зимнее открытие Minecraft-сервера 19 декабря 2026</title>
+  <title>PIPINDERS — Открытие Minecraft-сервера 19 декабря 2026</title>
   <link rel="stylesheet" href="./css/base.css?v=9">
-  <link rel="stylesheet" href="./css/winter.css?v=3">
-  <link rel="stylesheet" href="./css/minecraft.css?v=2">
-  <link rel="stylesheet" href="./css/weather.css?v=2">
+  <meta name="pipinders-theme-before">
+  <link rel="stylesheet" href="./css/minecraft.css?v=3">
+  <meta name="pipinders-theme-after">
+  <link rel="stylesheet" href="./css/world.css?v=1">
   <link rel="stylesheet" href="./css/gallery-link.css?v=2">
   <script type="application/ld+json">
     {
@@ -51,14 +52,17 @@
   <script src="./js/main.js?v=5" defer></script>
   <script src="./js/countdown.js?v=1" defer></script>
   <script src="./js/application.js?v=1" defer></script>
-  <script src="./js/winter.js?v=5" defer></script>
-  <script src="./js/weather.js?v=2" defer></script>
+  <link rel="stylesheet" href="./css/theme.css?v=1">
+  <noscript><link rel="stylesheet" href="./css/themes/overworld/theme.css?v=1"></noscript>
+  <script src="./js/theme.js?v=1"></script>
+  <script src="./js/theme-runtime.js?v=1" defer></script>
+  <script src="./js/world.js?v=1" defer></script>
 </head>
-<body class="winter-edition minecraft-edition">
+<body class="minecraft-edition">
   <a class="skip-link" href="#main">Перейти к содержанию</a>
   <div class="page-noise" aria-hidden="true"></div>
   <div class="page-glow" aria-hidden="true"></div>
-  <canvas class="winter-snow" id="winter-snow" aria-hidden="true"></canvas>
+  <template data-winter><canvas class="winter-snow" id="winter-snow" aria-hidden="true"></canvas></template>
 
   <div class="site-shell">
     <header class="site-header">
@@ -67,13 +71,14 @@
         <span class="brand-name"><span class="brand-word">PIPINDERS<span class="brand-period">.</span></span><small>MINECRAFT SERVER</small></span>
       </a>
       <div class="header-right">
-        <span class="header-coordinate">WORLD_001 <span class="coordinate-dash">/</span> SNOWY_TAIGA</span>
+        <span class="header-coordinate">WORLD_001 <span class="coordinate-dash">/</span> <span data-winter-text="SNOWY_TAIGA">OVERWORLD</span></span>
         <a class="header-nav header-rules-link" href="#rules">ПРАВИЛА</a><a class="header-nav header-gallery-link" href="/gallery.html">ЛЕТОПИСЬ</a><a class="status-pill status-link" href="#apply"><span class="status-light"></span> ПРИЁМ ЗАЯВОК</a>
       </div>
     </header>
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
+        <template data-winter>
         <div class="winter-garland" id="winter-garland" role="group" aria-label="Интерактивная гирлянда: нажми на лампочку, чтобы переключить её">
           <svg class="winter-wire" viewBox="0 0 1200 92" preserveAspectRatio="none" focusable="false" aria-hidden="true"><path class="winter-wire-shadow" d="M0 12 H12 V18 H24 V24 H36 V30 H48 V36 H60 V36 H72 V42 H84 V48 H96 V48 H108 V48 H120 V54 H132 V54 H144 V54 H156 V54 H168 V54 H180 V54 H192 V48 H204 V48 H216 V48 H228 V42 H240 V36 H252 V36 H264 V30 H276 V24 H288 V18 H300 V12 H312 V18 H324 V24 H336 V30 H348 V36 H360 V36 H372 V42 H384 V48 H396 V48 H408 V48 H420 V54 H432 V54 H444 V54 H456 V54 H468 V54 H480 V54 H492 V48 H504 V48 H516 V48 H528 V42 H540 V36 H552 V36 H564 V30 H576 V24 H588 V18 H600 V12 H612 V18 H624 V24 H636 V30 H648 V36 H660 V36 H672 V42 H684 V48 H696 V48 H708 V48 H720 V54 H732 V54 H744 V54 H756 V54 H768 V54 H780 V54 H792 V48 H804 V48 H816 V48 H828 V42 H840 V36 H852 V36 H864 V30 H876 V24 H888 V18 H900 V12 H912 V18 H924 V24 H936 V30 H948 V36 H960 V36 H972 V42 H984 V48 H996 V48 H1008 V48 H1020 V54 H1032 V54 H1044 V54 H1056 V54 H1068 V54 H1080 V54 H1092 V48 H1104 V48 H1116 V48 H1128 V42 H1140 V36 H1152 V36 H1164 V30 H1176 V24 H1188 V18 H1200 V12"/><path class="winter-wire-highlight" d="M0 12 H12 V18 H24 V24 H36 V30 H48 V36 H60 V36 H72 V42 H84 V48 H96 V48 H108 V48 H120 V54 H132 V54 H144 V54 H156 V54 H168 V54 H180 V54 H192 V48 H204 V48 H216 V48 H228 V42 H240 V36 H252 V36 H264 V30 H276 V24 H288 V18 H300 V12 H312 V18 H324 V24 H336 V30 H348 V36 H360 V36 H372 V42 H384 V48 H396 V48 H408 V48 H420 V54 H432 V54 H444 V54 H456 V54 H468 V54 H480 V54 H492 V48 H504 V48 H516 V48 H528 V42 H540 V36 H552 V36 H564 V30 H576 V24 H588 V18 H600 V12 H612 V18 H624 V24 H636 V30 H648 V36 H660 V36 H672 V42 H684 V48 H696 V48 H708 V48 H720 V54 H732 V54 H744 V54 H756 V54 H768 V54 H780 V54 H792 V48 H804 V48 H816 V48 H828 V42 H840 V36 H852 V36 H864 V30 H876 V24 H888 V18 H900 V12 H912 V18 H924 V24 H936 V30 H948 V36 H960 V36 H972 V42 H984 V48 H996 V48 H1008 V48 H1020 V54 H1032 V54 H1044 V54 H1056 V54 H1068 V54 H1080 V54 H1092 V48 H1104 V48 H1116 V48 H1128 V42 H1140 V36 H1152 V36 H1164 V30 H1176 V24 H1188 V18 H1200 V12"/></svg>
           <div class="winter-bulbs" id="winter-bulbs" role="group" aria-label="Лампочки гирлянды"></div>
@@ -84,19 +89,20 @@
         </div>
         <div class="lamp-easter-egg" aria-hidden="true">НАЖМИ НА ЛАМПОЧКУ — И ОНА ПОГАСНЕТ</div>
         <div class="winter-side-mark" aria-hidden="true"><span>WINTER</span><svg viewBox="0 0 42 42"><path d="M21 3v36M3 21h36M8.3 8.3l25.4 25.4M33.7 8.3 8.3 33.7"/></svg><span>2026</span></div>
+        </template>
         <div class="hero-scenery" aria-hidden="true">
-          <div class="block-world"><img class="world-art" src="./assets/images/winter-world.svg" width="1600" height="820" alt="" loading="eager" decoding="async"><img class="house-light-overlay" src="./assets/images/house-light.svg" width="1600" height="820" alt="" loading="eager" decoding="async"></div>
-          <span class="world-label world-label--left">BIOME: SNOWY TAIGA</span>
-          <span class="world-label world-label--right" id="world-time-label">DAY 001 · WINTER</span>
+          <div class="block-world"><img class="world-art" data-world-art width="1600" height="820" alt="" loading="eager" decoding="async"><img class="house-light-overlay" src="./assets/images/house-light.svg" width="1600" height="820" alt="" loading="eager" decoding="async"><noscript><img class="world-art" src="./assets/images/themes/overworld/world.svg" width="1600" height="820" alt=""></noscript></div>
+          <span class="world-label world-label--left" data-winter-text="BIOME: SNOWY TAIGA">BIOME: OVERWORLD</span>
+          <span class="world-label world-label--right" id="world-time-label">МСК / ДЕНЬ</span>
         </div>
 
         <div class="hero-content">
-          <div class="hero-kicker"><span class="kicker-line"></span> ЗИМНИЙ БИОМ <span class="kicker-index">// 001</span></div>
-          <p class="hero-overline">ПЕРВЫЙ СНЕГ. ПЕРВЫЙ БЛОК. НОВАЯ ИСТОРИЯ.</p>
-          <h1 class="hero-title" id="hero-title"><span class="snowy-word" id="snowy-word" role="button" tabindex="0" aria-label="Стряхнуть снег с надписи СКОРО" title="Нажми, чтобы стряхнуть снег">СКОРО<canvas id="title-snow" class="title-snow" aria-hidden="true"></canvas></span><span class="hero-dot">.</span></h1>
+          <div class="hero-kicker"><span class="kicker-line"></span> <span data-winter-text="ЗИМНИЙ БИОМ">ОБЫЧНЫЙ МИР</span> <span class="kicker-index">// 001</span></div>
+          <p class="hero-overline" data-winter-text="ПЕРВЫЙ СНЕГ. ПЕРВЫЙ БЛОК. НОВАЯ ИСТОРИЯ.">ПЕРВЫЙ БЛОК. НОВАЯ ИСТОРИЯ.</p>
+          <h1 class="hero-title" id="hero-title"><span class="hero-word" id="snowy-word">СКОРО<template data-winter><canvas id="title-snow" class="title-snow" aria-hidden="true"></canvas></template></span><span class="hero-dot">.</span></h1>
           <div class="hero-title-rule" aria-hidden="true"><span></span></div>
-          <h2 class="hero-subtitle">Новый мир. <span>Тёплая история.</span></h2>
-          <p class="hero-description">Даже самая большая история начинается с первого блока.<br class="desktop-break"> Этой зимой поставим его вместе.</p>
+          <h2 class="hero-subtitle">Новый мир. <span data-winter-text="Тёплая история.">Твоя история.</span></h2>
+          <p class="hero-description">Даже самая большая история начинается с первого блока.<br class="desktop-break"> <span data-winter-text="Этой зимой поставим его вместе.">Поставим его вместе.</span></p>
           <div class="launch" aria-labelledby="launch-label">
             <p class="launch-label" id="launch-label"><span class="tiny-square" aria-hidden="true"></span> ОТКРЫТИЕ СЕРВЕРА</p>
             <time class="launch-date" datetime="2026-12-19T14:00:00+03:00">19 декабря 2026 <span>·</span> 14:00 МСК</time>
@@ -208,7 +214,7 @@
       <section class="outro" aria-label="Ожидание открытия">
         <div class="outro-topline"><span class="section-index">04 /</span> УВИДИМСЯ В ИГРЕ</div>
         <div class="outro-inner">
-          <div class="winter-outro-star" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 2v44M2 24h44M8.5 8.5l31 31M39.5 8.5l-31 31M19 6l5 5 5-5M19 42l5-5 5 5M6 19l5 5-5 5M42 19l-5 5 5 5"/></svg></div>
+          <template data-winter><div class="winter-outro-star" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 2v44M2 24h44M8.5 8.5l31 31M39.5 8.5l-31 31M19 6l5 5 5-5M19 42l5-5 5 5M6 19l5 5-5 5M42 19l-5 5 5 5"/></svg></div></template>
           <div class="outro-signal" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
           <p>ДО ВСТРЕЧИ.<br><strong>19 ДЕКАБРЯ.</strong></p>
           <span class="outro-note">14:00 МСК · Информацию для входа в мир получат принятые игроки.</span>
@@ -221,7 +227,7 @@
       <a href="https://pipinders.ru/" aria-label="PIPINDERS.RU">PIPINDERS.RU <span class="footer-link-icon" aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
       <nav class="footer-legal" aria-label="Разделы сайта"><a href="/gallery.html">ЛЕТОПИСЬ</a><a href="/privacy.html">ПОЛИТИКА ДАННЫХ</a><a href="/consent.html">СОГЛАСИЕ</a></nav>
       <a class="footer-mail" href="mailto:apply@pipinders.ru">apply@pipinders.ru</a>
-    </footer>
+    <label class="theme-picker" hidden><span>ТЕМА</span><select aria-label="Оформление сайта" data-theme-picker><option value="auto">Авто</option><option value="overworld">Overworld</option><option value="winter">Зима</option></select></label></footer>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>

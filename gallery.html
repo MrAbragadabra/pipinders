@@ -24,14 +24,19 @@
   <meta name="twitter:card" content="summary_large_image">
   <title>Летопись миров — сезоны I и II | PIPINDERS</title>
   <link rel="stylesheet" href="./css/base.css?v=9">
-  <link rel="stylesheet" href="./css/winter.css?v=3">
-  <link rel="stylesheet" href="./css/minecraft.css?v=2">
+  <meta name="pipinders-theme-before">
+  <link rel="stylesheet" href="./css/minecraft.css?v=3">
+  <meta name="pipinders-theme-after">
   <link rel="stylesheet" href="./css/gallery.css?v=2">
-  <script src="./js/gallery.js?v=2" defer></script>
+  <script src="./js/gallery.js?v=3" defer></script>
+  <link rel="stylesheet" href="./css/theme.css?v=1">
+  <noscript><link rel="stylesheet" href="./css/themes/overworld/theme.css?v=1"></noscript>
+  <script src="./js/theme.js?v=1"></script>
+  <script src="./js/theme-runtime.js?v=1" defer></script>
 </head>
-<body class="winter-edition minecraft-edition gallery-page">
+<body class="minecraft-edition gallery-page">
   <a class="skip-link" href="#main">Перейти к галерее</a>
-  <canvas class="gallery-snow" id="gallery-snow" aria-hidden="true"></canvas>
+  <template data-winter><canvas class="gallery-snow" id="gallery-snow" aria-hidden="true"></canvas></template>
   <div class="site-shell">
     <header class="site-header">
       <a class="brand" href="/" aria-label="PIPINDERS — на главную">
@@ -109,7 +114,7 @@
       <a href="/" aria-label="Вернуться на главную">PIPINDERS.RU</a>
       <nav class="footer-legal" aria-label="Разделы сайта"><a href="/">ГЛАВНАЯ</a><a href="/privacy.html">ПОЛИТИКА ДАННЫХ</a><a href="/consent.html">СОГЛАСИЕ</a></nav>
       <a class="footer-mail" href="mailto:apply@pipinders.ru">apply@pipinders.ru</a>
-    </footer>
+    <label class="theme-picker" hidden><span>ТЕМА</span><select aria-label="Оформление сайта" data-theme-picker><option value="auto">Авто</option><option value="overworld">Overworld</option><option value="winter">Зима</option></select></label></footer>
   </div>
 
   <dialog class="gallery-lightbox" id="gallery-lightbox" aria-label="Просмотр скриншота">

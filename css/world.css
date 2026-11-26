@@ -1,0 +1,27 @@
+.minecraft-edition .block-world .world-art {
+  filter: brightness(.96) saturate(.96);
+  transition: filter 1.2s steps(8, end);
+}
+.minecraft-edition .block-world .house-light-overlay {
+  opacity: 0;
+  z-index: 1;
+  filter: none;
+  transition: opacity 1.2s steps(8, end);
+}
+.minecraft-edition[data-dayphase="dawn"] .block-world .world-art { filter: brightness(.84) saturate(.9); }
+.minecraft-edition[data-dayphase="dusk"] .block-world .world-art { filter: brightness(.80) saturate(.91); }
+.minecraft-edition[data-dayphase="night"] .block-world .world-art { filter: brightness(.65) saturate(.82); }
+.minecraft-edition[data-dayphase="dawn"] .block-world .house-light-overlay { opacity: .38; }
+.minecraft-edition[data-dayphase="dusk"] .block-world .house-light-overlay { opacity: .74; }
+.minecraft-edition[data-dayphase="night"] .block-world .house-light-overlay { opacity: 1; }
+.minecraft-edition[data-dayphase="dusk"] .hero { background-color: #142624; }
+.minecraft-edition[data-dayphase="night"] .hero { background-color: #0b1b23; }
+.minecraft-edition[data-dayphase="dawn"] .hero { background-color: #122825; }
+
+
+.minecraft-edition .block-world { isolation: isolate; }
+.minecraft-edition .block-world .world-art { z-index: 0; }
+.minecraft-edition .block-world::after { z-index: 1; }
+.minecraft-edition .block-world .house-light-overlay { z-index: 2; }
+
+@media (prefers-reduced-motion: reduce) { .minecraft-edition .block-world img { transition: none !important; } }
